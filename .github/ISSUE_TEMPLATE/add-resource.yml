@@ -1,0 +1,71 @@
+name: Add a resource
+description: Suggest a system, platform, module, benchmark, survey, dataset, or meta-resource for inclusion.
+title: "[Add Resource]: "
+labels:
+  - addition
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the map. Please keep the suggestion concrete and use a canonical link when possible.
+  - type: input
+    id: resource_name
+    attributes:
+      label: Name
+      description: Official project, paper, or resource name.
+      placeholder: The AI Scientist
+    validations:
+      required: true
+  - type: input
+    id: resource_url
+    attributes:
+      label: URL
+      description: Official repository, project page, documentation page, or paper page.
+      placeholder: https://github.com/SakanaAI/AI-Scientist
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Choose the best top-level home for the resource.
+      options:
+        - Autonomous Research Systems
+        - Research Infrastructure & Platforms
+        - Workflow Modules
+        - Benchmarks, Surveys & Meta-Resources
+    validations:
+      required: true
+  - type: input
+    id: stage
+    attributes:
+      label: Workflow stage
+      description: Optional, but helpful for placement.
+      placeholder: Literature / Ideation / Planning / Data / Coding / Experiment / Analysis / Writing / End-to-end
+  - type: textarea
+    id: short_description
+    attributes:
+      label: Short description
+      description: One sentence describing what it does and why it matters.
+      placeholder: Open-source end-to-end system for automated scientific discovery from a seed codebase.
+    validations:
+      required: true
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: Use the repo's tag system. Include at least the compact README ribbon.
+      placeholder: |
+        Level: System
+        Stage: End-to-end
+        Loop: Closed-loop
+        Domain: General
+        Openness: Open-source
+  - type: textarea
+    id: why_include
+    attributes:
+      label: Why it should be included
+      description: Explain why this resource improves the map.
+      placeholder: It is a canonical public reference for end-to-end AI-native research systems.
+    validations:
+      required: true

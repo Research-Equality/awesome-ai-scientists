@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run awesome-lint
+        run: npx --yes awesome-lint README.md
+
+      - name: Run markdownlint
+        run: npx --yes markdownlint-cli README.md CONTRIBUTING.md docs .github
+
+      - name: Install website dependencies
+        run: npm ci --prefix website
+
+      - name: Build website
+        run: npm run build --prefix website

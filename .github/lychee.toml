@@ -1,0 +1,8 @@
+accept = [200, 403, 429]
+exclude = [
+  "^mailto:",
+  "^https://awesome\\.re/badge\\.svg$",
+  "^https://img\\.shields\\.io/"
+]
+max_retries = 3
+timeout = 20

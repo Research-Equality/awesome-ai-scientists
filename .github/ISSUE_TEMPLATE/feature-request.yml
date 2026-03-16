@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest an improvement to the taxonomy, README structure, contribution flow, or repository automation.
+title: "[Feature Request]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for structural improvements to the repository itself.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Short title for the proposed improvement.
+      placeholder: Add a machine-readable data file for entries
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What gap, friction, or limitation are you trying to solve?
+      placeholder: The current README format is readable, but downstream reuse is difficult.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the change you want.
+      placeholder: Add a structured JSON or YAML file for entries and generate README sections from it.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why this matters
+      description: Explain how the change would improve curation, usability, or maintenance.
+      placeholder: This would make the taxonomy easier to validate and reuse.

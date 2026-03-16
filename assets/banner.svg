@@ -1,0 +1,136 @@
+<svg width="1600" height="460" viewBox="0 0 1600 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1520" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.55" stop-color="#0A172A"/>
+      <stop offset="1" stop-color="#101B31"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 120) rotate(90) scale(210 280)">
+      <stop stop-color="#22D3EE" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 340) rotate(90) scale(180 260)">
+      <stop stop-color="#38BDF8" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#A5B4FC" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#020617" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="cardStroke" x1="940" y1="44" x2="1460" y2="388" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="210" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="460" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="460" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="460" rx="28" stroke="#7DD3FC" stroke-opacity="0.14"/>
+  <ellipse cx="1320" cy="120" rx="280" ry="210" fill="url(#glowA)"/>
+  <ellipse cx="1120" cy="340" rx="260" ry="180" fill="url(#glowB)"/>
+
+  <g opacity="0.82">
+    <circle cx="84" cy="84" r="3" fill="#38BDF8"/>
+    <circle cx="112" cy="84" r="3" fill="#F59E0B"/>
+    <circle cx="140" cy="84" r="3" fill="#22C55E"/>
+  </g>
+
+  <g transform="translate(86 118)">
+    <text x="0" y="0" fill="#E5F3FF" font-family="Inter, Segoe UI, sans-serif" font-size="54" font-weight="700" letter-spacing="-1.2">
+      Awesome-AI-Research
+    </text>
+    <text x="0" y="52" fill="#8FB3D9" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="500">
+      A curated, layered map of AI-native research systems
+    </text>
+    <text x="0" y="96" fill="#AFC8E6" font-family="Inter, Segoe UI, sans-serif" font-size="18">
+      Systems • Platforms • Workflow Modules • Benchmarks • Surveys • Datasets • Meta-resources
+    </text>
+
+    <g transform="translate(0 134)">
+      <rect width="232" height="42" rx="21" fill="url(#pill)"/>
+      <text x="24" y="27" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700">
+        Layered research ecosystem
+      </text>
+    </g>
+
+    <g transform="translate(252 134)">
+      <rect width="184" height="42" rx="21" fill="#0F172A" stroke="#334155"/>
+      <text x="22" y="27" fill="#CBD5E1" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="600">
+        Workflow-aware curation
+      </text>
+    </g>
+
+    <g transform="translate(0 206)">
+      <rect width="540" height="118" rx="18" fill="#081222" fill-opacity="0.72" stroke="#1E293B"/>
+      <text x="24" y="34" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700">
+        What this repo optimizes for
+      </text>
+      <text x="24" y="64" fill="#9FB6D2" font-family="Inter, Segoe UI, sans-serif" font-size="15">
+        • Distinguish systems from infrastructure and modules
+      </text>
+      <text x="24" y="90" fill="#9FB6D2" font-family="Inter, Segoe UI, sans-serif" font-size="15">
+        • Map resources onto the actual research workflow
+      </text>
+      <text x="24" y="116" fill="#9FB6D2" font-family="Inter, Segoe UI, sans-serif" font-size="15">
+        • Stay curated, opinionated, and maintainable over time
+      </text>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(918 58)">
+    <rect width="588" height="344" rx="28" fill="#07111F" fill-opacity="0.78" stroke="url(#cardStroke)"/>
+
+    <g transform="translate(32 30)">
+      <rect width="524" height="58" rx="18" fill="#0B1B31" stroke="#38BDF8" stroke-opacity="0.35"/>
+      <text x="24" y="26" fill="#7DD3FC" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">
+        LAYER 1
+      </text>
+      <text x="24" y="44" fill="#E0F2FE" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700">
+        Autonomous Research Systems
+      </text>
+    </g>
+
+    <g transform="translate(54 122)">
+      <path d="M0 28H70" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.45"/>
+      <path d="M0 92H70" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.45"/>
+      <path d="M0 156H70" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.45"/>
+
+      <rect x="70" y="0" width="448" height="56" rx="16" fill="#0E1729" stroke="#243B53"/>
+      <text x="92" y="23" fill="#67E8F9" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">
+        LAYER 2
+      </text>
+      <text x="92" y="40" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700">
+        Research Infrastructure &amp; Platforms
+      </text>
+
+      <rect x="70" y="64" width="448" height="56" rx="16" fill="#0E1729" stroke="#243B53"/>
+      <text x="92" y="87" fill="#FBBF24" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">
+        LAYER 3
+      </text>
+      <text x="92" y="104" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700">
+        Workflow Modules
+      </text>
+
+      <rect x="70" y="128" width="448" height="56" rx="16" fill="#0E1729" stroke="#243B53"/>
+      <text x="92" y="151" fill="#A78BFA" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">
+        LAYER 4
+      </text>
+      <text x="92" y="168" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700">
+        Benchmarks, Surveys &amp; Meta-Resources
+      </text>
+    </g>
+
+    <g transform="translate(420 262)">
+      <rect width="116" height="40" rx="20" fill="#082032" stroke="#0EA5E9" stroke-opacity="0.4"/>
+      <text x="21" y="25" fill="#BAE6FD" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600">
+        Research flow
+      </text>
+    </g>
+  </g>
+</svg>
