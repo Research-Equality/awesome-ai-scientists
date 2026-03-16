@@ -144,8 +144,7 @@ select {
   border-bottom: 1px solid var(--border);
 }
 
-.intro-block h1,
-.catalog-block h2 {
+.intro-block h1 {
   margin: 0;
   letter-spacing: -0.03em;
 }
@@ -165,13 +164,14 @@ select {
   padding-top: 28px;
 }
 
-.catalog-block h2 {
-  font-size: 1.35rem;
-}
-
 .results-count {
   font-size: 0.92rem;
   white-space: nowrap;
+}
+
+.catalog-header {
+  justify-content: flex-end;
+  margin-bottom: 8px;
 }
 
 .filters-row {

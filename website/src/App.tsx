@@ -155,7 +155,6 @@ function App() {
           </div>
 
           <div className="catalog-header">
-            <h2>{copy.sections.content}</h2>
             <span className="results-count">
               {filteredResources.length} {copy.filters.results}
             </span>
