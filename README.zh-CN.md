@@ -2,6 +2,7 @@
 <!-- markdownlint-disable MD041 -->
 
 <div align="center">
+  <img src="./images/logo.png" alt="Awesome-AI-Research logo" width="240">
   <h1>Awesome-AI-Research</h1>
   <p>
     <a href="./README.md">English</a> · <a href="./README.zh-CN.md">中文</a>

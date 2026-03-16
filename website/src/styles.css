@@ -87,7 +87,29 @@ select {
   padding: 14px 0;
 }
 
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.brand-mark img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
 .brand-title {
+  display: inline-block;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -464,6 +486,11 @@ select {
 
   .header-actions {
     gap: 8px;
+  }
+
+  .brand-mark img {
+    width: 38px;
+    height: 38px;
   }
 
   .header-link {

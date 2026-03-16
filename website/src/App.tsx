@@ -9,6 +9,7 @@ import { locales, type Language } from "./locales";
 
 const repositoryUrl = "https://github.com/Research-Equality/Awesome-AI-Research";
 const surveyUrl = "https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns";
+const logoUrl = new URL("logo.png", document.baseURI).toString();
 
 function App() {
   const [language, setLanguage] = useState<Language>("en");
@@ -89,10 +90,15 @@ function App() {
       <header className="site-header">
         <div className="container header-row">
           <div className="brand-block">
-            <a className="brand-title" href="#top">
-              Awesome-AI-Research
+            <a className="brand-mark" href="#top" aria-label="Awesome-AI-Research">
+              <img src={logoUrl} alt="" />
             </a>
-            <p className="brand-subtitle">{copy.hero.subtitle}</p>
+            <div>
+              <a className="brand-title" href="#top">
+                Awesome-AI-Research
+              </a>
+              <p className="brand-subtitle">{copy.hero.subtitle}</p>
+            </div>
           </div>
 
           <div className="header-actions">
