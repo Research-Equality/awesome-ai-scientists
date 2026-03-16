@@ -201,38 +201,43 @@ function App() {
           <ul className="resource-list">
             {filteredResources.map((resource) => (
               <li className="resource-item" key={resource.id}>
-                <p className="resource-line">
-                  <a
-                    className="resource-name"
-                    href={resource.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {resource.name}
-                  </a>
-                  {" — "}
-                  {copy.resourceDescriptions[resource.id] ?? resource.description}
-                </p>
-
-                <p className="resource-tags">
-                  {renderTags(resource).map((tag) => (
-                    <span className={`tag-chip ${tag.className}`} key={`${resource.id}-${tag.key}`}>
-                      {tag.label}
-                    </span>
-                  ))}
-                </p>
-
-                <p className="resource-links">
-                  <span className="resource-links-label">{copy.labels.link}:</span>{" "}
-                  {resource.links.map((link, index) => (
-                    <span key={`${resource.id}-${link.kind}`}>
-                      {index > 0 ? " · " : ""}
-                      <a href={link.url} target="_blank" rel="noreferrer">
-                        {copy.linkKinds[link.kind]}
+                <div className="resource-main">
+                  <div className="resource-copy">
+                    <p className="resource-line">
+                      <a
+                        className="resource-name"
+                        href={resource.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {resource.name}
                       </a>
-                    </span>
-                  ))}
-                </p>
+                      {" — "}
+                      {copy.resourceDescriptions[resource.id] ?? resource.description}
+                    </p>
+
+                    <p className="resource-tags">
+                      {renderTags(resource).map((tag) => (
+                        <span className={`tag-chip ${tag.className}`} key={`${resource.id}-${tag.key}`}>
+                          {tag.label}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+
+                  <div className="resource-links-block">
+                    <p className="resource-links-label">{copy.labels.link}</p>
+                    <ul className="resource-links-list">
+                      {resource.links.map((link) => (
+                        <li key={`${resource.id}-${link.kind}`}>
+                          <a href={link.url} target="_blank" rel="noreferrer">
+                            {copy.linkKinds[link.kind]}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
