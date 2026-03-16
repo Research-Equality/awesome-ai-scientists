@@ -40,6 +40,44 @@ function App() {
     return matchesQuery && matchesLevel && matchesStage && matchesDomain && matchesOpenness;
   });
 
+  const renderTags = (resource: (typeof resources)[number]) => [
+    {
+      key: "level",
+      label: `${copy.labels.level}: ${copy.names.levels[resource.level]}`,
+      className: "tag-chip-level",
+    },
+    {
+      key: "stage",
+      label: `${copy.labels.stage}: ${copy.names.stages[resource.stage]}`,
+      className: "tag-chip-stage",
+    },
+    {
+      key: "loop",
+      label: `${copy.labels.loop}: ${copy.names.loops[resource.loop]}`,
+      className: "tag-chip-loop",
+    },
+    {
+      key: "scope",
+      label: `${copy.labels.scope}: ${copy.names.scopes[resource.scope]}`,
+      className: "tag-chip-scope",
+    },
+    {
+      key: "domain",
+      label: `${copy.labels.domain}: ${copy.names.domains[resource.domain]}`,
+      className: "tag-chip-domain",
+    },
+    {
+      key: "openness",
+      label: `${copy.labels.openness}: ${copy.names.openness[resource.openness]}`,
+      className: "tag-chip-openness",
+    },
+    {
+      key: "maturity",
+      label: `${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`,
+      className: "tag-chip-maturity",
+    },
+  ];
+
   return (
     <div className="page-shell">
       <header className="site-header">
@@ -177,16 +215,15 @@ function App() {
                 </p>
 
                 <p className="resource-tags">
-                  <span>{`${copy.labels.level}: ${copy.names.levels[resource.level]}`}</span>
-                  <span>{`${copy.labels.stage}: ${copy.names.stages[resource.stage]}`}</span>
-                  <span>{`${copy.labels.loop}: ${copy.names.loops[resource.loop]}`}</span>
-                  <span>{`${copy.labels.scope}: ${copy.names.scopes[resource.scope]}`}</span>
-                  <span>{`${copy.labels.domain}: ${copy.names.domains[resource.domain]}`}</span>
-                  <span>{`${copy.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
-                  <span>{`${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`}</span>
+                  {renderTags(resource).map((tag) => (
+                    <span className={`tag-chip ${tag.className}`} key={`${resource.id}-${tag.key}`}>
+                      {tag.label}
+                    </span>
+                  ))}
                 </p>
 
                 <p className="resource-links">
+                  <span className="resource-links-label">{copy.labels.link}:</span>{" "}
                   {resource.links.map((link, index) => (
                     <span key={`${resource.id}-${link.kind}`}>
                       {index > 0 ? " · " : ""}

@@ -6,6 +6,20 @@
   --muted: #6b7280;
   --accent: #2563eb;
   --surface-muted: #f8fafc;
+  --chip-blue-bg: #eff6ff;
+  --chip-blue-text: #1d4ed8;
+  --chip-teal-bg: #ecfeff;
+  --chip-teal-text: #0f766e;
+  --chip-violet-bg: #f5f3ff;
+  --chip-violet-text: #6d28d9;
+  --chip-slate-bg: #f1f5f9;
+  --chip-slate-text: #475569;
+  --chip-amber-bg: #fffbeb;
+  --chip-amber-text: #b45309;
+  --chip-emerald-bg: #ecfdf5;
+  --chip-emerald-text: #047857;
+  --chip-rose-bg: #fff1f2;
+  --chip-rose-text: #be123c;
   --container: 1120px;
 }
 
@@ -247,8 +261,59 @@ select {
 }
 
 .resource-tags span {
-  color: #374151;
-  font-size: 0.83rem;
+  font-size: 0.82rem;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.tag-chip-level {
+  background: var(--chip-blue-bg);
+  border-color: #dbeafe;
+  color: var(--chip-blue-text);
+}
+
+.tag-chip-stage {
+  background: var(--chip-teal-bg);
+  border-color: #ccfbf1;
+  color: var(--chip-teal-text);
+}
+
+.tag-chip-loop {
+  background: var(--chip-violet-bg);
+  border-color: #e9d5ff;
+  color: var(--chip-violet-text);
+}
+
+.tag-chip-scope {
+  background: var(--chip-slate-bg);
+  border-color: #e2e8f0;
+  color: var(--chip-slate-text);
+}
+
+.tag-chip-domain {
+  background: var(--chip-amber-bg);
+  border-color: #fde68a;
+  color: var(--chip-amber-text);
+}
+
+.tag-chip-openness {
+  background: var(--chip-emerald-bg);
+  border-color: #bbf7d0;
+  color: var(--chip-emerald-text);
+}
+
+.tag-chip-maturity {
+  background: var(--chip-rose-bg);
+  border-color: #fecdd3;
+  color: var(--chip-rose-text);
 }
 
 .resource-links {
@@ -257,8 +322,17 @@ select {
   line-height: 1.7;
 }
 
+.resource-links-label {
+  color: #374151;
+  font-weight: 600;
+}
+
 .resource-links a {
   color: var(--accent);
+}
+
+.resource-links a:hover {
+  text-decoration: underline;
 }
 
 .site-footer {
@@ -288,10 +362,19 @@ select {
   .header-row,
   .footer-row,
   .catalog-header {
+    align-items: stretch;
     flex-direction: column;
   }
 
   .filters-row {
     grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-link {
+    text-align: center;
   }
 }
