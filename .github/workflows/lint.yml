@@ -23,7 +23,7 @@ jobs:
         run: npx --yes awesome-lint README.md
 
       - name: Run markdownlint
-        run: npx --yes markdownlint-cli README.md CONTRIBUTING.md docs .github
+        run: npx --yes markdownlint-cli README.md CONTRIBUTING.md CHANGELOG.md docs .github website/README.md
 
       - name: Install website dependencies
         run: npm ci --prefix website

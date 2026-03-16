@@ -4,6 +4,9 @@
 
 <div align="center">
   <p>
+    <a href="https://research-equality.github.io/Awesome-AI-Research/">
+      <img src="https://img.shields.io/badge/Website-live-0ea5e9.svg?style=flat-square" alt="Website">
+    </a>
     <img src="https://img.shields.io/badge/PRs-welcome-2ea043.svg?style=flat-square" alt="PRs Welcome">
     <img src="https://img.shields.io/badge/License-MIT-111827.svg?style=flat-square" alt="License: MIT">
     <img src="https://img.shields.io/badge/CI-lint%20%2B%20link%20check-22c55e.svg?style=flat-square" alt="CI: lint and link check">
@@ -59,6 +62,7 @@ Systems span the full loop, platforms provide the runtime and coordination subst
 ## Table of Contents
 
 <!--lint disable awesome-list-item-->
+- [Website & Publishing](#website--publishing)
 - [🧠 Autonomous Research Systems](#-autonomous-research-systems)
 - [🏗 Research Infrastructure & Platforms](#-research-infrastructure--platforms)
 - [🔬 Workflow Modules](#-workflow-modules)
@@ -66,12 +70,25 @@ Systems span the full loop, platforms provide the runtime and coordination subst
 - [Tag System](#tag-system)
 - [Inclusion Criteria](#inclusion-criteria)
 - [Contributing](#contributing)
+- [Changelog](#changelog)
 - [License](#license)
 - [Acknowledgements / Inspirations](#acknowledgements--inspirations)
 <!--lint enable awesome-list-item-->
 
 > Each entry uses the repository's compact tag ribbon: `Level` · `Stage` · `Loop` · `Domain` · `Openness`.
 > The full curation model, including `Scope` and `Maturity`, lives in [docs/tag-system.md](docs/tag-system.md).
+
+## Website & Publishing
+
+The repository includes a dedicated showcase website and a lightweight publishing workflow.
+
+<!--lint disable awesome-list-item-->
+- Live site: [GitHub Pages site](https://research-equality.github.io/Awesome-AI-Research/)
+- Frontend source: [website/](website)
+- GitHub Pages deployment: [`.github/workflows/deploy-website.yml`](.github/workflows/deploy-website.yml)
+- Publishing guide: [docs/publishing.md](docs/publishing.md)
+- Social preview assets: [PNG](assets/social-preview.png) / [SVG](assets/social-preview.svg)
+<!--lint enable awesome-list-item-->
 
 ## 🧠 Autonomous Research Systems
 
@@ -284,6 +301,10 @@ Contributions are welcome, especially when they improve the map rather than just
 <!--lint enable awesome-list-item-->
 
 If you want to suggest a new resource first, open the **Add Resource** issue template.
+
+## Changelog
+
+Release history and the current `Unreleased` queue live in [CHANGELOG.md](CHANGELOG.md). Categorized GitHub release notes are configured through [`.github/release.yml`](.github/release.yml).
 
 ## License
 

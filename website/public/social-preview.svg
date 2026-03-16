@@ -1,0 +1,85 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="48" x2="1208" y2="592" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06101C"/>
+      <stop offset="0.56" stop-color="#09172A"/>
+      <stop offset="1" stop-color="#101C31"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" stroke="#93C5FD" stroke-opacity="0.08"/>
+    </pattern>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1020 136) rotate(90) scale(220 280)">
+      <stop stop-color="#22D3EE" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="640" rx="32" fill="url(#bg)"/>
+  <rect width="1280" height="640" rx="32" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1278" height="638" rx="31" stroke="#93C5FD" stroke-opacity="0.14"/>
+  <ellipse cx="1020" cy="136" rx="280" ry="220" fill="url(#glowA)"/>
+
+  <g transform="translate(86 118)">
+    <text x="0" y="0" fill="#ECF8FF" font-family="Inter, Segoe UI, sans-serif" font-size="64" font-weight="700" letter-spacing="-1.2">
+      Awesome-AI-Research
+    </text>
+    <text x="0" y="48" fill="#9FC2E3" font-family="Inter, Segoe UI, sans-serif" font-size="26" font-weight="500">
+      A curated, layered map of AI-native research systems
+    </text>
+    <text x="0" y="98" fill="#BCD1EA" font-family="Inter, Segoe UI, sans-serif" font-size="18">
+      Systems • Platforms • Workflow Modules • Benchmarks • Surveys • Datasets • Meta-resources
+    </text>
+
+    <g transform="translate(0 156)">
+      <rect width="186" height="42" rx="21" fill="#0F766E"/>
+      <text x="22" y="27" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="700">
+        Layered ecosystem map
+      </text>
+    </g>
+
+    <g transform="translate(0 244)">
+      <rect width="564" height="160" rx="24" fill="#081222" fill-opacity="0.82" stroke="#1E293B"/>
+      <text x="28" y="40" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700">
+        Why it exists
+      </text>
+      <text x="28" y="76" fill="#9FB6D2" font-family="Inter, Segoe UI, sans-serif" font-size="16">
+        • Separate systems, infrastructure, modules, and meta-resources.
+      </text>
+      <text x="28" y="108" fill="#9FB6D2" font-family="Inter, Segoe UI, sans-serif" font-size="16">
+        • Map everything onto the actual research workflow.
+      </text>
+      <text x="28" y="140" fill="#9FB6D2" font-family="Inter, Segoe UI, sans-serif" font-size="16">
+        • Keep the ecosystem curated, legible, and extensible.
+      </text>
+    </g>
+  </g>
+
+  <g transform="translate(780 100)">
+    <rect width="402" height="432" rx="28" fill="#07111F" fill-opacity="0.84" stroke="#38BDF8" stroke-opacity="0.32"/>
+    <text x="30" y="50" fill="#7DD3FC" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">
+      WEBSITE VIEW
+    </text>
+    <text x="30" y="84" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="30" font-weight="700">
+      Inspect the map
+    </text>
+
+    <g transform="translate(30 126)">
+      <rect width="342" height="68" rx="20" fill="#0B1B31" stroke="#38BDF8" stroke-opacity="0.35"/>
+      <text x="20" y="44" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700">
+        Featured resources
+      </text>
+    </g>
+    <g transform="translate(30 214)">
+      <rect width="342" height="68" rx="20" fill="#0D1D22" stroke="#34D399" stroke-opacity="0.3"/>
+      <text x="20" y="44" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700">
+        Signal snapshot
+      </text>
+    </g>
+    <g transform="translate(30 302)">
+      <rect width="342" height="68" rx="20" fill="#211609" stroke="#F59E0B" stroke-opacity="0.28"/>
+      <text x="20" y="44" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700">
+        Explorer + inspector
+      </text>
+    </g>
+  </g>
+</svg>

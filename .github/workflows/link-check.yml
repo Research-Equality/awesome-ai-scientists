@@ -19,6 +19,6 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --config .github/lychee.toml README.md CONTRIBUTING.md docs .github/PULL_REQUEST_TEMPLATE.md
+          args: --config .github/lychee.toml README.md CONTRIBUTING.md CHANGELOG.md docs website/README.md .github/PULL_REQUEST_TEMPLATE.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

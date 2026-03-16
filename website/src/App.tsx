@@ -1,4 +1,4 @@
-import { startTransition, useDeferredValue, useState } from "react";
+import { startTransition, useDeferredValue, useEffect, useState } from "react";
 import {
   inspirations,
   layerNotes,
@@ -10,6 +10,9 @@ import {
   type Resource,
   type Stage,
 } from "./data/resources";
+
+const repositoryUrl = "https://github.com/Research-Equality/Awesome-AI-Research";
+const liveSiteUrl = "https://research-equality.github.io/Awesome-AI-Research/";
 
 const levels: Array<Level | "All"> = [
   "All",
@@ -62,6 +65,31 @@ const openSourceCount = resources.filter(
   (resource) => resource.openness === "Open-source",
 ).length;
 const layerCount = new Set(resources.map((resource) => resource.layer)).size;
+const stageCount = new Set(resources.map((resource) => resource.stage)).size;
+
+const levelSignals = levels
+  .filter((level): level is Level => level !== "All")
+  .map((level) => ({
+    label: level,
+    value: resources.filter((resource) => resource.level === level).length,
+  }));
+
+const stageSignals = workflowNotes.map((note) => ({
+  label: note.stage,
+  value: resources.filter((resource) => resource.stage === note.stage).length,
+}));
+
+const opennessSignals = opennessValues
+  .filter((openness): openness is Openness => openness !== "All")
+  .map((openness) => ({
+    label: openness,
+    value: resources.filter((resource) => resource.openness === openness).length,
+  }));
+
+const layerSignals = layerNotes.map((layer) => ({
+  label: layer.title.replace("Research Infrastructure & Platforms", "Infrastructure & Platforms"),
+  value: resources.filter((resource) => resource.layer === layer.title).length,
+}));
 
 function App() {
   const [query, setQuery] = useState("");
@@ -69,6 +97,9 @@ function App() {
   const [stageFilter, setStageFilter] = useState<Stage | "All">("All");
   const [domainFilter, setDomainFilter] = useState<Domain | "All">("All");
   const [opennessFilter, setOpennessFilter] = useState<Openness | "All">("All");
+  const [selectedResourceId, setSelectedResourceId] = useState<string>(
+    featuredResources[0]?.id ?? resources[0]?.id ?? "",
+  );
 
   const deferredQuery = useDeferredValue(query);
   const normalizedQuery = deferredQuery.trim().toLowerCase();
@@ -84,6 +115,7 @@ function App() {
         resource.level,
         resource.stage,
         resource.domain,
+        resource.openness,
       ]
         .join(" ")
         .toLowerCase()
@@ -107,6 +139,40 @@ function App() {
     );
   });
 
+  useEffect(() => {
+    if (filteredResources.length === 0) {
+      return;
+    }
+
+    const selectionStillVisible = filteredResources.some(
+      (resource) => resource.id === selectedResourceId,
+    );
+
+    if (!selectionStillVisible) {
+      setSelectedResourceId(filteredResources[0].id);
+    }
+  }, [filteredResources, selectedResourceId]);
+
+  const selectedResource = filteredResources.find(
+    (resource) => resource.id === selectedResourceId,
+  );
+
+  const relatedResources = selectedResource
+    ? resources
+        .filter((resource) => {
+          if (resource.id === selectedResource.id) {
+            return false;
+          }
+
+          return (
+            resource.subgroup === selectedResource.subgroup ||
+            (resource.layer === selectedResource.layer &&
+              resource.stage === selectedResource.stage)
+          );
+        })
+        .slice(0, 3)
+    : [];
+
   const activeFilterCount = [
     levelFilter,
     stageFilter,
@@ -124,6 +190,43 @@ function App() {
     });
   };
 
+  const focusResource = (resource: Resource) => {
+    startTransition(() => {
+      setSelectedResourceId(resource.id);
+    });
+  };
+
+  const focusSubgroup = (resource: Resource) => {
+    startTransition(() => {
+      setQuery(resource.subgroup);
+      setSelectedResourceId(resource.id);
+    });
+  };
+
+  const applyLevelFilter = (value: Level | "All") => {
+    startTransition(() => {
+      setLevelFilter(value);
+    });
+  };
+
+  const applyStageFilter = (value: Stage | "All") => {
+    startTransition(() => {
+      setStageFilter(value);
+    });
+  };
+
+  const applyDomainFilter = (value: Domain | "All") => {
+    startTransition(() => {
+      setDomainFilter(value);
+    });
+  };
+
+  const applyOpennessFilter = (value: Openness | "All") => {
+    startTransition(() => {
+      setOpennessFilter(value);
+    });
+  };
+
   return (
     <div className="site-shell">
       <div className="site-noise" />
@@ -138,14 +241,10 @@ function App() {
           </a>
           <div className="topbar-links">
             <a href="#layers">Layers</a>
-            <a href="#featured">Featured</a>
+            <a href="#signals">Signals</a>
             <a href="#explorer">Explorer</a>
-            <a href="#contribute">Contribute</a>
-            <a
-              href="https://github.com/Research-Equality/Awesome-AI-Research"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#contribute">Ops</a>
+            <a href={repositoryUrl} target="_blank" rel="noreferrer">
               GitHub
             </a>
           </div>
@@ -159,10 +258,10 @@ function App() {
               <span> layered AI research ecosystem.</span>
             </h1>
             <p className="hero-text">
-              This is not a flat directory of papers or tools. It is a
-              structured map of systems, platforms, workflow modules, and
-              meta-resources, organized so researchers can see both the stack
-              and the workflow at once.
+              This site turns the repository into a more legible map: layers,
+              workflow stages, curated signals, filterable resources, and a
+              detail inspector that makes each entry easier to place in the
+              stack.
             </p>
 
             <div className="hero-actions">
@@ -171,11 +270,19 @@ function App() {
               </a>
               <a
                 className="button button-secondary"
-                href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/README.md"
+                href={repositoryUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                Read the canonical README
+                Open GitHub repo
+              </a>
+              <a
+                className="button button-ghost"
+                href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/docs/publishing.md"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Publishing guide
               </a>
             </div>
 
@@ -183,6 +290,7 @@ function App() {
               <StatCard value={resources.length} label="Curated resources" />
               <StatCard value={layerCount} label="Ecosystem layers" />
               <StatCard value={levelsCount} label="Object types" />
+              <StatCard value={stageCount} label="Workflow stages" />
               <StatCard value={openSourceCount} label="Open-source entries" />
             </div>
           </div>
@@ -203,13 +311,27 @@ function App() {
                   text="Every resource is placed against literature, ideation, planning, data, coding, experiment, analysis, writing, or end-to-end coverage."
                 />
                 <DifferenceCard
-                  title="Tag-driven curation"
-                  text="Compact ribbons make scope, loop behavior, domain, and openness legible at a glance."
+                  title="Inspectable, not just searchable"
+                  text="The site adds a live inspector so each resource can be read as part of the map, not just a list of links."
                 />
                 <DifferenceCard
-                  title="Built for long-term navigation"
-                  text="The goal is a maintainable map with opinion, not a temporary trend list."
+                  title="Operationally complete"
+                  text="Pages deployment, release notes, changelog discipline, and social preview assets are all part of the repository."
                 />
+              </div>
+
+              <div className="live-site-callout">
+                <span className="panel-chip">Website</span>
+                <div>
+                  <strong>GitHub Pages deployment ready</strong>
+                  <p>
+                    The production site is meant to live at{" "}
+                    <a href={liveSiteUrl} target="_blank" rel="noreferrer">
+                      research-equality.github.io/Awesome-AI-Research
+                    </a>
+                    .
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -221,7 +343,7 @@ function App() {
           <SectionHeader
             eyebrow="Structure"
             title="Four layers, one research workflow"
-            text="The site combines the repo's layered ecosystem view with a workflow-first reading of AI for Research."
+            text="The site keeps the repository's layered ecosystem view, while making the workflow-stage perspective explicit."
           />
 
           <div className="layer-layout">
@@ -252,8 +374,9 @@ function App() {
                 <span className="panel-chip">Workflow stages</span>
                 <h3>Stage-aware by design</h3>
                 <p>
-                  Modules live on particular parts of the loop, while systems
-                  and platforms span across it.
+                  Modules sit on particular stages; systems and platforms span
+                  across them. This is the second axis that keeps the map
+                  legible.
                 </p>
               </div>
               <div className="workflow-grid">
@@ -278,134 +401,172 @@ function App() {
         <section className="section" id="featured">
           <SectionHeader
             eyebrow="Featured"
-            title="Representative resources to anchor the map"
-            text="These are not ranked as 'best overall'. They are featured because they clarify important parts of the ecosystem."
+            title="Representative resources that anchor the map"
+            text="These entries are featured because they help define important slices of the ecosystem, not because they are universally 'best'."
           />
 
           <div className="featured-grid">
             {featuredResources.map((resource) => (
-              <ResourceCard key={resource.id} resource={resource} featured />
+              <ResourceCard
+                key={resource.id}
+                resource={resource}
+                featured
+                selected={resource.id === selectedResourceId}
+                onInspect={() => focusResource(resource)}
+              />
             ))}
+          </div>
+        </section>
+
+        <section className="section" id="signals">
+          <SectionHeader
+            eyebrow="Signals"
+            title="A quick structural read of the current map"
+            text="These distributions make the curation stance visible: what kinds of objects dominate, which workflow stages are denser, and where openness is strongest or thin."
+          />
+
+          <div className="signal-grid">
+            <SignalCard title="By object type" accent="cyan" items={levelSignals} />
+            <SignalCard title="By workflow stage" accent="amber" items={stageSignals} />
+            <SignalCard title="By openness" accent="violet" items={opennessSignals} />
+            <SignalCard title="By layer" accent="teal" items={layerSignals} />
           </div>
         </section>
 
         <section className="section" id="explorer">
           <SectionHeader
             eyebrow="Explorer"
-            title="Filter the ecosystem"
-            text="Search by name or function, then narrow by object type, stage, domain, or openness."
+            title="Filter the ecosystem, then inspect a single resource in context"
+            text="Search by function, then narrow by level, stage, domain, or openness. The inspector panel keeps the selected entry legible."
           />
 
-          <div className="explorer-shell">
-            <div className="filters">
-              <label className="search">
-                <span>Search</span>
-                <input
-                  type="search"
-                  placeholder="Search systems, benchmarks, domains, or workflow stages"
-                  value={query}
-                  onChange={(event) => {
-                    const nextValue = event.target.value;
-                    startTransition(() => {
-                      setQuery(nextValue);
-                    });
-                  }}
-                />
-              </label>
+          <div className="explorer-layout">
+            <div className="explorer-main">
+              <div className="filters">
+                <label className="search">
+                  <span>Search</span>
+                  <input
+                    type="search"
+                    placeholder="Search systems, benchmarks, domains, or workflow stages"
+                    value={query}
+                    onChange={(event) => {
+                      const nextValue = event.target.value;
+                      startTransition(() => {
+                        setQuery(nextValue);
+                      });
+                    }}
+                  />
+                </label>
 
-              <div className="filter-grid">
-                <FilterSelect
-                  label="Level"
-                  value={levelFilter}
-                  options={levels}
-                  onChange={(value) =>
-                    startTransition(() =>
-                      setLevelFilter(value as Level | "All"),
-                    )
-                  }
-                />
-                <FilterSelect
-                  label="Stage"
-                  value={stageFilter}
-                  options={stages}
-                  onChange={(value) =>
-                    startTransition(() =>
-                      setStageFilter(value as Stage | "All"),
-                    )
-                  }
-                />
-                <FilterSelect
-                  label="Domain"
-                  value={domainFilter}
-                  options={domains}
-                  onChange={(value) =>
-                    startTransition(() =>
-                      setDomainFilter(value as Domain | "All"),
-                    )
-                  }
-                />
-                <FilterSelect
-                  label="Openness"
-                  value={opennessFilter}
-                  options={opennessValues}
-                  onChange={(value) =>
-                    startTransition(() =>
-                      setOpennessFilter(value as Openness | "All"),
-                    )
-                  }
-                />
-              </div>
-
-              <div className="filter-footer">
-                <div className="results-copy">
-                  <strong>{filteredResources.length}</strong>
-                  <span>results</span>
-                  {activeFilterCount > 0 ? (
-                    <small>{activeFilterCount} active filters</small>
-                  ) : (
-                    <small>No filters applied</small>
-                  )}
+                <div className="filter-grid">
+                  <FilterSelect
+                    label="Level"
+                    value={levelFilter}
+                    options={levels}
+                    onChange={(value) => applyLevelFilter(value as Level | "All")}
+                  />
+                  <FilterSelect
+                    label="Stage"
+                    value={stageFilter}
+                    options={stages}
+                    onChange={(value) => applyStageFilter(value as Stage | "All")}
+                  />
+                  <FilterSelect
+                    label="Domain"
+                    value={domainFilter}
+                    options={domains}
+                    onChange={(value) => applyDomainFilter(value as Domain | "All")}
+                  />
+                  <FilterSelect
+                    label="Openness"
+                    value={opennessFilter}
+                    options={opennessValues}
+                    onChange={(value) =>
+                      applyOpennessFilter(value as Openness | "All")
+                    }
+                  />
                 </div>
-                <button
-                  className="button button-ghost"
-                  type="button"
-                  onClick={clearFilters}
-                >
-                  Reset filters
-                </button>
-              </div>
-            </div>
 
-            <div className="results-grid">
-              {filteredResources.length > 0 ? (
-                filteredResources.map((resource) => (
-                  <ResourceCard key={resource.id} resource={resource} />
-                ))
-              ) : (
-                <div className="empty-state">
-                  <h3>No matching resources</h3>
-                  <p>
-                    Try broadening the search or clearing one of the active
-                    filters.
-                  </p>
+                <div className="filter-footer">
+                  <div className="results-copy">
+                    <strong>{filteredResources.length}</strong>
+                    <span>results</span>
+                    {activeFilterCount > 0 ? (
+                      <small>{activeFilterCount} active filters</small>
+                    ) : (
+                      <small>No filters applied</small>
+                    )}
+                  </div>
                   <button
-                    className="button button-secondary"
+                    className="button button-ghost"
                     type="button"
                     onClick={clearFilters}
                   >
-                    Clear filters
+                    Reset filters
                   </button>
                 </div>
-              )}
+              </div>
+
+              <div className="results-grid">
+                {filteredResources.length > 0 ? (
+                  filteredResources.map((resource) => (
+                    <ResourceCard
+                      key={resource.id}
+                      resource={resource}
+                      selected={resource.id === selectedResourceId}
+                      onInspect={() => focusResource(resource)}
+                    />
+                  ))
+                ) : (
+                  <div className="empty-state">
+                    <h3>No matching resources</h3>
+                    <p>
+                      Try broadening the search or clearing one of the active
+                      filters.
+                    </p>
+                    <button
+                      className="button button-secondary"
+                      type="button"
+                      onClick={clearFilters}
+                    >
+                      Clear filters
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
+
+            <aside className="inspector-panel">
+              {selectedResource ? (
+                <ResourceInspector
+                  resource={selectedResource}
+                  relatedResources={relatedResources}
+                  onFocusResource={focusResource}
+                  onLevelFilter={applyLevelFilter}
+                  onStageFilter={applyStageFilter}
+                  onDomainFilter={applyDomainFilter}
+                  onOpennessFilter={applyOpennessFilter}
+                  onFocusSubgroup={focusSubgroup}
+                />
+              ) : (
+                <div className="inspector-empty">
+                  <span className="panel-chip">Inspector</span>
+                  <h3>No resource selected</h3>
+                  <p>
+                    Restore at least one result to inspect its layer placement,
+                    tags, and nearby resources.
+                  </p>
+                </div>
+              )}
+            </aside>
           </div>
         </section>
 
         <section className="section" id="contribute">
           <SectionHeader
-            eyebrow="Curation"
-            title="Designed like a serious map, not a dump"
-            text="The website follows the same editorial rules as the repository: canonical links, one-sentence descriptions, and explicit tags."
+            eyebrow="Operations"
+            title="Repository governance, website publishing, and release discipline"
+            text="The site is only part of the project. The repository now carries the operational documents needed to keep it maintainable."
           />
 
           <div className="contribute-grid">
@@ -413,14 +574,14 @@ function App() {
               <h3>Tag system</h3>
               <p>
                 Every entry exposes the compact curation ribbon used by the
-                repository.
+                repository and the site inspector.
               </p>
               <code className="tag-example">
                 Level: System · Stage: End-to-end · Loop: Closed-loop · Domain:
                 General · Openness: Open-source
               </code>
               <a
-                href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/docs/tag-system.md"
+                href={`${repositoryUrl}/blob/main/docs/tag-system.md`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -437,7 +598,7 @@ function App() {
                 <li>Representative, novel, or structurally useful.</li>
               </ul>
               <a
-                href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/docs/inclusion-criteria.md"
+                href={`${repositoryUrl}/blob/main/docs/inclusion-criteria.md`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -446,28 +607,53 @@ function App() {
             </article>
 
             <article className="policy-card">
-              <h3>Contribute a resource</h3>
+              <h3>Website publishing</h3>
               <p>
-                Additions should improve the map, not just increase the count.
-                The issue and PR templates already ask for name, URL, category,
-                short description, tags, and justification.
+                GitHub Pages deployment, social preview assets, and metadata
+                are now documented and versioned with the repository.
               </p>
               <div className="policy-actions">
                 <a
                   className="button button-primary"
-                  href="https://github.com/Research-Equality/Awesome-AI-Research/issues/new/choose"
+                  href={`${repositoryUrl}/blob/main/docs/publishing.md`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Open an issue
+                  Open publishing guide
                 </a>
                 <a
                   className="button button-secondary"
-                  href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/CONTRIBUTING.md"
+                  href={`${repositoryUrl}/blob/main/.github/workflows/deploy-website.yml`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Read contribution guide
+                  View Pages workflow
+                </a>
+              </div>
+            </article>
+
+            <article className="policy-card">
+              <h3>Release management</h3>
+              <p>
+                Change history and release note categories now live alongside
+                the codebase so the project can evolve without drifting.
+              </p>
+              <div className="policy-actions">
+                <a
+                  className="button button-primary"
+                  href={`${repositoryUrl}/blob/main/CHANGELOG.md`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Read changelog
+                </a>
+                <a
+                  className="button button-secondary"
+                  href={`${repositoryUrl}/blob/main/.github/release.yml`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View release config
                 </a>
               </div>
             </article>
@@ -478,7 +664,7 @@ function App() {
           <SectionHeader
             eyebrow="Inspirations"
             title="Reference points"
-            text="The site borrows the rigor of mature GitHub curation projects without copying their surface."
+            text="The visual and editorial approach borrows rigor from mature GitHub projects without copying their surface."
           />
           <div className="inspiration-grid">
             {inspirations.map((item) => (
@@ -506,15 +692,10 @@ function App() {
           </p>
         </div>
         <div className="footer-links">
-          <a href="https://github.com/Research-Equality/Awesome-AI-Research">
-            Repository
-          </a>
-          <a href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/README.md">
-            README
-          </a>
-          <a href="https://github.com/Research-Equality/Awesome-AI-Research/blob/main/docs/roadmap.md">
-            Roadmap
-          </a>
+          <a href={repositoryUrl}>Repository</a>
+          <a href={`${repositoryUrl}/blob/main/README.md`}>README</a>
+          <a href={`${repositoryUrl}/blob/main/CHANGELOG.md`}>Changelog</a>
+          <a href={liveSiteUrl}>Live site</a>
         </div>
       </footer>
     </div>
@@ -582,15 +763,61 @@ function FilterSelect({
   );
 }
 
+function SignalCard({
+  title,
+  items,
+  accent,
+}: {
+  title: string;
+  items: Array<{ label: string; value: number }>;
+  accent: "cyan" | "amber" | "violet" | "teal";
+}) {
+  const maxValue = Math.max(...items.map((item) => item.value), 1);
+
+  return (
+    <article className={`signal-card signal-${accent}`}>
+      <h3>{title}</h3>
+      <div className="bar-list">
+        {items.map((item) => (
+          <div className="bar-row" key={item.label}>
+            <div className="bar-labels">
+              <span>{item.label}</span>
+              <strong>{item.value}</strong>
+            </div>
+            <div className="bar-track">
+              <div
+                className="bar-fill"
+                style={{ width: `${(item.value / maxValue) * 100}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+}
+
 function ResourceCard({
   resource,
+  selected,
+  onInspect,
   featured = false,
 }: {
   resource: Resource;
+  selected: boolean;
+  onInspect: () => void;
   featured?: boolean;
 }) {
   return (
-    <article className={featured ? "resource-card featured-card" : "resource-card"}>
+    <article
+      className={[
+        "resource-card",
+        featured ? "featured-card" : "",
+        selected ? "resource-card-selected" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className="resource-topline">
         <span className="resource-level">{resource.level}</span>
         <span className="resource-layer">{resource.layer}</span>
@@ -609,7 +836,138 @@ function ResourceCard({
         <span>{`Domain: ${resource.domain}`}</span>
         <span>{`Openness: ${resource.openness}`}</span>
       </div>
+      <div className="resource-actions">
+        <button className="button button-ghost" type="button" onClick={onInspect}>
+          Inspect
+        </button>
+        <a href={resource.url} target="_blank" rel="noreferrer">
+          Open reference
+        </a>
+      </div>
     </article>
+  );
+}
+
+function ResourceInspector({
+  resource,
+  relatedResources,
+  onFocusResource,
+  onLevelFilter,
+  onStageFilter,
+  onDomainFilter,
+  onOpennessFilter,
+  onFocusSubgroup,
+}: {
+  resource: Resource;
+  relatedResources: Resource[];
+  onFocusResource: (resource: Resource) => void;
+  onLevelFilter: (value: Level | "All") => void;
+  onStageFilter: (value: Stage | "All") => void;
+  onDomainFilter: (value: Domain | "All") => void;
+  onOpennessFilter: (value: Openness | "All") => void;
+  onFocusSubgroup: (resource: Resource) => void;
+}) {
+  return (
+    <div className="inspector-card">
+      <span className="panel-chip">Selected resource</span>
+      <div className="inspector-heading">
+        <div>
+          <h3>{resource.name}</h3>
+          <p>{resource.description}</p>
+        </div>
+        <a href={resource.url} target="_blank" rel="noreferrer">
+          Open reference
+        </a>
+      </div>
+
+      <div className="inspector-summary">
+        <span>{resource.layer}</span>
+        <span>{resource.subgroup}</span>
+      </div>
+
+      <div className="inspector-metadata">
+        <MetadataRow label="Level" value={resource.level} />
+        <MetadataRow label="Stage" value={resource.stage} />
+        <MetadataRow label="Loop" value={resource.loop} />
+        <MetadataRow label="Scope" value={resource.scope} />
+        <MetadataRow label="Domain" value={resource.domain} />
+        <MetadataRow label="Openness" value={resource.openness} />
+        <MetadataRow label="Maturity" value={resource.maturity} />
+      </div>
+
+      <div className="inspector-tools">
+        <strong>Use this resource as a filter lens</strong>
+        <div className="inspector-tool-grid">
+          <button type="button" onClick={() => onLevelFilter(resource.level)}>
+            {`Level: ${resource.level}`}
+          </button>
+          <button type="button" onClick={() => onStageFilter(resource.stage)}>
+            {`Stage: ${resource.stage}`}
+          </button>
+          <button type="button" onClick={() => onDomainFilter(resource.domain)}>
+            {`Domain: ${resource.domain}`}
+          </button>
+          <button
+            type="button"
+            onClick={() => onOpennessFilter(resource.openness)}
+          >
+            {`Openness: ${resource.openness}`}
+          </button>
+        </div>
+      </div>
+
+      <div className="inspector-actions-panel">
+        <button
+          className="button button-secondary"
+          type="button"
+          onClick={() => onFocusSubgroup(resource)}
+        >
+          Focus same subgroup
+        </button>
+        <a
+          className="button button-ghost"
+          href={`${repositoryUrl}/blob/main/docs/tag-system.md`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Read tag guide
+        </a>
+      </div>
+
+      <div className="related-panel">
+        <strong>Nearby resources</strong>
+        <p>
+          Entries that share the same subgroup or sit close on the same
+          workflow-layer intersection.
+        </p>
+        <div className="related-list">
+          {relatedResources.length > 0 ? (
+            relatedResources.map((item) => (
+              <button
+                className="related-item"
+                type="button"
+                key={item.id}
+                onClick={() => onFocusResource(item)}
+              >
+                <span>{item.name}</span>
+                <small>{item.subgroup}</small>
+              </button>
+            ))
+          ) : (
+            <div className="related-empty">No nearby resources in the current map.</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MetadataRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="metadata-row">
+      <span>{label}</span>
+      <strong>{value}</strong>
+    </div>
   );
 }
 

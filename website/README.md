@@ -2,6 +2,15 @@
 
 Interactive showcase site for the Awesome-AI-Research repository.
 
+The site is designed as a presentation layer for the repository, not a README clone. It includes:
+
+- a layered ecosystem overview
+- featured resources
+- signal snapshots for the current curation
+- a filterable explorer
+- a detail inspector for the selected resource
+- publishing-aware metadata and social preview assets
+
 ## Local development
 
 ```bash

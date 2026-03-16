@@ -1,0 +1,29 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+  categories:
+    - title: Website
+      labels:
+        - website
+        - ui
+        - enhancement
+    - title: Curation
+      labels:
+        - curation
+        - addition
+        - taxonomy
+    - title: Documentation
+      labels:
+        - docs
+        - documentation
+    - title: Infrastructure
+      labels:
+        - ci
+        - infra
+        - tooling
+change-template: "- $TITLE (#$NUMBER)"
+template: |
+  ## What's Changed
+
+  $CHANGES
