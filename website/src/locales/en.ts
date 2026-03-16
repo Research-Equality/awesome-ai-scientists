@@ -93,7 +93,7 @@ export const en: Copy = {
   survey: {
     title: "Usage Survey",
     description:
-      "Share how often you use these AI research tools and how you feel about them. The responses will help improve the curation.",
+      "Share how often you use these AI research tools, how useful they feel in real research workflows, and where they still fall short. The responses will help us understand actual usage patterns, identify high-value tools, and improve the curation priorities of this repository.",
     cta: "Fill in the survey",
   },
   sections: {
