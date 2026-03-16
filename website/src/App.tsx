@@ -193,7 +193,6 @@ function App() {
 
       <footer className="site-footer">
         <div className="container footer-row">
-          <p>{copy.footer.summary}</p>
           <a href="#top">Top</a>
         </div>
       </footer>
