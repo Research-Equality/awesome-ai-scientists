@@ -48,16 +48,16 @@ Systems span the full loop, platforms provide the runtime and coordination subst
 
 ## Featured Resources
 
-| Resource | Why it matters | Primary layer |
-| --- | --- | --- |
-| [**The AI Scientist**](https://github.com/SakanaAI/AI-Scientist) | A canonical public reference for end-to-end automated research loops. | `System` |
-| [**AI co-scientist**](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist) | A strong example of multi-agent hypothesis generation with explicit scientist oversight. | `System` |
-| [**Coscientist**](https://www.nature.com/articles/s41586-023-06792-0) | One of the clearest demonstrations of LLM-driven experimental orchestration in science. | `System` |
-| [**FutureHouse**](https://www.futurehouse.org/) | A research-native platform narrative centered on automating scientific discovery. | `Platform` |
-| [**PaperQA2**](https://github.com/Future-House/paper-qa) | A practical, open-source module for citation-grounded literature synthesis. | `Module` |
-| [**STORM**](https://github.com/stanford-oval/storm) | A strong open-source reference for grounded, citation-backed research writing workflows. | `Module` |
-| [**PaperBench**](https://openai.com/index/paperbench/) | A benchmark that treats research replication itself as the evaluation target. | `Benchmark` |
-| [**AI4Research**](https://ai-4-research.github.io/) | A living survey site that complements this repo with broad paper coverage. | `Survey` |
+| Resource                                                                                                             | Why it matters                                                                                | Primary layer |
+| -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------- |
+| [**The AI Scientist**](https://github.com/SakanaAI/AI-Scientist)                                                    | A canonical public reference for end-to-end automated research loops.                         | `System`      |
+| [**AI co-scientist**](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist) | A strong example of multi-agent hypothesis generation with explicit scientist oversight.      | `System`      |
+| [**Coscientist**](https://www.nature.com/articles/s41586-023-06792-0)                                               | One of the clearest demonstrations of LLM-driven experimental orchestration in science.       | `System`      |
+| [**FutureHouse**](https://www.futurehouse.org/)                                                                     | A research-native platform narrative centered on automating scientific discovery.             | `Platform`    |
+| [**PaperQA2**](https://github.com/Future-House/paper-qa)                                                            | A practical, open-source module for citation-grounded literature synthesis.                   | `Module`      |
+| [**STORM**](https://github.com/stanford-oval/storm)                                                                 | A strong open-source reference for grounded, citation-backed research writing workflows.      | `Module`      |
+| [**PaperBench**](https://openai.com/index/paperbench/)                                                              | A benchmark that treats research replication itself as the evaluation target.                 | `Benchmark`   |
+| [**AI4Research**](https://ai-4-research.github.io/)                                                                 | A living survey site that complements this repo with broad paper coverage.                    | `Survey`      |
 
 ## Table of Contents
 
