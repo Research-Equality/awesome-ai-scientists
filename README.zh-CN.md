@@ -21,7 +21,7 @@
 
 Awesome-AI-Research 是一个面向 AI-for-Research 生态的策展型仓库，将自主研究系统、基础设施、工作流模块、基准、综述、数据集和元资源放进同一个分层结构中。
 
-网站：[GitHub Pages](https://research-equality.github.io/Awesome-AI-Research/)
+网站：[Awesome-AI-Research](https://research-equality.github.io/Awesome-AI-Research/)
 
 问卷邀请：[欢迎填写你使用这些 AI 科研工具的频率、真实感受，以及它们在哪些研究环节真正有帮助、哪些地方仍然不好用。我们收集这些反馈，是为了理解真实使用模式、识别高价值工具，并据此持续优化本仓库的策展重点。](https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns)
 
