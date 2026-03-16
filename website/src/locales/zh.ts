@@ -156,6 +156,8 @@ export const zh: Copy = {
       "结合化学软件与工具调用的研究代理，用于合成与发现任务。",
     futurehouse:
       "以自动化科学发现为核心目标的 research-native 平台，强调代理系统与领域工具结合。",
+    researchclaw:
+      "本地优先的 AI 科研助手，覆盖文献发现、笔记整理、实验跟踪与论文写作等研究工作流环节。",
     autogen:
       "常用于构建研究助手、文献代理和评测流程的多智能体编程框架。",
     langgraph:

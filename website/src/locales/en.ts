@@ -233,6 +233,8 @@ export const en: Copy = {
       "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
     futurehouse:
       "Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.",
+    researchclaw:
+      "Local-first AI research assistant for literature discovery, notes, experiment tracking, and paper writing across the scientific workflow.",
     autogen:
       "Multi-agent programming framework widely used to build research copilots, literature agents, and evaluation pipelines.",
     langgraph:

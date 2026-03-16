@@ -79,6 +79,12 @@ Integrated systems that try to cover meaningful parts of the scientific loop.
 
 The substrate that makes AI-native research systems practical: runtimes, orchestration, execution, evaluation environments, and observability.
 
+### Research Platforms
+
+- [ResearchClaw](https://github.com/ymx10086/ResearchClaw) - Local-first AI research assistant for literature discovery, note-taking, experiment tracking, and paper writing across the scientific workflow.  
+  [Code](https://github.com/ymx10086/ResearchClaw) · [Docs](https://github.com/ymx10086/ResearchClaw#readme) · [![GitHub stars](https://img.shields.io/github/stars/ymx10086/ResearchClaw?style=flat-square)](https://github.com/ymx10086/ResearchClaw/stargazers)  
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
 ### Agent Runtimes & Orchestration
 
 - [LangGraph](https://docs.langchain.com/oss/python/langgraph) - Low-level orchestration framework for building, managing, and deploying long-running, stateful agents.  

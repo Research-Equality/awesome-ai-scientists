@@ -253,6 +253,26 @@ export const resources: Resource[] = [
     featured: true,
   },
   {
+    id: "researchclaw",
+    name: "ResearchClaw",
+    url: "https://github.com/ymx10086/ResearchClaw",
+    links: [
+      { kind: "code", url: "https://github.com/ymx10086/ResearchClaw" },
+      { kind: "docs", url: "https://github.com/ymx10086/ResearchClaw#readme" },
+    ],
+    description:
+      "Local-first AI research assistant for literature discovery, notes, experiment tracking, and paper writing across the scientific workflow.",
+    level: "Platform",
+    stage: "End-to-end",
+    loop: "Human-in-the-loop",
+    scope: "General",
+    domain: "General",
+    openness: "Open-source",
+    maturity: "Active Project",
+    layer: "Research Infrastructure & Platforms",
+    subgroup: "Research Platforms",
+  },
+  {
     id: "autogen",
     name: "AutoGen",
     url: "https://github.com/microsoft/autogen",
