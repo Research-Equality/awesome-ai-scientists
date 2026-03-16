@@ -40,6 +40,14 @@ export const zh: Copy = {
     maturity: "成熟度",
     link: "链接",
   },
+  linkKinds: {
+    homepage: "主页",
+    code: "代码",
+    paper: "论文",
+    docs: "文档",
+    video: "视频",
+    slides: "PPT",
+  },
   footer: {
     summary: "面向 Awesome-AI-Research 的极简双语静态目录页。",
   },

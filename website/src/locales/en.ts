@@ -5,6 +5,7 @@ import type {
   Loop,
   Maturity,
   Openness,
+  ResourceLinkKind,
   Scope,
   Stage,
 } from "../data/resources";
@@ -48,6 +49,7 @@ export type Copy = {
     maturity: string;
     link: string;
   };
+  linkKinds: Record<ResourceLinkKind, string>;
   footer: {
     summary: string;
   };
@@ -105,6 +107,14 @@ export const en: Copy = {
     openness: "Openness",
     maturity: "Maturity",
     link: "Link",
+  },
+  linkKinds: {
+    homepage: "Homepage",
+    code: "Code",
+    paper: "Paper",
+    docs: "Docs",
+    video: "Video",
+    slides: "Slides",
   },
   footer: {
     summary: "Minimal bilingual catalog for the Awesome-AI-Research repository.",

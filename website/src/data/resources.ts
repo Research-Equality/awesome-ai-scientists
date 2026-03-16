@@ -46,10 +46,24 @@ export type Layer =
   | "Workflow Modules"
   | "Benchmarks, Surveys & Meta-Resources";
 
+export type ResourceLinkKind =
+  | "homepage"
+  | "code"
+  | "paper"
+  | "docs"
+  | "video"
+  | "slides";
+
+export type ResourceLink = {
+  kind: ResourceLinkKind;
+  url: string;
+};
+
 export type Resource = {
   id: string;
   name: string;
   url: string;
+  links: ResourceLink[];
   description: string;
   level: Level;
   stage: Stage;
@@ -68,6 +82,16 @@ export const resources: Resource[] = [
     id: "ai-co-scientist",
     name: "AI co-scientist",
     url: "https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist",
+    links: [
+      {
+        kind: "homepage",
+        url: "https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist",
+      },
+      {
+        kind: "paper",
+        url: "https://storage.googleapis.com/coscientist_paper/ai_coscientist.pdf",
+      },
+    ],
     description:
       "Google Research's multi-agent scientific collaborator for proposing, debating, ranking, and refining hypotheses with human oversight.",
     level: "System",
@@ -85,6 +109,10 @@ export const resources: Resource[] = [
     id: "the-ai-scientist",
     name: "The AI Scientist",
     url: "https://github.com/SakanaAI/AI-Scientist",
+    links: [
+      { kind: "code", url: "https://github.com/SakanaAI/AI-Scientist" },
+      { kind: "paper", url: "https://arxiv.org/abs/2408.06292" },
+    ],
     description:
       "Open-source end-to-end system that turns a seed codebase into ideas, experiments, figures, reviews, and a draft paper.",
     level: "System",
@@ -102,6 +130,9 @@ export const resources: Resource[] = [
     id: "coscientist",
     name: "Coscientist",
     url: "https://www.nature.com/articles/s41586-023-06792-0",
+    links: [
+      { kind: "paper", url: "https://www.nature.com/articles/s41586-023-06792-0" },
+    ],
     description:
       "Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.",
     level: "System",
@@ -119,6 +150,10 @@ export const resources: Resource[] = [
     id: "piflow",
     name: "PiFlow",
     url: "https://github.com/amair-lab/PiFlow",
+    links: [
+      { kind: "code", url: "https://github.com/amair-lab/PiFlow" },
+      { kind: "paper", url: "https://arxiv.org/abs/2505.15047" },
+    ],
     description:
       "Principle-aware multi-agent framework for iterative scientific discovery across nanomaterials, biomolecules, and superconductors.",
     level: "System",
@@ -135,6 +170,10 @@ export const resources: Resource[] = [
     id: "the-ai-scientist-v2",
     name: "The AI Scientist-v2",
     url: "https://github.com/SakanaAI/AI-Scientist-v2",
+    links: [
+      { kind: "code", url: "https://github.com/SakanaAI/AI-Scientist-v2" },
+      { kind: "paper", url: "https://arxiv.org/abs/2504.08066" },
+    ],
     description:
       "Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.",
     level: "System",
@@ -151,6 +190,10 @@ export const resources: Resource[] = [
     id: "chemcrow",
     name: "ChemCrow",
     url: "https://github.com/ur-whitelab/chemcrow-public",
+    links: [
+      { kind: "code", url: "https://github.com/ur-whitelab/chemcrow-public" },
+      { kind: "paper", url: "https://arxiv.org/abs/2304.05376" },
+    ],
     description:
       "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
     level: "System",
@@ -167,6 +210,7 @@ export const resources: Resource[] = [
     id: "futurehouse",
     name: "FutureHouse",
     url: "https://www.futurehouse.org/",
+    links: [{ kind: "homepage", url: "https://www.futurehouse.org/" }],
     description:
       "Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.",
     level: "Platform",
@@ -184,6 +228,7 @@ export const resources: Resource[] = [
     id: "autogen",
     name: "AutoGen",
     url: "https://github.com/microsoft/autogen",
+    links: [{ kind: "code", url: "https://github.com/microsoft/autogen" }],
     description:
       "Multi-agent programming framework widely used to build research copilots, literature agents, and evaluation pipelines.",
     level: "Platform",
@@ -200,6 +245,10 @@ export const resources: Resource[] = [
     id: "langgraph",
     name: "LangGraph",
     url: "https://docs.langchain.com/oss/python/langgraph",
+    links: [
+      { kind: "docs", url: "https://docs.langchain.com/oss/python/langgraph" },
+      { kind: "code", url: "https://github.com/langchain-ai/langgraph" },
+    ],
     description:
       "Stateful graph runtime for long-running agent workflows with branching, memory, recovery, and explicit control flow.",
     level: "Platform",
@@ -216,6 +265,10 @@ export const resources: Resource[] = [
     id: "openhands",
     name: "OpenHands",
     url: "https://github.com/All-Hands-AI/OpenHands",
+    links: [
+      { kind: "code", url: "https://github.com/All-Hands-AI/OpenHands" },
+      { kind: "docs", url: "https://docs.all-hands.dev/" },
+    ],
     description:
       "Agent runtime for repo-level coding, execution, and issue-driven engineering that adapts well to research coding workflows.",
     level: "Platform",
@@ -232,6 +285,7 @@ export const resources: Resource[] = [
     id: "agentscope",
     name: "AgentScope",
     url: "https://github.com/agentscope-ai/agentscope",
+    links: [{ kind: "code", url: "https://github.com/agentscope-ai/agentscope" }],
     description:
       "Agent-oriented programming framework for composing multi-agent workflows with explicit roles, collaboration patterns, and tool integration.",
     level: "Platform",
@@ -248,6 +302,10 @@ export const resources: Resource[] = [
     id: "e2b",
     name: "E2B",
     url: "https://e2b.dev/",
+    links: [
+      { kind: "homepage", url: "https://e2b.dev/" },
+      { kind: "docs", url: "https://e2b.dev/docs" },
+    ],
     description:
       "Sandboxed execution layer for code, browser, and desktop-style tool use inside AI-driven research workflows.",
     level: "Platform",
@@ -264,6 +322,10 @@ export const resources: Resource[] = [
     id: "wandb",
     name: "Weights & Biases",
     url: "https://wandb.ai/",
+    links: [
+      { kind: "homepage", url: "https://wandb.ai/" },
+      { kind: "docs", url: "https://docs.wandb.ai/" },
+    ],
     description:
       "Experiment tracking and collaboration layer for instrumenting long-running research agents, ablations, and benchmark runs.",
     level: "Platform",
@@ -280,6 +342,7 @@ export const resources: Resource[] = [
     id: "elicit",
     name: "Elicit",
     url: "https://elicit.com/",
+    links: [{ kind: "homepage", url: "https://elicit.com/" }],
     description:
       "AI research assistant for literature search, evidence extraction, and structured review workflows.",
     level: "Module",
@@ -296,6 +359,10 @@ export const resources: Resource[] = [
     id: "paperqa2",
     name: "PaperQA2",
     url: "https://github.com/Future-House/paper-qa",
+    links: [
+      { kind: "code", url: "https://github.com/Future-House/paper-qa" },
+      { kind: "paper", url: "https://arxiv.org/abs/2409.13740" },
+    ],
     description:
       "Open-source literature QA and evidence-synthesis stack optimized for scientific documents and citation-grounded answers.",
     level: "Module",
@@ -313,6 +380,7 @@ export const resources: Resource[] = [
     id: "research-rabbit",
     name: "ResearchRabbit",
     url: "https://www.researchrabbit.ai/",
+    links: [{ kind: "homepage", url: "https://www.researchrabbit.ai/" }],
     description:
       "Visual citation-graph exploration tool for expanding seed papers into neighborhoods of related work.",
     level: "Module",
@@ -329,6 +397,7 @@ export const resources: Resource[] = [
     id: "consensus",
     name: "Consensus",
     url: "https://consensus.app/",
+    links: [{ kind: "homepage", url: "https://consensus.app/" }],
     description:
       "Scientific search engine geared toward claim-grounded answers, useful for scoping evidence and framing candidate hypotheses.",
     level: "Module",
@@ -345,6 +414,7 @@ export const resources: Resource[] = [
     id: "geneagent",
     name: "GeneAgent",
     url: "https://github.com/ncbi-nlp/GeneAgent",
+    links: [{ kind: "code", url: "https://github.com/ncbi-nlp/GeneAgent" }],
     description:
       "Domain-database agent for gene set analysis that shows how scientific tool use can be grounded in external biomedical resources.",
     level: "Module",
@@ -361,6 +431,10 @@ export const resources: Resource[] = [
     id: "optuna",
     name: "Optuna",
     url: "https://optuna.org/",
+    links: [
+      { kind: "homepage", url: "https://optuna.org/" },
+      { kind: "code", url: "https://github.com/optuna/optuna" },
+    ],
     description:
       "Open-source optimization framework for trial scheduling, hyperparameter search, and controlled experiment iteration.",
     level: "Module",
@@ -377,6 +451,7 @@ export const resources: Resource[] = [
     id: "storm",
     name: "STORM",
     url: "https://github.com/stanford-oval/storm",
+    links: [{ kind: "code", url: "https://github.com/stanford-oval/storm" }],
     description:
       "Open-source system for grounded long-form report generation with citation-backed outlining and drafting.",
     level: "Module",
@@ -394,6 +469,7 @@ export const resources: Resource[] = [
     id: "overleaf-ai",
     name: "Overleaf AI",
     url: "https://www.overleaf.com/about/ai-features",
+    links: [{ kind: "homepage", url: "https://www.overleaf.com/about/ai-features" }],
     description:
       "AI-assisted writing and editing features inside a collaborative LaTeX environment used heavily in academic publication workflows.",
     level: "Module",
@@ -410,6 +486,7 @@ export const resources: Resource[] = [
     id: "paperbench",
     name: "PaperBench",
     url: "https://openai.com/index/paperbench/",
+    links: [{ kind: "paper", url: "https://openai.com/index/paperbench/" }],
     description:
       "Benchmark that evaluates whether agents can reproduce frontier AI research workflows from understanding claims to running experiments.",
     level: "Benchmark",
@@ -427,6 +504,7 @@ export const resources: Resource[] = [
     id: "frontiers-in-science",
     name: "Frontiers in Science",
     url: "https://openai.com/index/frontierscience/",
+    links: [{ kind: "homepage", url: "https://openai.com/index/frontierscience/" }],
     description:
       "Benchmark suite for evaluating scientific reasoning across olympiad-style and research-style tasks.",
     level: "Benchmark",
@@ -443,6 +521,7 @@ export const resources: Resource[] = [
     id: "sciencebench",
     name: "ScienceBench",
     url: "https://sciencebench.com/",
+    links: [{ kind: "homepage", url: "https://sciencebench.com/" }],
     description:
       "Autonomous laboratory benchmark for end-to-end scientific operation and discovery with minimal human oversight.",
     level: "Benchmark",
@@ -459,6 +538,7 @@ export const resources: Resource[] = [
     id: "ai4research",
     name: "AI4Research",
     url: "https://ai-4-research.github.io/",
+    links: [{ kind: "homepage", url: "https://ai-4-research.github.io/" }],
     description:
       "Living survey site mapping AI for scientific research across domains, tasks, and papers.",
     level: "Survey",
@@ -476,6 +556,7 @@ export const resources: Resource[] = [
     id: "survey-ai-scientists",
     name: "A Survey of AI Scientists",
     url: "https://arxiv.org/abs/2510.23045",
+    links: [{ kind: "paper", url: "https://arxiv.org/abs/2510.23045" }],
     description:
       "Survey focused on automatic scientists and end-to-end AI research pipelines.",
     level: "Survey",
@@ -492,6 +573,10 @@ export const resources: Resource[] = [
     id: "openalex",
     name: "OpenAlex",
     url: "https://openalex.org/",
+    links: [
+      { kind: "homepage", url: "https://openalex.org/" },
+      { kind: "docs", url: "https://docs.openalex.org/" },
+    ],
     description:
       "Open index of works, authors, venues, institutions, and concepts that underpins many research-native retrieval systems.",
     level: "Dataset",
@@ -508,6 +593,7 @@ export const resources: Resource[] = [
     id: "semantic-scholar-api",
     name: "Semantic Scholar Academic Graph API",
     url: "https://www.semanticscholar.org/product/api",
+    links: [{ kind: "docs", url: "https://www.semanticscholar.org/product/api" }],
     description:
       "Structured paper metadata and graph endpoints for retrieval, paper linking, and citation analysis.",
     level: "Dataset",
@@ -524,6 +610,7 @@ export const resources: Resource[] = [
     id: "awesome-research",
     name: "awesome-research",
     url: "https://github.com/emptymalei/awesome-research",
+    links: [{ kind: "code", url: "https://github.com/emptymalei/awesome-research" }],
     description:
       "Curated collection organized around research workflow tasks, useful as a complementary module-first view.",
     level: "Meta",
@@ -540,6 +627,12 @@ export const resources: Resource[] = [
     id: "awesome-ai-scientists",
     name: "Awesome-AI-Scientists",
     url: "https://github.com/tsinghua-fib-lab/Awesome-AI-Scientists",
+    links: [
+      {
+        kind: "code",
+        url: "https://github.com/tsinghua-fib-lab/Awesome-AI-Scientists",
+      },
+    ],
     description:
       "Curated list centered on AI Scientist systems, complementary to this repository's broader layered-map perspective.",
     level: "Meta",

@@ -82,6 +82,7 @@ select {
 .brand-subtitle,
 .intro-block p,
 .resource-description,
+.resource-links,
 .footer-row p,
 .results-count {
   color: var(--muted);
@@ -248,6 +249,16 @@ select {
 .resource-tags span {
   color: #374151;
   font-size: 0.83rem;
+}
+
+.resource-links {
+  margin: 6px 0 0;
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.resource-links a {
+  color: var(--accent);
 }
 
 .site-footer {

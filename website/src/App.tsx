@@ -185,6 +185,17 @@ function App() {
                   <span>{`${copy.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
                   <span>{`${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`}</span>
                 </p>
+
+                <p className="resource-links">
+                  {resource.links.map((link, index) => (
+                    <span key={`${resource.id}-${link.kind}`}>
+                      {index > 0 ? " · " : ""}
+                      <a href={link.url} target="_blank" rel="noreferrer">
+                        {copy.linkKinds[link.kind]}
+                      </a>
+                    </span>
+                  ))}
+                </p>
               </li>
             ))}
           </ul>
