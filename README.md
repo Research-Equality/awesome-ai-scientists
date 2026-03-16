@@ -23,7 +23,11 @@ Awesome-AI-Research is a curated repository for the AI-for-Research ecosystem. I
 
 Website: [Awesome-AI-Research](https://research-equality.github.io/Awesome-AI-Research/)
 
-Survey: [Share how often you use these AI research tools, how useful they feel in real research workflows, and where they still fall short. We are collecting responses to understand actual usage patterns, identify high-value tools, and improve the curation priorities of this repository.](https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns)
+## Feedback & Community
+
+Share how often you use these AI research tools, how useful they feel in real research workflows, and where they still fall short. We are collecting responses to understand actual usage patterns, identify high-value tools, and improve the curation priorities of this repository.
+
+Feishu Form: [Link](https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns)
 
 ## Tag System
 
