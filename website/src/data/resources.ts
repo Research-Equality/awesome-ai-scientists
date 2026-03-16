@@ -215,6 +215,26 @@ export const resources: Resource[] = [
     subgroup: "Self-Improving / Self-Evolving Research Systems",
   },
   {
+    id: "evoscientist",
+    name: "EvoScientist",
+    url: "https://github.com/EvoScientist/EvoScientist",
+    links: [
+      { kind: "code", url: "https://github.com/EvoScientist/EvoScientist" },
+      { kind: "docs", url: "https://github.com/EvoScientist/EvoScientist#readme" },
+    ],
+    description:
+      "Self-evolving AI scientist framework for end-to-end scientific discovery with iterative improvement and human oversight.",
+    level: "System",
+    stage: "End-to-end",
+    loop: "Human-in-the-loop",
+    scope: "General",
+    domain: "General",
+    openness: "Open-source",
+    maturity: "Active Project",
+    layer: "Autonomous Research Systems",
+    subgroup: "Self-Improving / Self-Evolving Research Systems",
+  },
+  {
     id: "chemcrow",
     name: "ChemCrow",
     url: "https://github.com/ur-whitelab/chemcrow-public",

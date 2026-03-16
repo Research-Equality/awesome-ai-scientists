@@ -152,6 +152,8 @@ export const zh: Copy = {
       "面向纳米材料、生物分子和超导体等方向的多智能体迭代式科学发现框架。",
     "the-ai-scientist-v2":
       "The AI Scientist 的树搜索升级版本，面向更高质量的自动科学发现轨迹。",
+    evoscientist:
+      "自我演化的 AI Scientist 框架，面向端到端科学发现，并强调迭代改进与人在环监督。",
     chemcrow:
       "结合化学软件与工具调用的研究代理，用于合成与发现任务。",
     futurehouse:

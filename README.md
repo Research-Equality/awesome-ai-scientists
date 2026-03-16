@@ -43,10 +43,6 @@ Integrated systems that try to cover meaningful parts of the scientific loop.
   [Code](https://github.com/SakanaAI/AI-Scientist) · [Paper](https://arxiv.org/abs/2408.06292) · [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/AI-Scientist?style=flat-square)](https://github.com/SakanaAI/AI-Scientist/stargazers)  
   `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
 
-- [The AI Scientist-v2](https://github.com/SakanaAI/AI-Scientist-v2) - Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.  
-  [Code](https://github.com/SakanaAI/AI-Scientist-v2) · [Paper](https://arxiv.org/abs/2504.08066) · [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/AI-Scientist-v2?style=flat-square)](https://github.com/SakanaAI/AI-Scientist-v2/stargazers)  
-  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
-
 - [AI-Researcher](https://github.com/HKUDS/AI-Researcher) - Open-source autonomous research system for end-to-end scientific innovation, covering idea generation, implementation, experimentation, and paper writing.  
   [Code](https://github.com/HKUDS/AI-Researcher) · [Paper](https://arxiv.org/abs/2505.18705) · [![GitHub stars](https://img.shields.io/github/stars/HKUDS/AI-Researcher?style=flat-square)](https://github.com/HKUDS/AI-Researcher/stargazers)  
   `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Research Prototype`
@@ -54,6 +50,16 @@ Integrated systems that try to cover meaningful parts of the scientific loop.
 - [Robin](https://github.com/Future-House/robin) - Multi-agent system from FutureHouse for automating scientific discovery; public materials describe it as orchestrating agents to automate key intellectual steps of the scientific process.  
   [Code](https://github.com/Future-House/robin) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/robin?style=flat-square)](https://github.com/Future-House/robin/stargazers)  
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Biology` · `Openness: Open-source` · `Maturity: Research Prototype`
+
+### Self-Improving / Self-Evolving Research Systems
+
+- [The AI Scientist-v2](https://github.com/SakanaAI/AI-Scientist-v2) - Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.  
+  [Code](https://github.com/SakanaAI/AI-Scientist-v2) · [Paper](https://arxiv.org/abs/2504.08066) · [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/AI-Scientist-v2?style=flat-square)](https://github.com/SakanaAI/AI-Scientist-v2/stargazers)  
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
+- [EvoScientist](https://github.com/EvoScientist/EvoScientist) - Self-evolving AI scientist framework for end-to-end scientific discovery with iterative improvement and human oversight.  
+  [Code](https://github.com/EvoScientist/EvoScientist) · [Docs](https://github.com/EvoScientist/EvoScientist#readme) · [![GitHub stars](https://img.shields.io/github/stars/EvoScientist/EvoScientist?style=flat-square)](https://github.com/EvoScientist/EvoScientist/stargazers)  
+  `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
 
 ### Closed-Loop Discovery Systems
 

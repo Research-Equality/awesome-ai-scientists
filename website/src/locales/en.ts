@@ -229,6 +229,8 @@ export const en: Copy = {
       "Principle-aware multi-agent framework for iterative scientific discovery across nanomaterials, biomolecules, and superconductors.",
     "the-ai-scientist-v2":
       "Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.",
+    evoscientist:
+      "Self-evolving AI scientist framework for end-to-end scientific discovery with iterative improvement and human oversight.",
     chemcrow:
       "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
     futurehouse:
