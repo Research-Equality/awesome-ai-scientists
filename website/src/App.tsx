@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { resources } from "./data/resources";
+import {
+  getGitHubStarsBadgeUrl,
+  getGitHubStarsPageUrl,
+  getResourceGitHubRepo,
+  resources,
+} from "./data/resources";
 import { locales, type Language } from "./locales";
 
 const repositoryUrl = "https://github.com/Research-Equality/Awesome-AI-Research";
@@ -199,8 +204,11 @@ function App() {
           </div>
 
           <ul className="resource-list">
-            {filteredResources.map((resource) => (
-              <li className="resource-item" key={resource.id}>
+            {filteredResources.map((resource) => {
+              const githubRepo = getResourceGitHubRepo(resource);
+
+              return (
+                <li className="resource-item" key={resource.id}>
                 <div className="resource-main">
                   <div className="resource-copy">
                     <p className="resource-line">
@@ -212,6 +220,20 @@ function App() {
                       >
                         {resource.name}
                       </a>
+                      {githubRepo ? (
+                        <a
+                          className="resource-stars"
+                          href={getGitHubStarsPageUrl(githubRepo)}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img
+                            src={getGitHubStarsBadgeUrl(githubRepo)}
+                            alt={`${resource.name} GitHub stars`}
+                            loading="lazy"
+                          />
+                        </a>
+                      ) : null}
                       {" — "}
                       {copy.resourceDescriptions[resource.id] ?? resource.description}
                     </p>
@@ -238,8 +260,9 @@ function App() {
                     </ul>
                   </div>
                 </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </section>
       </main>

@@ -261,6 +261,17 @@ select {
   font-weight: 600;
 }
 
+.resource-stars {
+  display: inline-flex;
+  margin: 0 8px 0 10px;
+  vertical-align: text-top;
+}
+
+.resource-stars img {
+  display: block;
+  height: 20px;
+}
+
 .resource-name:hover {
   color: var(--accent);
 }

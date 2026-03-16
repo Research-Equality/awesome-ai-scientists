@@ -77,6 +77,34 @@ export type Resource = {
   featured?: boolean;
 };
 
+const githubRepoPattern = /^https?:\/\/github\.com\/([^/]+\/[^/#?]+?)(?:\.git)?(?:[/?#].*)?$/i;
+
+export function getGitHubRepoFromUrl(url: string): string | null {
+  const match = url.match(githubRepoPattern);
+  return match ? match[1] : null;
+}
+
+export function getResourceGitHubRepo(resource: Resource): string | null {
+  const candidateUrls = [resource.url, ...resource.links.map((link) => link.url)];
+
+  for (const url of candidateUrls) {
+    const repo = getGitHubRepoFromUrl(url);
+    if (repo) {
+      return repo;
+    }
+  }
+
+  return null;
+}
+
+export function getGitHubStarsBadgeUrl(repo: string): string {
+  return `https://img.shields.io/github/stars/${repo}?style=flat-square&label=stars`;
+}
+
+export function getGitHubStarsPageUrl(repo: string): string {
+  return `https://github.com/${repo}/stargazers`;
+}
+
 export const resources: Resource[] = [
   {
     id: "ai-co-scientist",
