@@ -94,13 +94,6 @@ function App() {
         </section>
 
         <section className="catalog-block">
-          <div className="catalog-header">
-            <h2>{copy.sections.content}</h2>
-            <span className="results-count">
-              {filteredResources.length} {copy.filters.results}
-            </span>
-          </div>
-
           <div className="filters-row">
             <label className="filter-field filter-search">
               <span>{copy.filters.search}</span>
@@ -161,21 +154,30 @@ function App() {
             </label>
           </div>
 
-          <div className="resource-list">
-            {filteredResources.map((resource) => (
-              <article className="resource-item" key={resource.id}>
-                <div className="resource-head">
-                  <h3>{resource.name}</h3>
-                  <a href={resource.url} target="_blank" rel="noreferrer">
-                    {copy.labels.link}
-                  </a>
-                </div>
+          <div className="catalog-header">
+            <h2>{copy.sections.content}</h2>
+            <span className="results-count">
+              {filteredResources.length} {copy.filters.results}
+            </span>
+          </div>
 
-                <p className="resource-description">
+          <ul className="resource-list">
+            {filteredResources.map((resource) => (
+              <li className="resource-item" key={resource.id}>
+                <p className="resource-line">
+                  <a
+                    className="resource-name"
+                    href={resource.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {resource.name}
+                  </a>
+                  {" — "}
                   {copy.resourceDescriptions[resource.id] ?? resource.description}
                 </p>
 
-                <div className="resource-tags">
+                <p className="resource-tags">
                   <span>{`${copy.labels.level}: ${copy.names.levels[resource.level]}`}</span>
                   <span>{`${copy.labels.stage}: ${copy.names.stages[resource.stage]}`}</span>
                   <span>{`${copy.labels.loop}: ${copy.names.loops[resource.loop]}`}</span>
@@ -183,10 +185,10 @@ function App() {
                   <span>{`${copy.labels.domain}: ${copy.names.domains[resource.domain]}`}</span>
                   <span>{`${copy.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
                   <span>{`${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`}</span>
-                </div>
-              </article>
+                </p>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       </main>
 

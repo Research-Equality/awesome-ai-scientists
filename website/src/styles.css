@@ -145,8 +145,7 @@ select {
 }
 
 .intro-block h1,
-.catalog-block h2,
-.resource-head h3 {
+.catalog-block h2 {
   margin: 0;
   letter-spacing: -0.03em;
 }
@@ -205,6 +204,9 @@ select {
 
 .resource-list {
   display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .resource-item {
@@ -217,29 +219,33 @@ select {
   padding-top: 0;
 }
 
-.resource-head h3 {
-  font-size: 1rem;
+.resource-line,
+.resource-tags {
+  margin: 0;
 }
 
-.resource-head a {
-  font-size: 0.9rem;
+.resource-line {
+  line-height: 1.75;
 }
 
-.resource-description {
-  margin: 10px 0 0;
-  line-height: 1.72;
+.resource-name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.resource-name:hover {
+  color: var(--accent);
 }
 
 .resource-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 6px 10px;
+  margin-top: 6px;
+  line-height: 1.7;
 }
 
 .resource-tags span {
-  display: inline-flex;
-  align-items: center;
   color: #374151;
   font-size: 0.83rem;
 }
@@ -270,8 +276,7 @@ select {
 
   .header-row,
   .footer-row,
-  .catalog-header,
-  .resource-head {
+  .catalog-header {
     flex-direction: column;
   }
 
