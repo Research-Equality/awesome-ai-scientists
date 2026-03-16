@@ -154,6 +154,8 @@ export const zh: Copy = {
       "The AI Scientist 的树搜索升级版本，面向更高质量的自动科学发现轨迹。",
     evoscientist:
       "自我演化的 AI Scientist 框架，面向端到端科学发现，并强调迭代改进与人在环监督。",
+    scientify:
+      "基于 OpenClaw 的 AI 原生科研系统，覆盖自动文献综述、实验执行、写作与迭代式研究工作流。",
     chemcrow:
       "结合化学软件与工具调用的研究代理，用于合成与发现任务。",
     futurehouse:

@@ -231,6 +231,8 @@ export const en: Copy = {
       "Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.",
     evoscientist:
       "Self-evolving AI scientist framework for end-to-end scientific discovery with iterative improvement and human oversight.",
+    scientify:
+      "AI-native scientific research system built around OpenClaw for automated literature review, experimentation, writing, and iterative research workflows.",
     chemcrow:
       "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
     futurehouse:

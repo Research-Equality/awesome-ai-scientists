@@ -61,6 +61,10 @@ Integrated systems that try to cover meaningful parts of the scientific loop.
   [Code](https://github.com/EvoScientist/EvoScientist) · [Docs](https://github.com/EvoScientist/EvoScientist#readme) · [![GitHub stars](https://img.shields.io/github/stars/EvoScientist/EvoScientist?style=flat-square)](https://github.com/EvoScientist/EvoScientist/stargazers)  
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
 
+- [Scientify](https://github.com/tsingyuai/scientify) - AI-native scientific research system built around OpenClaw for automated literature review, experimentation, writing, and iterative research workflows.  
+  [Code](https://github.com/tsingyuai/scientify) · [Docs](https://github.com/tsingyuai/scientify#readme) · [![GitHub stars](https://img.shields.io/github/stars/tsingyuai/scientify?style=flat-square)](https://github.com/tsingyuai/scientify/stargazers)  
+  `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
 ### Closed-Loop Discovery Systems
 
 - [Coscientist](https://www.nature.com/articles/s41586-023-06792-0) - Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.  

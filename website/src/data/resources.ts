@@ -235,6 +235,26 @@ export const resources: Resource[] = [
     subgroup: "Self-Improving / Self-Evolving Research Systems",
   },
   {
+    id: "scientify",
+    name: "Scientify",
+    url: "https://github.com/tsingyuai/scientify",
+    links: [
+      { kind: "code", url: "https://github.com/tsingyuai/scientify" },
+      { kind: "docs", url: "https://github.com/tsingyuai/scientify#readme" },
+    ],
+    description:
+      "AI-native scientific research system built around OpenClaw for automated literature review, experimentation, writing, and iterative research workflows.",
+    level: "System",
+    stage: "End-to-end",
+    loop: "Human-in-the-loop",
+    scope: "General",
+    domain: "General",
+    openness: "Open-source",
+    maturity: "Active Project",
+    layer: "Autonomous Research Systems",
+    subgroup: "Self-Improving / Self-Evolving Research Systems",
+  },
+  {
     id: "chemcrow",
     name: "ChemCrow",
     url: "https://github.com/ur-whitelab/chemcrow-public",
