@@ -938,8 +938,27 @@ select {
   margin: 14px 0 0;
 }
 
+.policy-card ol {
+  padding-left: 18px;
+  margin: 14px 0 0;
+}
+
 .policy-card li + li {
   margin-top: 8px;
+}
+
+.policy-steps li {
+  display: grid;
+  gap: 4px;
+}
+
+.policy-steps strong {
+  color: var(--text);
+}
+
+.policy-steps span {
+  color: var(--muted);
+  line-height: 1.68;
 }
 
 .policy-actions {

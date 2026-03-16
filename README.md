@@ -90,6 +90,15 @@ The repository includes a dedicated showcase website and a lightweight publishin
 - Social preview assets: [PNG](assets/social-preview.png) / [SVG](assets/social-preview.svg)
 <!--lint enable awesome-list-item-->
 
+Quick setup:
+
+<!--lint disable awesome-list-item-->
+- Go to `Settings > Pages`
+- Set `Source` to `GitHub Actions`
+- Push to `main` or run `Deploy Website` manually from the Actions tab
+- Open `https://research-equality.github.io/Awesome-AI-Research/` after the workflow succeeds
+<!--lint enable awesome-list-item-->
+
 ## 🧠 Autonomous Research Systems
 
 Systems in this layer attempt to cover a substantial portion of the research loop: idea generation, literature grounding, experiment planning, execution, iteration, analysis, or writing.

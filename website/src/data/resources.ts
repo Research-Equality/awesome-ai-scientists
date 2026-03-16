@@ -611,3 +611,34 @@ export const inspirations = [
     note: "Breadth in AI Scientist coverage and a useful baseline for ecosystem scope.",
   },
 ] as const;
+
+export const pagesSetupSteps = [
+  {
+    title: "Open repository settings",
+    body: "Go to GitHub → your repository → Settings. You need admin or maintainer permissions to configure Pages.",
+  },
+  {
+    title: "Set Pages source to GitHub Actions",
+    body: "Open Settings → Pages, then under Build and deployment set Source to GitHub Actions.",
+  },
+  {
+    title: "Keep the workflow on the default branch",
+    body: "This repository deploys through .github/workflows/deploy-website.yml on pushes to main and on manual runs.",
+  },
+  {
+    title: "Wait for Deploy Website to succeed",
+    body: "After you push to main, the Deploy Website workflow builds website/ and publishes the static artifact to GitHub Pages.",
+  },
+  {
+    title: "Open the project site URL",
+    body: "For this repository the expected project Pages URL is https://research-equality.github.io/Awesome-AI-Research/.",
+  },
+] as const;
+
+export const pagesQuickChecks = [
+  "Settings → Pages → Source is GitHub Actions.",
+  "Actions is enabled for the repository.",
+  "The default branch is main.",
+  "The Deploy Website workflow is green on the latest main commit.",
+  "If you add a custom domain later, update the site URL and metadata.",
+] as const;

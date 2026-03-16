@@ -21,6 +21,46 @@ Expected site URL:
 
 The workflow builds the Vite app in [`website/`](../website) and uploads the static artifact to GitHub Pages.
 
+This matches GitHub's current Actions-based Pages deployment flow documented in the official GitHub Pages docs:
+
+- [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+- [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+- [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+
+## Quick setup in 5 steps
+
+1. Open your repository on GitHub.
+2. Go to `Settings > Pages`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+4. Make sure [`.github/workflows/deploy-website.yml`](../.github/workflows/deploy-website.yml) is on `main`, then push a commit or run the workflow manually from the Actions tab.
+5. After the workflow succeeds, open `https://research-equality.github.io/Awesome-AI-Research/`.
+
+## What the workflow does
+
+- Installs dependencies from [`website/package-lock.json`](../website/package-lock.json)
+- Builds the Vite app in [`website/`](../website)
+- Publishes the generated static files from `website/dist`
+- Uses the repository name as the Pages base path automatically
+
+## If the site does not appear
+
+Check these first:
+
+- `Settings > Pages > Source` is really set to `GitHub Actions`
+- the latest run of `Deploy Website` is green
+- the default branch is `main`
+- Actions are allowed for the repository
+- you are opening the project-site URL with the repository name in the path
+
+## If you add a custom domain later
+
+The current setup targets the default GitHub project Pages URL.
+
+If you later attach a custom domain, also update:
+
+- the canonical and social URL metadata in [`website/index.html`](../website/index.html)
+- the hard-coded site URL used in [`website/src/App.tsx`](../website/src/App.tsx)
+
 ## Website metadata
 
 The website includes:

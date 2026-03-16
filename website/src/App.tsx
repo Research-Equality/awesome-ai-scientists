@@ -2,6 +2,8 @@ import { startTransition, useDeferredValue, useEffect, useState } from "react";
 import {
   inspirations,
   layerNotes,
+  pagesQuickChecks,
+  pagesSetupSteps,
   resources,
   workflowNotes,
   type Domain,
@@ -607,6 +609,40 @@ function App() {
             </article>
 
             <article className="policy-card">
+              <h3>GitHub Pages setup</h3>
+              <p>
+                If you want this site online, the repository only needs one
+                GitHub setting plus the existing deployment workflow.
+              </p>
+              <ol className="policy-steps">
+                {pagesSetupSteps.map((step) => (
+                  <li key={step.title}>
+                    <strong>{step.title}</strong>
+                    <span>{step.body}</span>
+                  </li>
+                ))}
+              </ol>
+              <div className="policy-actions">
+                <a
+                  className="button button-primary"
+                  href={`${repositoryUrl}/blob/main/.github/workflows/deploy-website.yml`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View deploy workflow
+                </a>
+                <a
+                  className="button button-secondary"
+                  href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Official Pages docs
+                </a>
+              </div>
+            </article>
+
+            <article className="policy-card">
               <h3>Website publishing</h3>
               <p>
                 GitHub Pages deployment, social preview assets, and metadata
@@ -628,6 +664,33 @@ function App() {
                   rel="noreferrer"
                 >
                   View Pages workflow
+                </a>
+              </div>
+            </article>
+
+            <article className="policy-card">
+              <h3>Quick checks</h3>
+              <ul>
+                {pagesQuickChecks.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="policy-actions">
+                <a
+                  className="button button-primary"
+                  href={`${repositoryUrl}/blob/main/docs/publishing.md`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open step-by-step guide
+                </a>
+                <a
+                  className="button button-secondary"
+                  href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub Pages guide
                 </a>
               </div>
             </article>

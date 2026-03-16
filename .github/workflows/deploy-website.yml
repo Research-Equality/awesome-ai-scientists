@@ -39,7 +39,7 @@ jobs:
 
       - name: Build website
         env:
-          VITE_BASE_PATH: /Awesome-AI-Research/
+          VITE_BASE_PATH: ${{ format('/{0}/', github.event.repository.name) }}
         run: npm run build --prefix website
 
       - name: Upload artifact
