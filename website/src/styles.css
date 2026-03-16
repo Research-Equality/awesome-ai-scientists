@@ -175,6 +175,55 @@ select {
   line-height: 1.75;
 }
 
+.survey-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-muted);
+}
+
+.survey-title,
+.survey-description {
+  margin: 0;
+}
+
+.survey-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.survey-description {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.survey-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.survey-link:hover {
+  background: #dbeafe;
+}
+
 .catalog-block {
   padding-top: 28px;
 }
@@ -419,6 +468,11 @@ select {
 
   .header-link {
     text-align: center;
+  }
+
+  .survey-callout {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .resource-main {

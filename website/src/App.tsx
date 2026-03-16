@@ -8,6 +8,7 @@ import {
 import { locales, type Language } from "./locales";
 
 const repositoryUrl = "https://github.com/Research-Equality/Awesome-AI-Research";
+const surveyUrl = "https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns";
 
 function App() {
   const [language, setLanguage] = useState<Language>("en");
@@ -134,6 +135,15 @@ function App() {
         <section className="intro-block">
           <h1>Awesome-AI-Research</h1>
           <p>{copy.hero.purpose}</p>
+          <div className="survey-callout">
+            <div>
+              <p className="survey-title">{copy.survey.title}</p>
+              <p className="survey-description">{copy.survey.description}</p>
+            </div>
+            <a className="survey-link" href={surveyUrl} target="_blank" rel="noreferrer">
+              {copy.survey.cta}
+            </a>
+          </div>
         </section>
 
         <section className="catalog-block">

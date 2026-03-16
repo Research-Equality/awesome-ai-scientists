@@ -17,6 +17,12 @@ export const zh: Copy = {
       "Awesome-AI-Research 用“系统层级”和“科研流程阶段”两个维度整理 AI for Research 生态，让系统、平台、模块、基准、综述和数据资源能在同一结构中被清楚理解。",
     github: "查看 GitHub",
   },
+  survey: {
+    title: "邀请问卷",
+    description:
+      "欢迎填写你使用这些 AI 科研工具的频率和真实感受，反馈会帮助我们继续完善这个目录。",
+    cta: "填写问卷",
+  },
   sections: {
     content: "仓库内容",
   },

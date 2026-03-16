@@ -26,6 +26,11 @@ export type Copy = {
     purpose: string;
     github: string;
   };
+  survey: {
+    title: string;
+    description: string;
+    cta: string;
+  };
   sections: {
     content: string;
   };
@@ -84,6 +89,12 @@ export const en: Copy = {
     purpose:
       "Awesome-AI-Research organizes the AI for Research ecosystem by system level and research workflow stage, so systems, platforms, modules, benchmarks, surveys, and datasets can be read in one structure.",
     github: "View on GitHub",
+  },
+  survey: {
+    title: "Usage Survey",
+    description:
+      "Share how often you use these AI research tools and how you feel about them. The responses will help improve the curation.",
+    cta: "Fill in the survey",
   },
   sections: {
     content: "Repository Content",
