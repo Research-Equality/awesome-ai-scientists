@@ -28,7 +28,7 @@ Website: [Awesome-AI-Research](https://research-equality.github.io/Awesome-AI-Re
 
 Share how often you use these AI research tools, how useful they feel in real research workflows, and where they still fall short. We are collecting responses to understand actual usage patterns, identify high-value tools, and improve the curation priorities of this repository.
 
-Feishu Form: [Link](https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns)
+Feishu Form: [AI Research Tools Usage Survey](https://my.feishu.cn/share/base/form/shrcnnGoTojyKyJ3MYWi15b13Ns)
 
 ## Tag System
 
