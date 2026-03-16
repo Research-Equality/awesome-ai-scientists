@@ -28,6 +28,16 @@ export type Copy = {
   sections: {
     content: string;
   };
+  filters: {
+    search: string;
+    searchPlaceholder: string;
+    level: string;
+    stage: string;
+    domain: string;
+    openness: string;
+    all: string;
+    results: string;
+  };
   labels: {
     level: string;
     stage: string;
@@ -75,6 +85,16 @@ export const en: Copy = {
   },
   sections: {
     content: "Repository Content",
+  },
+  filters: {
+    search: "Search",
+    searchPlaceholder: "Search by name or description",
+    level: "Level",
+    stage: "Stage",
+    domain: "Domain",
+    openness: "Openness",
+    all: "All",
+    results: "results",
   },
   labels: {
     level: "Level",

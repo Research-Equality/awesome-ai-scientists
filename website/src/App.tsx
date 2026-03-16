@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
-import { layerNotes, resources } from "./data/resources";
+import { resources } from "./data/resources";
 import { locales, type Language } from "./locales";
 
 const repositoryUrl = "https://github.com/Research-Equality/Awesome-AI-Research";
 
 function App() {
   const [language, setLanguage] = useState<Language>("en");
+  const [query, setQuery] = useState("");
+  const [level, setLevel] = useState<string>("All");
+  const [stage, setStage] = useState<string>("All");
+  const [domain, setDomain] = useState<string>("All");
+  const [openness, setOpenness] = useState<string>("All");
   const copy = locales[language];
 
   useEffect(() => {
@@ -13,16 +18,26 @@ function App() {
     document.title = copy.documentTitle;
   }, [copy.documentTitle, language]);
 
-  const layers = layerNotes.map((layer) => {
-    const items = resources.filter((resource) => resource.layer === layer.title);
-    const subgroups = Array.from(new Set(items.map((resource) => resource.subgroup))).map(
-      (subgroup) => ({
-        subgroup,
-        items: items.filter((resource) => resource.subgroup === subgroup),
-      }),
-    );
+  const levelOptions = Array.from(new Set(resources.map((resource) => resource.level)));
+  const stageOptions = Array.from(new Set(resources.map((resource) => resource.stage)));
+  const domainOptions = Array.from(new Set(resources.map((resource) => resource.domain)));
+  const opennessOptions = Array.from(new Set(resources.map((resource) => resource.openness)));
 
-    return { layer, subgroups };
+  const normalizedQuery = query.trim().toLowerCase();
+
+  const filteredResources = resources.filter((resource) => {
+    const description = copy.resourceDescriptions[resource.id] ?? resource.description;
+    const matchesQuery =
+      normalizedQuery.length === 0 ||
+      resource.name.toLowerCase().includes(normalizedQuery) ||
+      description.toLowerCase().includes(normalizedQuery);
+
+    const matchesLevel = level === "All" || resource.level === level;
+    const matchesStage = stage === "All" || resource.stage === stage;
+    const matchesDomain = domain === "All" || resource.domain === domain;
+    const matchesOpenness = openness === "All" || resource.openness === openness;
+
+    return matchesQuery && matchesLevel && matchesStage && matchesDomain && matchesOpenness;
   });
 
   return (
@@ -76,62 +91,102 @@ function App() {
         <section className="intro-block">
           <h1>Awesome-AI-Research</h1>
           <p>{copy.hero.purpose}</p>
-          <nav className="layer-nav" aria-label="Repository categories">
-            {layers.map(({ layer }, index) => (
-              <a key={layer.title} href={`#layer-${index + 1}`}>
-                {copy.names.layers[layer.title]}
-              </a>
-            ))}
-          </nav>
         </section>
 
         <section className="catalog-block">
-          <h2>{copy.sections.content}</h2>
+          <div className="catalog-header">
+            <h2>{copy.sections.content}</h2>
+            <span className="results-count">
+              {filteredResources.length} {copy.filters.results}
+            </span>
+          </div>
 
-          {layers.map(({ layer, subgroups }, index) => (
-            <section className="layer-section" id={`layer-${index + 1}`} key={layer.title}>
-              <header className="layer-header">
-                <span className="layer-index">{`0${index + 1}`}</span>
-                <div>
-                  <h3>{copy.names.layers[layer.title]}</h3>
-                  <p>{copy.layerDescriptions[layer.title]}</p>
+          <div className="filters-row">
+            <label className="filter-field filter-search">
+              <span>{copy.filters.search}</span>
+              <input
+                type="search"
+                value={query}
+                placeholder={copy.filters.searchPlaceholder}
+                onChange={(event) => setQuery(event.target.value)}
+              />
+            </label>
+
+            <label className="filter-field">
+              <span>{copy.filters.level}</span>
+              <select value={level} onChange={(event) => setLevel(event.target.value)}>
+                <option value="All">{copy.filters.all}</option>
+                {levelOptions.map((value) => (
+                  <option key={value} value={value}>
+                    {copy.names.levels[value]}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="filter-field">
+              <span>{copy.filters.stage}</span>
+              <select value={stage} onChange={(event) => setStage(event.target.value)}>
+                <option value="All">{copy.filters.all}</option>
+                {stageOptions.map((value) => (
+                  <option key={value} value={value}>
+                    {copy.names.stages[value]}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="filter-field">
+              <span>{copy.filters.domain}</span>
+              <select value={domain} onChange={(event) => setDomain(event.target.value)}>
+                <option value="All">{copy.filters.all}</option>
+                {domainOptions.map((value) => (
+                  <option key={value} value={value}>
+                    {copy.names.domains[value]}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="filter-field">
+              <span>{copy.filters.openness}</span>
+              <select value={openness} onChange={(event) => setOpenness(event.target.value)}>
+                <option value="All">{copy.filters.all}</option>
+                {opennessOptions.map((value) => (
+                  <option key={value} value={value}>
+                    {copy.names.openness[value]}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <div className="resource-list">
+            {filteredResources.map((resource) => (
+              <article className="resource-item" key={resource.id}>
+                <div className="resource-head">
+                  <h3>{resource.name}</h3>
+                  <a href={resource.url} target="_blank" rel="noreferrer">
+                    {copy.labels.link}
+                  </a>
                 </div>
-              </header>
 
-              {subgroups.map(({ subgroup, items }) => (
-                <section className="subgroup-section" key={`${layer.title}-${subgroup}`}>
-                  <h4>{copy.subgroupNames[subgroup] ?? subgroup}</h4>
+                <p className="resource-description">
+                  {copy.resourceDescriptions[resource.id] ?? resource.description}
+                </p>
 
-                  <div className="resource-list">
-                    {items.map((resource) => (
-                      <article className="resource-card" key={resource.id}>
-                        <div className="resource-head">
-                          <h5>{resource.name}</h5>
-                          <a href={resource.url} target="_blank" rel="noreferrer">
-                            {copy.labels.link}
-                          </a>
-                        </div>
-
-                        <p className="resource-description">
-                          {copy.resourceDescriptions[resource.id] ?? resource.description}
-                        </p>
-
-                        <div className="resource-tags">
-                          <span>{`${copy.labels.level}: ${copy.names.levels[resource.level]}`}</span>
-                          <span>{`${copy.labels.stage}: ${copy.names.stages[resource.stage]}`}</span>
-                          <span>{`${copy.labels.loop}: ${copy.names.loops[resource.loop]}`}</span>
-                          <span>{`${copy.labels.scope}: ${copy.names.scopes[resource.scope]}`}</span>
-                          <span>{`${copy.labels.domain}: ${copy.names.domains[resource.domain]}`}</span>
-                          <span>{`${copy.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
-                          <span>{`${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`}</span>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </section>
-          ))}
+                <div className="resource-tags">
+                  <span>{`${copy.labels.level}: ${copy.names.levels[resource.level]}`}</span>
+                  <span>{`${copy.labels.stage}: ${copy.names.stages[resource.stage]}`}</span>
+                  <span>{`${copy.labels.loop}: ${copy.names.loops[resource.loop]}`}</span>
+                  <span>{`${copy.labels.scope}: ${copy.names.scopes[resource.scope]}`}</span>
+                  <span>{`${copy.labels.domain}: ${copy.names.domains[resource.domain]}`}</span>
+                  <span>{`${copy.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
+                  <span>{`${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`}</span>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
       </main>
 

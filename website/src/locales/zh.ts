@@ -20,6 +20,16 @@ export const zh: Copy = {
   sections: {
     content: "仓库内容",
   },
+  filters: {
+    search: "搜索",
+    searchPlaceholder: "按名称或简介搜索",
+    level: "层级",
+    stage: "阶段",
+    domain: "领域",
+    openness: "开放性",
+    all: "全部",
+    results: "条结果",
+  },
   labels: {
     level: "层级",
     stage: "阶段",
