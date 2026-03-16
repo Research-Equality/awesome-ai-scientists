@@ -94,6 +94,14 @@ export type Copy = {
     chineseReadme: string;
     backToTop: string;
   };
+  content: {
+    browse: string;
+    layers: string;
+    workflow: string;
+    tags: string;
+    allResources: string;
+    openGithub: string;
+  };
   names: {
     layers: Record<Layer, string>;
     levels: Record<Level, string>;
@@ -104,6 +112,7 @@ export type Copy = {
     openness: Record<Openness, string>;
     maturity: Record<Maturity, string>;
   };
+  subgroupNames: Record<string, string>;
   resourceDescriptions: Record<string, string>;
 };
 
@@ -271,6 +280,14 @@ export const en: Copy = {
     chineseReadme: "中文 README",
     backToTop: "Back to top",
   },
+  content: {
+    browse: "Browse resources",
+    layers: "Layers",
+    workflow: "Workflow",
+    tags: "Tags",
+    allResources: "All resources",
+    openGithub: "Open on GitHub",
+  },
   names: {
     layers: {
       "Autonomous Research Systems": "Autonomous Research Systems",
@@ -332,6 +349,33 @@ export const en: Copy = {
       "Production-like": "Production-like",
       Archived: "Archived",
     },
+  },
+  subgroupNames: {
+    "Agent Runtimes for Research": "Agent Runtimes for Research",
+    "Benchmarks & Evaluation Suites": "Benchmarks & Evaluation Suites",
+    "Closed-Loop Discovery Systems": "Closed-Loop Discovery Systems",
+    "Data, Environment & Tool Use": "Data, Environment & Tool Use",
+    Datasets: "Datasets",
+    "Domain-Specific Autonomous Discovery Systems":
+      "Domain-Specific Autonomous Discovery Systems",
+    "End-to-End AI Scientist Systems": "End-to-End AI Scientist Systems",
+    "Experiment Execution & Optimization":
+      "Experiment Execution & Optimization",
+    "Literature Discovery & Review": "Literature Discovery & Review",
+    "Memory / Observability / Collaboration Layers":
+      "Memory / Observability / Collaboration Layers",
+    "Other Awesome Lists": "Other Awesome Lists",
+    "Research Ideation & Hypothesis Generation":
+      "Research Ideation & Hypothesis Generation",
+    "Research Platforms": "Research Platforms",
+    "Research Workflow Orchestration": "Research Workflow Orchestration",
+    "Self-Improving / Self-Evolving Research Systems":
+      "Self-Improving / Self-Evolving Research Systems",
+    "Surveys & Taxonomies": "Surveys & Taxonomies",
+    "Tool-Use & Execution Infrastructure":
+      "Tool-Use & Execution Infrastructure",
+    "Writing, Publication & Communication":
+      "Writing, Publication & Communication",
   },
   resourceDescriptions: {
     "ai-co-scientist":

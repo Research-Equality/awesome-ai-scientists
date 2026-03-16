@@ -159,6 +159,14 @@ export const zh: Copy = {
     chineseReadme: "中文 README",
     backToTop: "返回顶部",
   },
+  content: {
+    browse: "浏览资源",
+    layers: "层级",
+    workflow: "流程",
+    tags: "标签",
+    allResources: "完整内容",
+    openGithub: "在 GitHub 打开",
+  },
   names: {
     layers: {
       "Autonomous Research Systems": "自主研究系统",
@@ -218,6 +226,26 @@ export const zh: Copy = {
       "Production-like": "接近生产",
       Archived: "已归档",
     },
+  },
+  subgroupNames: {
+    "Agent Runtimes for Research": "科研代理运行时",
+    "Benchmarks & Evaluation Suites": "基准与评测套件",
+    "Closed-Loop Discovery Systems": "闭环发现系统",
+    "Data, Environment & Tool Use": "数据、环境与工具使用",
+    Datasets: "数据集",
+    "Domain-Specific Autonomous Discovery Systems": "领域特定自主发现系统",
+    "End-to-End AI Scientist Systems": "端到端 AI Scientist 系统",
+    "Experiment Execution & Optimization": "实验执行与优化",
+    "Literature Discovery & Review": "文献发现与综述",
+    "Memory / Observability / Collaboration Layers": "记忆、观测与协作层",
+    "Other Awesome Lists": "其他 Awesome 列表",
+    "Research Ideation & Hypothesis Generation": "研究构思与假设生成",
+    "Research Platforms": "科研平台",
+    "Research Workflow Orchestration": "科研工作流编排",
+    "Self-Improving / Self-Evolving Research Systems": "自我改进 / 自我演化研究系统",
+    "Surveys & Taxonomies": "综述与分类体系",
+    "Tool-Use & Execution Infrastructure": "工具使用与执行基础设施",
+    "Writing, Publication & Communication": "写作、发表与传播",
   },
   resourceDescriptions: {
     "ai-co-scientist":
