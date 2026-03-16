@@ -1,95 +1,43 @@
 import { useEffect, useState } from "react";
-import { layerNotes, resources, workflowNotes } from "./data/resources";
+import { layerNotes, resources } from "./data/resources";
 import { locales, type Language } from "./locales";
 
 const repositoryUrl = "https://github.com/Research-Equality/Awesome-AI-Research";
 
-function getInitialLanguage(): Language {
-  if (typeof window === "undefined") {
-    return "en";
-  }
-
-  const saved = window.localStorage.getItem("awesome-ai-research-language");
-  if (saved === "en" || saved === "zh") {
-    return saved;
-  }
-
-  return window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
-}
-
 function App() {
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
+  const [language, setLanguage] = useState<Language>("en");
   const copy = locales[language];
 
   useEffect(() => {
-    window.localStorage.setItem("awesome-ai-research-language", language);
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.title = copy.documentTitle;
   }, [copy.documentTitle, language]);
 
-  const layerSections = layerNotes.map((layer) => {
-    const layerResources = resources.filter((resource) => resource.layer === layer.title);
-    const subgroups = Array.from(new Set(layerResources.map((resource) => resource.subgroup)));
-
-    return {
-      layer,
-      subgroups: subgroups.map((subgroup) => ({
+  const layers = layerNotes.map((layer) => {
+    const items = resources.filter((resource) => resource.layer === layer.title);
+    const subgroups = Array.from(new Set(items.map((resource) => resource.subgroup))).map(
+      (subgroup) => ({
         subgroup,
-        items: layerResources.filter((resource) => resource.subgroup === subgroup),
-      })),
-    };
+        items: items.filter((resource) => resource.subgroup === subgroup),
+      }),
+    );
+
+    return { layer, subgroups };
   });
 
-  const workflowStages = workflowNotes.filter((item) => item.stage !== "End-to-end");
-  const sampleResource =
-    resources.find((resource) => resource.id === "the-ai-scientist") ?? resources[0];
-
-  const getDescription = (id: string, fallback: string) =>
-    copy.resourceDescriptions[id] ?? fallback;
-
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
-    <div className="site-shell">
+    <div className="page-shell">
       <header className="site-header">
-        <div className="container site-header-inner">
-          <a
-            className="brand"
-            href="#top"
-            onClick={(event) => {
-              event.preventDefault();
-              scrollTo("top");
-            }}
-          >
-            <span className="brand-mark">AIR</span>
-            <span className="brand-copy">
-              <strong>Awesome-AI-Research</strong>
-              <small>{copy.hero.eyebrow}</small>
-            </span>
-          </a>
+        <div className="container header-row">
+          <div className="brand-block">
+            <a className="brand-title" href="#top">
+              Awesome-AI-Research
+            </a>
+            <p className="brand-subtitle">{copy.hero.subtitle}</p>
+          </div>
 
-          <nav className="site-nav" aria-label="Sections">
-            {layerSections.map(({ layer }, index) => (
-              <a
-                key={layer.title}
-                href={`#layer-${index + 1}`}
-                onClick={(event) => {
-                  event.preventDefault();
-                  scrollTo(`layer-${index + 1}`);
-                }}
-              >
-                {copy.names.layers[layer.title]}
-              </a>
-            ))}
-          </nav>
-
-          <div className="site-actions">
-            <div className="language-switch" role="group" aria-label={copy.switcher.label}>
+          <div className="header-actions">
+            <div className="language-switch" role="group" aria-label="Language">
               <button
                 className={language === "zh" ? "is-active" : ""}
                 type="button"
@@ -106,138 +54,91 @@ function App() {
               </button>
             </div>
 
-            <a className="button button-ghost" href={repositoryUrl} target="_blank" rel="noreferrer">
-              GitHub
+            <a className="header-link" href={`${repositoryUrl}/blob/main/README.md`} target="_blank" rel="noreferrer">
+              {copy.header.englishReadme}
+            </a>
+            <a
+              className="header-link"
+              href={`${repositoryUrl}/blob/main/README.zh-CN.md`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {copy.header.chineseReadme}
+            </a>
+            <a className="header-link header-link-primary" href={repositoryUrl} target="_blank" rel="noreferrer">
+              {copy.header.github}
             </a>
           </div>
         </div>
       </header>
 
-      <main className="page" id="top">
-        <section className="hero">
-          <div className="container hero-layout">
-            <div className="hero-copy">
-              <h1>Awesome-AI-Research</h1>
-              <p className="hero-subtitle">{copy.hero.subtitle}</p>
-              <p className="hero-purpose">{copy.hero.body}</p>
-
-              <div className="hero-actions">
-                <button
-                  className="button button-primary"
-                  type="button"
-                  onClick={() => scrollTo("layer-1")}
-                >
-                  {copy.content.browse}
-                </button>
-                <a className="button button-secondary" href={repositoryUrl} target="_blank" rel="noreferrer">
-                  {copy.content.openGithub}
-                </a>
-              </div>
-            </div>
-
-            <aside className="hero-side">
-              <div className="meta-block">
-                <span className="meta-label">{copy.content.layers}</span>
-                <div className="chip-row">
-                  {layerSections.map(({ layer }) => (
-                    <span className="chip" key={layer.title}>
-                      {copy.names.layers[layer.title]}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="meta-block">
-                <span className="meta-label">{copy.content.workflow}</span>
-                <div className="chip-row">
-                  {workflowStages.map((item) => (
-                    <span className="chip" key={item.stage}>
-                      {copy.names.stages[item.stage]}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="meta-block">
-                <span className="meta-label">{copy.content.tags}</span>
-                <div className="tag-line">
-                  <span>{`${copy.tags.labels.level}: ${copy.names.levels[sampleResource.level]}`}</span>
-                  <span>{`${copy.tags.labels.stage}: ${copy.names.stages[sampleResource.stage]}`}</span>
-                  <span>{`${copy.tags.labels.loop}: ${copy.names.loops[sampleResource.loop]}`}</span>
-                  <span>{`${copy.tags.labels.domain}: ${copy.names.domains[sampleResource.domain]}`}</span>
-                  <span>{`${copy.tags.labels.openness}: ${copy.names.openness[sampleResource.openness]}`}</span>
-                </div>
-              </div>
-            </aside>
-          </div>
+      <main className="container main-content" id="top">
+        <section className="intro-block">
+          <h1>Awesome-AI-Research</h1>
+          <p>{copy.hero.purpose}</p>
+          <nav className="layer-nav" aria-label="Repository categories">
+            {layers.map(({ layer }, index) => (
+              <a key={layer.title} href={`#layer-${index + 1}`}>
+                {copy.names.layers[layer.title]}
+              </a>
+            ))}
+          </nav>
         </section>
 
-        <section className="content">
-          <div className="container">
-            <div className="section-heading">
-              <h2>{copy.content.allResources}</h2>
-            </div>
+        <section className="catalog-block">
+          <h2>{copy.sections.content}</h2>
 
-            {layerSections.map(({ layer, subgroups }, index) => (
-              <section className="layer-section" id={`layer-${index + 1}`} key={layer.title}>
-                <header className="layer-header">
-                  <div>
-                    <span className="layer-number">{`0${index + 1}`}</span>
-                    <h3>{copy.names.layers[layer.title]}</h3>
-                  </div>
-                  <p>{copy.layers.items[layer.title].body}</p>
-                </header>
-
-                <div className="subgroup-list">
-                  {subgroups.map(({ subgroup, items }) => (
-                    <section className="subgroup-section" key={`${layer.title}-${subgroup}`}>
-                      <h4>{copy.subgroupNames[subgroup] ?? subgroup}</h4>
-
-                      <div className="resource-list">
-                        {items.map((resource) => (
-                          <article className="resource-item" key={resource.id}>
-                            <div className="resource-main">
-                              <h5>
-                                <a href={resource.url} target="_blank" rel="noreferrer">
-                                  {resource.name}
-                                </a>
-                              </h5>
-                              <p>{getDescription(resource.id, resource.description)}</p>
-                            </div>
-
-                            <div className="resource-meta">
-                              <span>{`${copy.tags.labels.level}: ${copy.names.levels[resource.level]}`}</span>
-                              <span>{`${copy.tags.labels.stage}: ${copy.names.stages[resource.stage]}`}</span>
-                              <span>{`${copy.tags.labels.loop}: ${copy.names.loops[resource.loop]}`}</span>
-                              <span>{`${copy.tags.labels.domain}: ${copy.names.domains[resource.domain]}`}</span>
-                              <span>{`${copy.tags.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
-                            </div>
-                          </article>
-                        ))}
-                      </div>
-                    </section>
-                  ))}
+          {layers.map(({ layer, subgroups }, index) => (
+            <section className="layer-section" id={`layer-${index + 1}`} key={layer.title}>
+              <header className="layer-header">
+                <span className="layer-index">{`0${index + 1}`}</span>
+                <div>
+                  <h3>{copy.names.layers[layer.title]}</h3>
+                  <p>{copy.layerDescriptions[layer.title]}</p>
                 </div>
-              </section>
-            ))}
-          </div>
+              </header>
+
+              {subgroups.map(({ subgroup, items }) => (
+                <section className="subgroup-section" key={`${layer.title}-${subgroup}`}>
+                  <h4>{copy.subgroupNames[subgroup] ?? subgroup}</h4>
+
+                  <div className="resource-list">
+                    {items.map((resource) => (
+                      <article className="resource-card" key={resource.id}>
+                        <div className="resource-head">
+                          <h5>{resource.name}</h5>
+                          <a href={resource.url} target="_blank" rel="noreferrer">
+                            {copy.labels.link}
+                          </a>
+                        </div>
+
+                        <p className="resource-description">
+                          {copy.resourceDescriptions[resource.id] ?? resource.description}
+                        </p>
+
+                        <div className="resource-tags">
+                          <span>{`${copy.labels.level}: ${copy.names.levels[resource.level]}`}</span>
+                          <span>{`${copy.labels.stage}: ${copy.names.stages[resource.stage]}`}</span>
+                          <span>{`${copy.labels.loop}: ${copy.names.loops[resource.loop]}`}</span>
+                          <span>{`${copy.labels.scope}: ${copy.names.scopes[resource.scope]}`}</span>
+                          <span>{`${copy.labels.domain}: ${copy.names.domains[resource.domain]}`}</span>
+                          <span>{`${copy.labels.openness}: ${copy.names.openness[resource.openness]}`}</span>
+                          <span>{`${copy.labels.maturity}: ${copy.names.maturity[resource.maturity]}`}</span>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </section>
+          ))}
         </section>
       </main>
 
       <footer className="site-footer">
-        <div className="container footer-inner">
+        <div className="container footer-row">
           <p>{copy.footer.summary}</p>
-          <div className="footer-links">
-            <a href={repositoryUrl} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <a href={`${repositoryUrl}/blob/main/README.md`} target="_blank" rel="noreferrer">
-              {copy.footer.englishReadme}
-            </a>
-            <a href={`${repositoryUrl}/blob/main/README.zh-CN.md`} target="_blank" rel="noreferrer">
-              {copy.footer.chineseReadme}
-            </a>
-          </div>
+          <a href="#top">Top</a>
         </div>
       </footer>
     </div>

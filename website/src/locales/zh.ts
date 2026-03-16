@@ -3,169 +3,35 @@ import type { Copy } from "./en";
 export const zh: Copy = {
   documentTitle: "Awesome-AI-Research",
   switcher: {
-    label: "语言",
     zh: "中文",
     en: "EN",
   },
-  nav: {
-    overview: "概览",
-    why: "项目定位",
-    layers: "分层结构",
-    workflow: "科研流程",
-    featured: "精选资源",
-    tags: "标签体系",
+  header: {
     github: "GitHub",
+    englishReadme: "README",
+    chineseReadme: "中文 README",
   },
   hero: {
-    eyebrow: "AI 原生科研生态地图",
     subtitle: "一个面向 AI 原生科研系统的分层生态地图。",
-    body:
-      "这是一个以系统层级和科研流程为双轴组织的 AI for Research 开源策展项目，用更清晰的结构理解整个生态。",
-    explore: "开始浏览",
-    github: "GitHub",
-    diagramTitle: "结构概览",
-    diagramBody: "四层结构，用科研流程这一条线索来阅读。",
+    purpose:
+      "Awesome-AI-Research 用“系统层级”和“科研流程阶段”两个维度整理 AI for Research 生态，让系统、平台、模块、基准、综述和数据资源能在同一结构中被清楚理解。",
+    github: "查看 GitHub",
   },
-  why: {
-    eyebrow: "为什么这个仓库不一样",
-    title: "重点是清晰的信息结构，而不是噱头",
-    text:
-      "Awesome-AI-Research 希望成为一个安静、清晰、可长期维护的生态地图，而不是平铺链接的资源页。",
-    items: [
-      {
-        title: "不只是论文",
-        body:
-          "只有当论文是某个系统、基准或综述的核心参考时，才会作为主要条目出现。",
-      },
-      {
-        title: "不只是工具",
-        body:
-          "资源按照它在研究栈中的真实角色分类，而不是按模糊的产品营销术语归类。",
-      },
-      {
-        title: "不只是 AI Scientist 项目",
-        body:
-          "仓库同时覆盖基础设施、工作流模块和元资源，从而更完整地表达研究生态。",
-      },
-      {
-        title: "它是一张分层地图",
-        body:
-          "每个条目都同时放在系统层级和科研流程两个维度里理解。",
-      },
-    ],
+  sections: {
+    content: "仓库内容",
   },
-  layers: {
-    eyebrow: "四层结构",
-    title: "把不同类型的对象分开，生态才更容易理解",
-    text:
-      "仓库将系统、基础设施、模块、基准与综述明确分层，帮助你快速判断一个项目在生态中的位置。",
-    stats: {
-      resources: "条目数",
-      types: "典型对象",
-    },
-    items: {
-      "Autonomous Research Systems": {
-        title: "Autonomous Research Systems",
-        body: "尝试覆盖科研闭环中关键环节的综合型研究系统。",
-      },
-      "Research Infrastructure & Platforms": {
-        title: "Research Infrastructure & Platforms",
-        body: "支撑研究代理运行的底层能力，包括编排、执行、记忆、观测与协作。",
-      },
-      "Workflow Modules": {
-        title: "Workflow Modules",
-        body: "面向文献、构思、规划、编码、实验、分析、写作等阶段的单点能力模块。",
-      },
-      "Benchmarks, Surveys & Meta-Resources": {
-        title: "Benchmarks, Surveys & Meta-Resources",
-        body: "帮助整个生态保持可比较、可评估、可导航的基准、综述、数据与元资源层。",
-      },
-    },
-  },
-  workflow: {
-    eyebrow: "科研流程视角",
-    title: "第二条线索：科研活动本身",
-    text:
-      "除了按系统层级理解资源之外，也可以按它最直接支持的科研阶段来阅读整个仓库。",
-    helper: "选择一个阶段，查看仓库中对应的代表性覆盖。",
-    related: "代表性条目",
-    stages: {
-      Literature: {
-        title: "文献",
-        note: "检索、综述、引用图谱探索与 related work 支持。",
-      },
-      Ideation: {
-        title: "构思",
-        note: "假设生成、新颖性搜索与 research gap 挖掘。",
-      },
-      Planning: {
-        title: "规划",
-        note: "实验方案设计、消融设计与评估计划。",
-      },
-      Data: {
-        title: "数据与工具",
-        note: "科学工具调用、运行环境、数据准备与执行能力。",
-      },
-      Coding: {
-        title: "科研编码",
-        note: "研究型 coding agent、方法实现与仓库级工程化。",
-      },
-      Experiment: {
-        title: "实验",
-        note: "闭环实验、优化流程与试验调度。",
-      },
-      Analysis: {
-        title: "分析",
-        note: "基准评测、结果解释、误差分析与可观测性。",
-      },
-      Writing: {
-        title: "写作",
-        note: "论文起草、图表、审稿回复与科研传播。",
-      },
-    },
-  },
-  featured: {
-    eyebrow: "精选资源",
-    title: "一组能代表整体结构的示例",
-    text:
-      "这些条目分布在四个层级中，用来快速展示仓库的覆盖面与策展取向。",
-    open: "打开资源",
-  },
-  tags: {
-    eyebrow: "标签系统",
-    title: "用统一标签把不同对象放进同一坐标系",
-    text:
-      "每个条目都使用一致的标签维度，便于跨层级、跨流程阶段进行比较。",
-    exampleEyebrow: "示例",
-    exampleTitle: "统一标签让异构资源也能被清楚比较",
-    exampleBody:
-      "系统、基准、综述看起来差异很大，但在统一标签结构下仍然可以被放到同一地图中理解。",
-    labels: {
-      level: "层级",
-      stage: "阶段",
-      loop: "闭环方式",
-      scope: "范围",
-      domain: "领域",
-      openness: "开放性",
-      maturity: "成熟度",
-    },
+  labels: {
+    level: "层级",
+    stage: "阶段",
+    loop: "闭环方式",
+    scope: "范围",
+    domain: "领域",
+    openness: "开放性",
+    maturity: "成熟度",
+    link: "链接",
   },
   footer: {
-    summary:
-      "一个双语、结构化、适合长期维护的 AI 原生科研生态地图。",
-    contributing: "参与贡献",
-    license: "许可证",
-    englishReadme: "English README",
-    chineseReadme: "中文 README",
-    backToTop: "返回顶部",
-  },
-  content: {
-    browse: "浏览资源",
-    layers: "层级",
-    workflow: "流程",
-    tags: "标签",
-    allResources: "完整内容",
-    openGithub: "在 GitHub 打开",
+    summary: "面向 Awesome-AI-Research 的极简双语静态目录页。",
   },
   names: {
     layers: {
@@ -227,6 +93,16 @@ export const zh: Copy = {
       Archived: "已归档",
     },
   },
+  layerDescriptions: {
+    "Autonomous Research Systems":
+      "覆盖科研闭环中关键环节的综合系统，从构思到执行、分析或写作。",
+    "Research Infrastructure & Platforms":
+      "支撑 AI 原生科研的运行底座，包括编排、执行、记忆、观测与协作能力。",
+    "Workflow Modules":
+      "服务于文献、构思、规划、编码、实验、分析和写作等阶段的单点能力模块。",
+    "Benchmarks, Surveys & Meta-Resources":
+      "帮助生态保持可比较、可评估、可导航的基准、综述、数据集与元资源。",
+  },
   subgroupNames: {
     "Agent Runtimes for Research": "科研代理运行时",
     "Benchmarks & Evaluation Suites": "基准与评测套件",
@@ -251,18 +127,62 @@ export const zh: Copy = {
     "ai-co-scientist":
       "Google Research 的多智能体科学协作系统，用于提出、辩论、排序并迭代优化研究假设。",
     "the-ai-scientist":
-      "面向端到端科研闭环的开源系统，可从种子代码库出发生成想法、实验、图表、评审与论文草稿。",
+      "开源的端到端科研系统，可从种子代码库出发生成想法、实验、图表、评审与论文草稿。",
     coscientist:
       "面向化学研究的代理系统，可规划合成路径、检索文档、控制仪器并循环执行实验流程。",
+    piflow:
+      "面向纳米材料、生物分子和超导体等方向的多智能体迭代式科学发现框架。",
+    "the-ai-scientist-v2":
+      "The AI Scientist 的树搜索升级版本，面向更高质量的自动科学发现轨迹。",
+    chemcrow:
+      "结合化学软件与工具调用的研究代理，用于合成与发现任务。",
     futurehouse:
-      "以自动化科学发现为核心叙事的 research-native 平台，强调 agent 系统与领域工具结合。",
+      "以自动化科学发现为核心目标的 research-native 平台，强调代理系统与领域工具结合。",
+    autogen:
+      "常用于构建研究助手、文献代理和评测流程的多智能体编程框架。",
+    langgraph:
+      "适合长流程代理任务的有状态图运行时，支持分支、记忆、恢复与显式控制流。",
+    openhands:
+      "面向仓库级编码、执行和 issue 驱动工程任务的代理运行时，也适用于研究编码工作流。",
+    agentscope:
+      "支持显式角色、协作模式和工具集成的 agent-oriented 编程框架。",
+    e2b:
+      "为 AI 驱动科研流程提供代码、浏览器和桌面式工具调用的沙箱执行层。",
+    wandb:
+      "用于长流程研究代理、消融实验与基准运行的实验追踪与协作层。",
+    elicit:
+      "面向文献搜索、证据抽取与结构化综述流程的 AI 研究助手。",
     paperqa2:
-      "面向科学文献的问答与证据综合工具栈，强调引用支撑与文献级可追溯性。",
+      "面向科学文献的开源问答与证据综合工具栈，强调引用支撑。",
+    "research-rabbit":
+      "用于从种子论文扩展相关工作网络的可视化引用图谱探索工具。",
+    consensus:
+      "以 claim-grounded answer 为特色的科学搜索引擎，适合构思研究问题与假设。",
+    geneagent:
+      "面向基因集分析的领域数据库代理，展示了科学工具使用如何接入外部生物医学资源。",
+    optuna:
+      "用于试验调度、超参数搜索和受控实验迭代的开源优化框架。",
     storm:
-      "用于生成带引用依据的长篇研究报告，支持结构化提纲与草稿生成。",
+      "支持引用支撑提纲与草稿生成的开源长篇研究报告生成系统。",
+    "overleaf-ai":
+      "集成在协作式 LaTeX 环境中的 AI 写作与编辑功能，适合学术发表流程。",
     paperbench:
-      "用于评估代理能否复现前沿 AI 研究流程的基准，从理解论文主张到执行实验。",
+      "用于评估代理能否从理解论文主张到运行实验，完整复现前沿 AI 研究流程的基准。",
+    "frontiers-in-science":
+      "面向奥赛式与研究式科学推理任务的基准套件。",
+    sciencebench:
+      "面向端到端科学操作与发现、且尽量减少人工介入的自主实验室基准。",
     ai4research:
-      "持续更新的 AI for Research 调研站点，按领域、任务与论文组织整个研究生态。",
+      "持续更新的 AI for Research 调研站点，覆盖不同领域、任务与论文。",
+    "survey-ai-scientists":
+      "聚焦自动科学家与端到端 AI 研究流程的综述。",
+    openalex:
+      "开放的学术作品、作者、机构、期刊与概念索引，是许多研究检索系统的重要底层资源。",
+    "semantic-scholar-api":
+      "提供论文元数据与图谱接口，可用于检索、论文关联与引用分析。",
+    "awesome-research":
+      "按研究工作流任务组织的 curated list，可作为本仓库的补充视角。",
+    "awesome-ai-scientists":
+      "聚焦 AI Scientist 系统的 curated list，与本仓库更广义的分层地图视角互补。",
   },
 };

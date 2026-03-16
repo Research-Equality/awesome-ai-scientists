@@ -9,98 +9,37 @@ import type {
   Stage,
 } from "../data/resources";
 
-type WorkflowStage = Exclude<Stage, "End-to-end">;
-
 export type Copy = {
   documentTitle: string;
   switcher: {
-    label: string;
     zh: string;
     en: string;
   };
-  nav: {
-    overview: string;
-    why: string;
-    layers: string;
-    workflow: string;
-    featured: string;
-    tags: string;
+  header: {
     github: string;
+    englishReadme: string;
+    chineseReadme: string;
   };
   hero: {
-    eyebrow: string;
     subtitle: string;
-    body: string;
-    explore: string;
+    purpose: string;
     github: string;
-    diagramTitle: string;
-    diagramBody: string;
   };
-  why: {
-    eyebrow: string;
-    title: string;
-    text: string;
-    items: Array<{
-      title: string;
-      body: string;
-    }>;
+  sections: {
+    content: string;
   };
-  layers: {
-    eyebrow: string;
-    title: string;
-    text: string;
-    stats: {
-      resources: string;
-      types: string;
-    };
-    items: Record<Layer, { title: string; body: string }>;
-  };
-  workflow: {
-    eyebrow: string;
-    title: string;
-    text: string;
-    helper: string;
-    related: string;
-    stages: Record<WorkflowStage, { title: string; note: string }>;
-  };
-  featured: {
-    eyebrow: string;
-    title: string;
-    text: string;
-    open: string;
-  };
-  tags: {
-    eyebrow: string;
-    title: string;
-    text: string;
-    exampleEyebrow: string;
-    exampleTitle: string;
-    exampleBody: string;
-    labels: {
-      level: string;
-      stage: string;
-      loop: string;
-      scope: string;
-      domain: string;
-      openness: string;
-      maturity: string;
-    };
+  labels: {
+    level: string;
+    stage: string;
+    loop: string;
+    scope: string;
+    domain: string;
+    openness: string;
+    maturity: string;
+    link: string;
   };
   footer: {
     summary: string;
-    contributing: string;
-    license: string;
-    englishReadme: string;
-    chineseReadme: string;
-    backToTop: string;
-  };
-  content: {
-    browse: string;
-    layers: string;
-    workflow: string;
-    tags: string;
-    allResources: string;
-    openGithub: string;
   };
   names: {
     layers: Record<Layer, string>;
@@ -112,6 +51,7 @@ export type Copy = {
     openness: Record<Openness, string>;
     maturity: Record<Maturity, string>;
   };
+  layerDescriptions: Record<Layer, string>;
   subgroupNames: Record<string, string>;
   resourceDescriptions: Record<string, string>;
 };
@@ -119,174 +59,35 @@ export type Copy = {
 export const en: Copy = {
   documentTitle: "Awesome-AI-Research",
   switcher: {
-    label: "Language",
     zh: "中文",
     en: "EN",
   },
-  nav: {
-    overview: "Overview",
-    why: "Why Different",
-    layers: "Layers",
-    workflow: "Workflow",
-    featured: "Featured",
-    tags: "Tags",
+  header: {
     github: "GitHub",
+    englishReadme: "README",
+    chineseReadme: "中文 README",
   },
   hero: {
-    eyebrow: "AI-native research map",
-    subtitle: "A layered map of AI-native research systems.",
-    body:
-      "A curated open-source view of the AI for Research ecosystem, organized by system level and workflow stage.",
-    explore: "Explore",
-    github: "GitHub",
-    diagramTitle: "Structure at a glance",
-    diagramBody: "Four layers, read through a workflow-oriented lens.",
+    subtitle: "A curated, layered map of AI-native research systems.",
+    purpose:
+      "Awesome-AI-Research organizes the AI for Research ecosystem by system level and research workflow stage, so systems, platforms, modules, benchmarks, surveys, and datasets can be read in one structure.",
+    github: "View on GitHub",
   },
-  why: {
-    eyebrow: "Why this repo is different",
-    title: "Structured for clarity, not for hype",
-    text:
-      "Awesome-AI-Research is meant to be a calm, legible map of the field rather than a flat list of links.",
-    items: [
-      {
-        title: "Not just papers",
-        body:
-          "Papers appear when they serve as the canonical reference for a meaningful system, benchmark, or survey.",
-      },
-      {
-        title: "Not just tools",
-        body:
-          "Resources are grouped by what they are in the stack, not by loose product-language categories.",
-      },
-      {
-        title: "Not just AI Scientist projects",
-        body:
-          "The map includes infrastructure, workflow modules, and meta-resources needed to understand the full ecosystem.",
-      },
-      {
-        title: "A layered map",
-        body:
-          "Every entry is positioned through both system level and research workflow stage.",
-      },
-    ],
+  sections: {
+    content: "Repository Content",
   },
-  layers: {
-    eyebrow: "Four-layer overview",
-    title: "The ecosystem is easier to read when layers stay distinct",
-    text:
-      "The repository separates systems, infrastructure, modules, and meta-resources so each resource is easier to place and compare.",
-    stats: {
-      resources: "Resources",
-      types: "Typical objects",
-    },
-    items: {
-      "Autonomous Research Systems": {
-        title: "Autonomous Research Systems",
-        body:
-          "Integrated systems that try to close a meaningful part of the scientific loop.",
-      },
-      "Research Infrastructure & Platforms": {
-        title: "Research Infrastructure & Platforms",
-        body:
-          "The runtime substrate: orchestration, execution, memory, observability, and collaboration.",
-      },
-      "Workflow Modules": {
-        title: "Workflow Modules",
-        body:
-          "Stage-specific building blocks for literature, ideation, planning, coding, experiments, analysis, and writing.",
-      },
-      "Benchmarks, Surveys & Meta-Resources": {
-        title: "Benchmarks, Surveys & Meta-Resources",
-        body:
-          "Evaluation, survey, dataset, and meta layers that keep the landscape legible and comparable.",
-      },
-    },
-  },
-  workflow: {
-    eyebrow: "Workflow view",
-    title: "A second lens: the research workflow",
-    text:
-      "Modules and systems can also be understood by the stage of research activity they support most directly.",
-    helper:
-      "Select a stage to see representative coverage from the repository.",
-    related: "Representative resources",
-    stages: {
-      Literature: {
-        title: "Literature",
-        note: "Retrieval, synthesis, citation graph exploration, and related work support.",
-      },
-      Ideation: {
-        title: "Ideation",
-        note: "Hypothesis generation, novelty search, and research gap discovery.",
-      },
-      Planning: {
-        title: "Planning",
-        note: "Protocol design, ablations, and evaluation planning.",
-      },
-      Data: {
-        title: "Data",
-        note: "Scientific tool use, runtimes, data preparation, and execution environments.",
-      },
-      Coding: {
-        title: "Coding",
-        note: "Research coding agents, implementation workflows, and repo-level engineering.",
-      },
-      Experiment: {
-        title: "Experiment",
-        note: "Closed-loop experimentation, optimization, and trial scheduling.",
-      },
-      Analysis: {
-        title: "Analysis",
-        note: "Benchmarking, result interpretation, error analysis, and observability.",
-      },
-      Writing: {
-        title: "Writing",
-        note: "Drafting, figures, reviewer response, and research communication.",
-      },
-    },
-  },
-  featured: {
-    eyebrow: "Featured resources",
-    title: "A small set of representative entries",
-    text:
-      "Featured resources span the four layers and show how the map covers systems, infrastructure, modules, and meta-resources together.",
-    open: "Open resource",
-  },
-  tags: {
-    eyebrow: "Tag system",
-    title: "A compact schema for comparison",
-    text:
-      "Every entry uses the same tag dimensions so mixed objects remain comparable across layers and workflow stages.",
-    exampleEyebrow: "Example",
-    exampleTitle: "Consistent tags make heterogeneous resources legible",
-    exampleBody:
-      "A system, a benchmark, and a survey can still be compared when they share a common structure.",
-    labels: {
-      level: "Level",
-      stage: "Stage",
-      loop: "Loop",
-      scope: "Scope",
-      domain: "Domain",
-      openness: "Openness",
-      maturity: "Maturity",
-    },
+  labels: {
+    level: "Level",
+    stage: "Stage",
+    loop: "Loop",
+    scope: "Scope",
+    domain: "Domain",
+    openness: "Openness",
+    maturity: "Maturity",
+    link: "Link",
   },
   footer: {
-    summary:
-      "A bilingual, structured, long-term-maintainable map of the AI-native research ecosystem.",
-    contributing: "Contributing",
-    license: "License",
-    englishReadme: "English README",
-    chineseReadme: "中文 README",
-    backToTop: "Back to top",
-  },
-  content: {
-    browse: "Browse resources",
-    layers: "Layers",
-    workflow: "Workflow",
-    tags: "Tags",
-    allResources: "All resources",
-    openGithub: "Open on GitHub",
+    summary: "Minimal bilingual catalog for the Awesome-AI-Research repository.",
   },
   names: {
     layers: {
@@ -350,6 +151,16 @@ export const en: Copy = {
       Archived: "Archived",
     },
   },
+  layerDescriptions: {
+    "Autonomous Research Systems":
+      "Systems that attempt to cover meaningful parts of the scientific loop, from ideation to execution, analysis, or writing.",
+    "Research Infrastructure & Platforms":
+      "The runtime substrate for AI-native research: orchestration, execution, memory, observability, and collaboration.",
+    "Workflow Modules":
+      "Stage-specific building blocks for literature review, ideation, planning, coding, experimentation, analysis, and writing.",
+    "Benchmarks, Surveys & Meta-Resources":
+      "Benchmarks, surveys, datasets, and other reference layers that keep the ecosystem legible and comparable.",
+  },
   subgroupNames: {
     "Agent Runtimes for Research": "Agent Runtimes for Research",
     "Benchmarks & Evaluation Suites": "Benchmarks & Evaluation Suites",
@@ -379,21 +190,65 @@ export const en: Copy = {
   },
   resourceDescriptions: {
     "ai-co-scientist":
-      "Multi-agent scientific collaborator for proposing, debating, ranking, and refining hypotheses with human oversight.",
+      "Google Research's multi-agent scientific collaborator for proposing, debating, ranking, and refining hypotheses with human oversight.",
     "the-ai-scientist":
       "Open-source end-to-end system that turns a seed codebase into ideas, experiments, figures, reviews, and a draft paper.",
     coscientist:
       "Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.",
+    piflow:
+      "Principle-aware multi-agent framework for iterative scientific discovery across nanomaterials, biomolecules, and superconductors.",
+    "the-ai-scientist-v2":
+      "Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.",
+    chemcrow:
+      "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
     futurehouse:
       "Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.",
+    autogen:
+      "Multi-agent programming framework widely used to build research copilots, literature agents, and evaluation pipelines.",
+    langgraph:
+      "Stateful graph runtime for long-running agent workflows with branching, memory, recovery, and explicit control flow.",
+    openhands:
+      "Agent runtime for repo-level coding, execution, and issue-driven engineering that adapts well to research coding workflows.",
+    agentscope:
+      "Agent-oriented programming framework for composing multi-agent workflows with explicit roles, collaboration patterns, and tool integration.",
+    e2b:
+      "Sandboxed execution layer for code, browser, and desktop-style tool use inside AI-driven research workflows.",
+    wandb:
+      "Experiment tracking and collaboration layer for instrumenting long-running research agents, ablations, and benchmark runs.",
+    elicit:
+      "AI research assistant for literature search, evidence extraction, and structured review workflows.",
     paperqa2:
-      "Literature QA and evidence-synthesis stack optimized for scientific documents and citation-grounded answers.",
+      "Open-source literature QA and evidence-synthesis stack optimized for scientific documents and citation-grounded answers.",
+    "research-rabbit":
+      "Visual citation-graph exploration tool for expanding seed papers into neighborhoods of related work.",
+    consensus:
+      "Scientific search engine geared toward claim-grounded answers, useful for scoping evidence and framing candidate hypotheses.",
+    geneagent:
+      "Domain-database agent for gene set analysis that shows how scientific tool use can be grounded in external biomedical resources.",
+    optuna:
+      "Open-source optimization framework for trial scheduling, hyperparameter search, and controlled experiment iteration.",
     storm:
-      "Grounded long-form report generation system with citation-backed outlining and drafting.",
+      "Open-source system for grounded long-form report generation with citation-backed outlining and drafting.",
+    "overleaf-ai":
+      "AI-assisted writing and editing features inside a collaborative LaTeX environment used heavily in academic publication workflows.",
     paperbench:
-      "Benchmark for whether agents can reproduce frontier AI research workflows from understanding claims to running experiments.",
+      "Benchmark that evaluates whether agents can reproduce frontier AI research workflows from understanding claims to running experiments.",
+    "frontiers-in-science":
+      "Benchmark suite for evaluating scientific reasoning across olympiad-style and research-style tasks.",
+    sciencebench:
+      "Autonomous laboratory benchmark for end-to-end scientific operation and discovery with minimal human oversight.",
     ai4research:
       "Living survey site mapping AI for scientific research across domains, tasks, and papers.",
+    "survey-ai-scientists":
+      "Survey focused on automatic scientists and end-to-end AI research pipelines.",
+    openalex:
+      "Open index of works, authors, venues, institutions, and concepts that underpins many research-native retrieval systems.",
+    "semantic-scholar-api":
+      "Structured paper metadata and graph endpoints for retrieval, paper linking, and citation analysis.",
+    "awesome-research":
+      "Curated collection organized around research workflow tasks, useful as a complementary module-first view.",
+    "awesome-ai-scientists":
+      "Curated list centered on AI Scientist systems, complementary to this repository's broader layered-map perspective.",
   },
 };
 

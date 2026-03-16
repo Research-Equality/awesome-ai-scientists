@@ -13,79 +13,185 @@
     <img src="https://img.shields.io/badge/License-MIT-111827.svg?style=flat-square" alt="License: MIT">
   </p>
   <p><strong>A curated, layered map of AI-native research systems.</strong></p>
-  <p>Organized through two lenses: system level and research workflow stage.</p>
-  <img src="assets/banner.svg" alt="Awesome-AI-Research banner" width="100%">
+  <p>Organized by system level and research workflow stage.</p>
 </div>
 
-Awesome-AI-Research is a curated repository for the AI for Research ecosystem. It is designed as a structured map rather than a flat directory of papers or tools.
+Awesome-AI-Research is a curated repository for the AI for Research ecosystem. It groups systems, platforms, modules, benchmarks, surveys, datasets, and meta-resources in one structure.
 
-The repository and the GitHub Pages website both support bilingual presentation:
-
-<!--lint disable awesome-list-item-->
-- Website: language toggle in the top-right corner (`中文 / EN`)
-- Repository: [README.md](./README.md) for English, [README.zh-CN.md](./README.zh-CN.md) for Simplified Chinese
-<!--lint enable awesome-list-item-->
-
-## Why This Repo Is Different
-
-<!--lint disable awesome-list-item-->
-- **Not just papers.** Papers appear when they are the canonical reference for a meaningful system, benchmark, or survey.
-- **Not just tools.** Resources are grouped by what they are in the stack, not by vague product labels.
-- **Not just AI Scientist projects.** The map includes infrastructure, workflow modules, and meta-resources.
-- **A layered map.** Each entry is positioned by both object level and workflow stage.
-<!--lint enable awesome-list-item-->
-
-## Structure
-
-<div align="center">
-  <img src="assets/structure-diagram.svg" alt="Structure diagram for the AI-native research ecosystem" width="100%">
-</div>
-
-### Four Layers
-
-<!--lint disable awesome-list-item-->
-- **Autonomous Research Systems**: loop-spanning systems that cover meaningful parts of the scientific workflow
-- **Research Infrastructure & Platforms**: orchestration, execution, memory, observability, and collaboration substrate
-- **Workflow Modules**: stage-specific capabilities for literature, ideation, planning, coding, experiments, analysis, and writing
-- **Benchmarks, Surveys & Meta-Resources**: evaluation and reference layers that keep the ecosystem legible and comparable
-<!--lint enable awesome-list-item-->
-
-### Workflow Stages
-
-`Literature` · `Ideation` · `Planning` · `Data` · `Coding` · `Experiment` · `Analysis` · `Writing`
-
-## Featured Resources
-
-- [The AI Scientist](https://github.com/SakanaAI/AI-Scientist) - Open-source end-to-end system for ideas, experiments, figures, reviews, and draft papers. `Level: System` · `Stage: End-to-end`.
-- [AI co-scientist](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist) - Multi-agent scientific collaborator for hypothesis proposal, debate, ranking, and refinement. `Level: System` · `Stage: End-to-end`.
-- [FutureHouse](https://www.futurehouse.org/) - Research-native platform focused on automating scientific discovery with agents and domain-aware tooling. `Level: Platform` · `Stage: End-to-end`.
-- [PaperQA2](https://github.com/Future-House/paper-qa) - Literature QA and evidence-synthesis stack for scientific documents. `Level: Module` · `Stage: Literature`.
-- [STORM](https://github.com/stanford-oval/storm) - Citation-grounded long-form report generation for research writing workflows. `Level: Module` · `Stage: Writing`.
-- [PaperBench](https://openai.com/index/paperbench/) - Benchmark for whether agents can reproduce frontier AI research workflows. `Level: Benchmark` · `Stage: End-to-end`.
-- [AI4Research](https://ai-4-research.github.io/) - Living survey site for AI in scientific research across tasks and domains. `Level: Survey` · `Stage: End-to-end`.
+Website: [research-equality.github.io/Awesome-AI-Research](https://research-equality.github.io/Awesome-AI-Research/)
 
 ## Tag System
 
-Each entry follows the same compact schema:
+Each entry follows the same schema:
 
 `Level` · `Stage` · `Loop` · `Scope` · `Domain` · `Openness` · `Maturity`
 
-Example:
-
-`Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
-
 Full definitions live in [docs/tag-system.md](./docs/tag-system.md).
+
+## 🧠 Autonomous Research Systems
+
+Integrated systems that try to cover meaningful parts of the scientific loop.
+
+<!--lint disable awesome-list-item-->
+
+### End-to-End AI Scientist Systems
+
+- [AI co-scientist](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist) - Multi-agent scientific collaborator from Google Research that proposes, debates, ranks, and refines hypotheses with scientist oversight.
+  `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Paper-only` · `Maturity: Research Prototype`
+- [The AI Scientist](https://github.com/SakanaAI/AI-Scientist) - Open-source end-to-end system that turns a seed codebase into ideas, experiments, figures, reviews, and a draft paper.
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
+### Closed-Loop Discovery Systems
+
+- [Coscientist](https://www.nature.com/articles/s41586-023-06792-0) - Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: Domain-specific` · `Domain: Chemistry` · `Openness: Paper-only` · `Maturity: Research Prototype`
+- [PiFlow](https://github.com/amair-lab/PiFlow) - Principle-aware multi-agent framework for iterative scientific discovery across nanomaterials, biomolecules, and superconductors.
+  `Level: System` · `Stage: Experiment` · `Loop: Closed-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Open-source` · `Maturity: Research Prototype`
+
+### Self-Improving / Self-Evolving Research Systems
+
+- [The AI Scientist-v2](https://github.com/SakanaAI/AI-Scientist-v2) - Agentic-tree-search successor designed for workshop-level automated scientific discovery and higher-quality research trajectories.
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
+### Domain-Specific Autonomous Discovery Systems
+
+- [ChemCrow](https://github.com/ur-whitelab/chemcrow-public) - Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.
+  `Level: System` · `Stage: Planning` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Chemistry` · `Openness: Open-source` · `Maturity: Research Prototype`
+
+## 🏗 Research Infrastructure & Platforms
+
+The substrate that makes AI-native research systems practical: runtimes, orchestration, execution, observability, and collaboration.
+
+### Research Platforms
+
+- [FutureHouse](https://www.futurehouse.org/) - Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Closed-source` · `Maturity: Production-like`
+
+### Agent Runtimes for Research
+
+- [AutoGen](https://github.com/microsoft/autogen) - Multi-agent programming framework widely used to build research copilots, literature agents, and evaluation pipelines.
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+- [LangGraph](https://docs.langchain.com/oss/python/langgraph) - Stateful graph runtime for long-running agent workflows with branching, memory, recovery, and explicit control flow.
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Production-like`
+- [OpenHands](https://github.com/All-Hands-AI/OpenHands) - Agent runtime for repo-level coding, execution, and issue-driven engineering that adapts well to research coding workflows.
+  `Level: Platform` · `Stage: Coding` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: CS` · `Openness: Partially Open` · `Maturity: Active Project`
+
+### Research Workflow Orchestration
+
+- [AgentScope](https://github.com/agentscope-ai/agentscope) - Agent-oriented programming framework for composing multi-agent workflows with explicit roles, collaboration patterns, and tool integration.
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
+### Tool-Use & Execution Infrastructure
+
+- [E2B](https://e2b.dev/) - Sandboxed execution layer for code, browser, and desktop-style tool use inside AI-driven research workflows.
+  `Level: Platform` · `Stage: Data` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Partially Open` · `Maturity: Production-like`
+
+### Memory / Observability / Collaboration Layers
+
+- [Weights & Biases](https://wandb.ai/) - Experiment tracking and collaboration layer for instrumenting long-running research agents, ablations, and benchmark runs.
+  `Level: Platform` · `Stage: Analysis` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Partially Open` · `Maturity: Production-like`
+
+## 🔬 Workflow Modules
+
+Reusable units in the research workflow, organized by stage.
+
+### Literature Discovery & Review
+
+- [Elicit](https://elicit.com/) - AI research assistant for literature search, evidence extraction, and structured review workflows.
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Closed-source` · `Maturity: Production-like`
+- [PaperQA2](https://github.com/Future-House/paper-qa) - Open-source literature QA and evidence-synthesis stack optimized for scientific documents and citation-grounded answers.
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+- [ResearchRabbit](https://www.researchrabbit.ai/) - Visual citation-graph exploration tool for expanding seed papers into neighborhoods of related work.
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Closed-source` · `Maturity: Production-like`
+
+### Research Ideation & Hypothesis Generation
+
+- [AI co-scientist](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist) - A hypothesis-generation system based on proposal, debate, ranking, and refinement.
+  `Level: Module` · `Stage: Ideation` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Paper-only` · `Maturity: Research Prototype`
+- [Consensus](https://consensus.app/) - Scientific search engine geared toward claim-grounded answers and useful for framing candidate hypotheses.
+  `Level: Module` · `Stage: Ideation` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Closed-source` · `Maturity: Production-like`
+
+### Planning & Experimental Design
+
+- [ChemCrow](https://github.com/ur-whitelab/chemcrow-public) - Chemistry tool-use agent for turning high-level questions into actionable experimental reasoning and design.
+  `Level: Module` · `Stage: Planning` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Chemistry` · `Openness: Open-source` · `Maturity: Research Prototype`
+- [Coscientist](https://www.nature.com/articles/s41586-023-06792-0) - Chemistry planning system for protocol search, synthesis reasoning, and lab orchestration.
+  `Level: Module` · `Stage: Planning` · `Loop: Closed-loop` · `Scope: Domain-specific` · `Domain: Chemistry` · `Openness: Paper-only` · `Maturity: Research Prototype`
+
+### Data, Environment & Tool Use
+
+- [E2B](https://e2b.dev/) - Execution substrate for safe code runs, browser control, and reproducible tool use by research agents.
+  `Level: Module` · `Stage: Data` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Partially Open` · `Maturity: Production-like`
+- [GeneAgent](https://github.com/ncbi-nlp/GeneAgent) - Domain-database agent for gene set analysis grounded in external biomedical resources.
+  `Level: Module` · `Stage: Data` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Biology` · `Openness: Open-source` · `Maturity: Research Prototype`
+
+### Method Development & Research Coding
+
+- [AutoGen](https://github.com/microsoft/autogen) - Flexible substrate for custom research coding agents with explicit roles, tools, and review loops.
+  `Level: Module` · `Stage: Coding` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+- [OpenHands](https://github.com/All-Hands-AI/OpenHands) - Repo-level coding agent for implementing research ideas, modifying codebases, and validating changes through execution.
+  `Level: Module` · `Stage: Coding` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: CS` · `Openness: Partially Open` · `Maturity: Active Project`
+
+### Experiment Execution & Optimization
+
+- [Optuna](https://optuna.org/) - Open-source optimization framework for trial scheduling, hyperparameter search, and controlled experiment iteration.
+  `Level: Module` · `Stage: Experiment` · `Loop: Open-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Production-like`
+- [PiFlow](https://github.com/amair-lab/PiFlow) - Closed-loop reference for iterative scientific discovery with experiment execution inside the discovery process.
+  `Level: Module` · `Stage: Experiment` · `Loop: Closed-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Open-source` · `Maturity: Research Prototype`
+
+### Analysis, Evaluation & Interpretation
+
+- [PaperBench](https://openai.com/index/paperbench/) - Benchmark for whether agents can reproduce frontier AI research workflows from understanding claims to running experiments.
+  `Level: Benchmark` · `Stage: Analysis` · `Loop: Open-loop` · `Scope: Domain-specific` · `Domain: CS` · `Openness: Partially Open` · `Maturity: Research Prototype`
+- [Weights & Biases](https://wandb.ai/) - Shared workspace for tracking metrics, visualizing runs, comparing ablations, and reviewing long research trajectories.
+  `Level: Module` · `Stage: Analysis` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Partially Open` · `Maturity: Production-like`
+
+### Writing, Publication & Communication
+
+- [Overleaf AI](https://www.overleaf.com/about/ai-features) - AI-assisted writing and editing features inside a collaborative LaTeX environment used in academic publication workflows.
+  `Level: Module` · `Stage: Writing` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Closed-source` · `Maturity: Production-like`
+- [STORM](https://github.com/stanford-oval/storm) - Open-source system for grounded long-form report generation with citation-backed outlining and drafting.
+  `Level: Module` · `Stage: Writing` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
+## 📚 Benchmarks, Surveys & Meta-Resources
+
+Reference resources that make the ecosystem easier to evaluate and navigate.
+
+### Surveys & Taxonomies
+
+- [A Survey of AI Scientists](https://arxiv.org/abs/2510.23045) - Survey focused on automatic scientists and end-to-end AI research pipelines.
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Paper-only` · `Maturity: Research Prototype`
+- [AI4Research](https://ai-4-research.github.io/) - Living survey site mapping AI for scientific research across domains, tasks, and papers.
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Partially Open` · `Maturity: Active Project`
+
+### Benchmarks & Evaluation Suites
+
+- [Frontiers in Science](https://openai.com/index/frontierscience/) - Benchmark suite for evaluating scientific reasoning across olympiad-style and research-style tasks.
+  `Level: Benchmark` · `Stage: Analysis` · `Loop: Open-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Partially Open` · `Maturity: Research Prototype`
+- [PaperBench](https://openai.com/index/paperbench/) - Evaluates whether agents can replicate frontier AI research papers end-to-end, from understanding claims to executing experiments.
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Scope: Domain-specific` · `Domain: CS` · `Openness: Partially Open` · `Maturity: Research Prototype`
+- [ScienceBench](https://sciencebench.com/) - Autonomous laboratory benchmark for end-to-end scientific operation and discovery with minimal human oversight.
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Partially Open` · `Maturity: Research Prototype`
+
+### Datasets
+
+- [OpenAlex](https://openalex.org/) - Open index of works, authors, venues, institutions, and concepts that underpins many research-native retrieval systems.
+  `Level: Dataset` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Partially Open` · `Maturity: Production-like`
+- [Semantic Scholar Academic Graph API](https://www.semanticscholar.org/product/api) - Structured paper metadata and graph endpoints for retrieval, paper linking, and citation analysis.
+  `Level: Dataset` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Multi-domain` · `Openness: Partially Open` · `Maturity: Production-like`
+
+### Other Awesome Lists
+
+- [awesome-research](https://github.com/emptymalei/awesome-research) - Curated collection organized around research workflow tasks and useful as a complementary module-first view.
+  `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+- [Awesome-AI-Scientists](https://github.com/tsinghua-fib-lab/Awesome-AI-Scientists) - Curated list centered on AI Scientist systems and complementary to this repository's broader layered-map perspective.
+  `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
+<!--lint enable awesome-list-item-->
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request or suggesting a resource.
-
-Additional curation references:
-
-<!--lint disable awesome-list-item-->
-- [docs/inclusion-criteria.md](./docs/inclusion-criteria.md)
-- [docs/curation-principles.md](./docs/curation-principles.md)
-<!--lint enable awesome-list-item-->
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md), [docs/inclusion-criteria.md](./docs/inclusion-criteria.md), and [docs/tag-system.md](./docs/tag-system.md) before submitting new entries.
 
 ## License
 
