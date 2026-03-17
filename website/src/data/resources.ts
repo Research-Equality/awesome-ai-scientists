@@ -155,6 +155,26 @@ export const resources: Resource[] = [
     featured: true,
   },
   {
+    id: "autoresearchclaw",
+    name: "AutoResearchClaw",
+    url: "https://github.com/aiming-lab/AutoResearchClaw",
+    links: [
+      { kind: "code", url: "https://github.com/aiming-lab/AutoResearchClaw" },
+      { kind: "docs", url: "https://github.com/aiming-lab/AutoResearchClaw#readme" },
+    ],
+    description:
+      "Fully autonomous research pipeline that turns a single research idea into literature-grounded experiments, analysis, and a conference-ready paper with OpenClaw-compatible execution.",
+    level: "System",
+    stage: "End-to-end",
+    loop: "Closed-loop",
+    scope: "General",
+    domain: "General",
+    openness: "Open-source",
+    maturity: "Active Project",
+    layer: "Autonomous Research Systems",
+    subgroup: "End-to-End AI Scientist Systems",
+  },
+  {
     id: "coscientist",
     name: "Coscientist",
     url: "https://www.nature.com/articles/s41586-023-06792-0",
@@ -291,6 +311,29 @@ export const resources: Resource[] = [
     layer: "Research Infrastructure & Platforms",
     subgroup: "Research Platforms",
     featured: true,
+  },
+  {
+    id: "research-claw",
+    name: "Research-Claw",
+    url: "https://github.com/wentorai/Research-Claw",
+    links: [
+      { kind: "code", url: "https://github.com/wentorai/Research-Claw" },
+      {
+        kind: "docs",
+        url: "https://github.com/wentorai/Research-Claw/blob/main/docs/00-reference-map.md",
+      },
+    ],
+    description:
+      "Local-first academic research workspace with a dashboard, literature management, writing, experiment workflows, and OpenClaw-based extensions for always-on research assistance.",
+    level: "Platform",
+    stage: "End-to-end",
+    loop: "Human-in-the-loop",
+    scope: "General",
+    domain: "General",
+    openness: "Partially Open",
+    maturity: "Active Project",
+    layer: "Research Infrastructure & Platforms",
+    subgroup: "Research Platforms",
   },
   {
     id: "researchclaw",

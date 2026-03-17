@@ -234,6 +234,8 @@ export const en: Copy = {
       "Google Research's multi-agent scientific collaborator for proposing, debating, ranking, and refining hypotheses with human oversight.",
     "the-ai-scientist":
       "Open-source end-to-end system that turns a seed codebase into ideas, experiments, figures, reviews, and a draft paper.",
+    autoresearchclaw:
+      "Fully autonomous research pipeline that turns a single research idea into literature-grounded experiments, analysis, and a conference-ready paper with OpenClaw-compatible execution.",
     coscientist:
       "Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.",
     piflow:
@@ -248,6 +250,8 @@ export const en: Copy = {
       "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
     futurehouse:
       "Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.",
+    "research-claw":
+      "Local-first academic research workspace with a dashboard, literature management, writing, experiment workflows, and OpenClaw-based extensions for always-on research assistance.",
     researchclaw:
       "Local-first AI research assistant for literature discovery, notes, experiment tracking, and paper writing across the scientific workflow.",
     autogen:

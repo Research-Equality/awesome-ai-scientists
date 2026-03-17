@@ -54,6 +54,10 @@ Integrated systems that try to cover meaningful parts of the scientific loop.
   [Code](https://github.com/HKUDS/AI-Researcher) · [Paper](https://arxiv.org/abs/2505.18705) · [![GitHub stars](https://img.shields.io/github/stars/HKUDS/AI-Researcher?style=flat-square)](https://github.com/HKUDS/AI-Researcher/stargazers)  
   `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Research Prototype`
 
+- [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) - Fully autonomous research pipeline that turns a single research idea into literature-grounded experiments, analysis, and a conference-ready paper with OpenClaw-compatible execution.  
+  [Code](https://github.com/aiming-lab/AutoResearchClaw) · [Docs](https://github.com/aiming-lab/AutoResearchClaw#readme) · [![GitHub stars](https://img.shields.io/github/stars/aiming-lab/AutoResearchClaw?style=flat-square)](https://github.com/aiming-lab/AutoResearchClaw/stargazers)  
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
 - [Robin](https://github.com/Future-House/robin) - Multi-agent system from FutureHouse for automating scientific discovery; public materials describe it as orchestrating agents to automate key intellectual steps of the scientific process.  
   [Code](https://github.com/Future-House/robin) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/robin?style=flat-square)](https://github.com/Future-House/robin/stargazers)  
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: Domain-specific` · `Domain: Biology` · `Openness: Open-source` · `Maturity: Research Prototype`
@@ -97,6 +101,10 @@ Integrated systems that try to cover meaningful parts of the scientific loop.
 The substrate that makes AI-native research systems practical: runtimes, orchestration, execution, evaluation environments, and observability.
 
 ### Research Platforms
+
+- [Research-Claw](https://github.com/wentorai/Research-Claw) - Local-first academic research workspace with a dashboard, literature management, writing, experiment workflows, and OpenClaw-based extensions for always-on research assistance.  
+  [Code](https://github.com/wentorai/Research-Claw) · [Docs](https://github.com/wentorai/Research-Claw/blob/main/docs/00-reference-map.md) · [![GitHub stars](https://img.shields.io/github/stars/wentorai/Research-Claw?style=flat-square)](https://github.com/wentorai/Research-Claw/stargazers)  
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Partially Open` · `Maturity: Active Project`
 
 - [ResearchClaw](https://github.com/ymx10086/ResearchClaw) - Local-first AI research assistant for literature discovery, note-taking, experiment tracking, and paper writing across the scientific workflow.  
   [Code](https://github.com/ymx10086/ResearchClaw) · [Docs](https://github.com/ymx10086/ResearchClaw#readme) · [![GitHub stars](https://img.shields.io/github/stars/ymx10086/ResearchClaw?style=flat-square)](https://github.com/ymx10086/ResearchClaw/stargazers)  

@@ -152,6 +152,8 @@ export const zh: Copy = {
       "Google Research 的多智能体科学协作系统，用于提出、辩论、排序并迭代优化研究假设。",
     "the-ai-scientist":
       "开源的端到端科研系统，可从种子代码库出发生成想法、实验、图表、评审与论文草稿。",
+    autoresearchclaw:
+      "全自动科研流水线，可将单个研究想法转化为基于真实文献的实验、分析与可投稿论文，并支持 OpenClaw 兼容执行。",
     coscientist:
       "面向化学研究的代理系统，可规划合成路径、检索文档、控制仪器并循环执行实验流程。",
     piflow:
@@ -166,6 +168,8 @@ export const zh: Copy = {
       "结合化学软件与工具调用的研究代理，用于合成与发现任务。",
     futurehouse:
       "以自动化科学发现为核心目标的 research-native 平台，强调代理系统与领域工具结合。",
+    "research-claw":
+      "本地优先的科研工作台，集成 Dashboard、文献管理、写作、实验工作流与基于 OpenClaw 的扩展能力，用于持续辅助研究过程。",
     researchclaw:
       "本地优先的 AI 科研助手，覆盖文献发现、笔记整理、实验跟踪与论文写作等研究工作流环节。",
     autogen:
