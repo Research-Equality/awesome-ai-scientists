@@ -128,6 +128,12 @@ The substrate that makes AI-native research systems practical: runtimes, orchest
   [Code](https://github.com/Future-House/ldp) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/ldp?style=flat-square)](https://github.com/Future-House/ldp/stargazers)  
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
 
+### Research Workflow Orchestration
+
+- [ARIS: Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) - Lightweight Markdown-only research workflow kit for idea discovery, cross-model review loops, experiment automation, and paper writing across Claude Code, Codex, OpenClaw, and similar agents.  
+  [Code](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) · [Docs](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#readme) · [![GitHub stars](https://img.shields.io/github/stars/wanshuiyin/Auto-claude-code-research-in-sleep?style=flat-square)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/stargazers)  
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Scope: General` · `Domain: General` · `Openness: Open-source` · `Maturity: Active Project`
+
 ### Tool-Use & Execution Infrastructure
 
 - [E2B](https://e2b.dev/) - Isolated sandbox infrastructure for safely executing agent-generated code, processing data, and running tools.  

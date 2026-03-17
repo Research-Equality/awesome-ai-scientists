@@ -262,6 +262,8 @@ export const en: Copy = {
       "Agent runtime for repo-level coding, execution, and issue-driven engineering that adapts well to research coding workflows.",
     agentscope:
       "Agent-oriented programming framework for composing multi-agent workflows with explicit roles, collaboration patterns, and tool integration.",
+    aris:
+      "Lightweight Markdown-only research workflow kit for idea discovery, cross-model review loops, experiment automation, and paper writing across Claude Code, Codex, OpenClaw, and similar agents.",
     e2b:
       "Sandboxed execution layer for code, browser, and desktop-style tool use inside AI-driven research workflows.",
     wandb:

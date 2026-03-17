@@ -430,6 +430,26 @@ export const resources: Resource[] = [
     subgroup: "Research Workflow Orchestration",
   },
   {
+    id: "aris",
+    name: "ARIS: Auto-claude-code-research-in-sleep",
+    url: "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+    links: [
+      { kind: "code", url: "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep" },
+      { kind: "docs", url: "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#readme" },
+    ],
+    description:
+      "Lightweight Markdown-only research workflow kit for idea discovery, cross-model review loops, experiment automation, and paper writing across Claude Code, Codex, OpenClaw, and similar agents.",
+    level: "Platform",
+    stage: "End-to-end",
+    loop: "Human-in-the-loop",
+    scope: "General",
+    domain: "General",
+    openness: "Open-source",
+    maturity: "Active Project",
+    layer: "Research Infrastructure & Platforms",
+    subgroup: "Research Workflow Orchestration",
+  },
+  {
     id: "e2b",
     name: "E2B",
     url: "https://e2b.dev/",

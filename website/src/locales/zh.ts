@@ -180,6 +180,8 @@ export const zh: Copy = {
       "面向仓库级编码、执行和 issue 驱动工程任务的代理运行时，也适用于研究编码工作流。",
     agentscope:
       "支持显式角色、协作模式和工具集成的 agent-oriented 编程框架。",
+    aris:
+      "轻量、仅基于 Markdown 的研究工作流编排工具包，覆盖想法发现、跨模型评审循环、实验自动化与论文写作，可运行在 Claude Code、Codex、OpenClaw 等代理环境中。",
     e2b:
       "为 AI 驱动科研流程提供代码、浏览器和桌面式工具调用的沙箱执行层。",
     wandb:
