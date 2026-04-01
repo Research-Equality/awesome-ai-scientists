@@ -213,6 +213,7 @@ export const en: Copy = {
     "End-to-End AI Scientist Systems": "End-to-End AI Scientist Systems",
     "Experiment Execution & Optimization":
       "Experiment Execution & Optimization",
+    "Evaluation & Training Environments": "Evaluation & Training Environments",
     "Literature Discovery & Review": "Literature Discovery & Review",
     "Memory / Observability / Collaboration Layers":
       "Memory / Observability / Collaboration Layers",
@@ -234,8 +235,18 @@ export const en: Copy = {
       "Google Research's multi-agent scientific collaborator for proposing, debating, ranking, and refining hypotheses with human oversight.",
     "the-ai-scientist":
       "Open-source end-to-end system that turns a seed codebase into ideas, experiments, figures, reviews, and a draft paper.",
+    "ai-researcher":
+      "Open-source autonomous research system for end-to-end scientific innovation, covering idea generation, implementation, experimentation, and paper writing.",
     autoresearchclaw:
       "Fully autonomous research pipeline that turns a single research idea into literature-grounded experiments, analysis, and a conference-ready paper with OpenClaw-compatible execution.",
+    nanoresearch:
+      "End-to-end autonomous research engine that turns a topic into planned experiments, executed jobs, grounded analysis, and paper drafts backed by real run outputs.",
+    "agent-laboratory":
+      "End-to-end autonomous research workflow with specialized agents for literature review, experimentation, and report writing, with optional co-pilot mode and AgentRxiv support.",
+    "mlr-copilot":
+      "Autonomous machine learning research framework that generates research ideas, implements experiments, and executes them with iterative debugging and human feedback.",
+    robin:
+      "Multi-agent system from FutureHouse for automating scientific discovery, including candidate generation, assay planning, and optional experimental data analysis.",
     coscientist:
       "Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.",
     piflow:
@@ -248,6 +259,8 @@ export const en: Copy = {
       "AI-native scientific research system built around OpenClaw for automated literature review, experimentation, writing, and iterative research workflows.",
     chemcrow:
       "Tool-augmented chemistry agent that combines LLM reasoning with scientific software for synthesis and discovery tasks.",
+    biomni:
+      "General-purpose biomedical AI agent designed to autonomously execute a wide range of research tasks across biomedical subfields.",
     futurehouse:
       "Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.",
     "research-claw":
@@ -258,6 +271,7 @@ export const en: Copy = {
       "Multi-agent programming framework widely used to build research copilots, literature agents, and evaluation pipelines.",
     langgraph:
       "Stateful graph runtime for long-running agent workflows with branching, memory, recovery, and explicit control flow.",
+    ldp: "Framework for modular interchange of language agents, environments, and optimizers.",
     openhands:
       "Agent runtime for repo-level coding, execution, and issue-driven engineering that adapts well to research coding workflows.",
     agentscope:
@@ -266,16 +280,32 @@ export const en: Copy = {
       "Lightweight Markdown-only research workflow kit for idea discovery, cross-model review loops, experiment automation, and paper writing across Claude Code, Codex, OpenClaw, and similar agents.",
     e2b:
       "Sandboxed execution layer for code, browser, and desktop-style tool use inside AI-driven research workflows.",
+    aviary:
+      "Language-agent gym with built-in scientific task environments, including scientific literature search and protein stability.",
     wandb:
       "Experiment tracking and collaboration layer for instrumenting long-running research agents, ablations, and benchmark runs.",
     elicit:
       "AI research assistant for literature search, evidence extraction, and structured review workflows.",
     paperqa2:
       "Open-source literature QA and evidence-synthesis stack optimized for scientific documents and citation-grounded answers.",
+    lattereview:
+      "Multi-agent literature review framework for title and abstract screening, evidence abstraction, multimodal review, and customizable reviewer workflows.",
+    litllm:
+      "AI-powered literature review assistant that combines hybrid retrieval, re-ranking, and structured generation for related-work drafting.",
     "research-rabbit":
       "Visual citation-graph exploration tool for expanding seed papers into neighborhoods of related work.",
+    litmaps:
+      "Literature discovery and monitoring tool built around citation-network exploration, visualization, and alerts.",
+    "connected-papers":
+      "Visual paper exploration tool for finding related academic work around a seed paper.",
+    scite:
+      "Research discovery and evaluation platform centered on Smart Citations, showing whether studies support, contrast, or mention prior work.",
+    "scispace-literature-review":
+      "AI literature review workspace for finding, analyzing, organizing, and comparing scientific papers.",
     consensus:
       "Scientific search engine geared toward claim-grounded answers, useful for scoping evidence and framing candidate hypotheses.",
+    researchagent:
+      "Iterative research idea generation system that retrieves scientific literature and refines candidate problems, methods, and experiment designs with LLM reviewer feedback.",
     geneagent:
       "Domain-database agent for gene set analysis that shows how scientific tool use can be grounded in external biomedical resources.",
     optuna:
@@ -290,8 +320,20 @@ export const en: Copy = {
       "Benchmark suite for evaluating scientific reasoning across olympiad-style and research-style tasks.",
     sciencebench:
       "Autonomous laboratory benchmark for end-to-end scientific operation and discovery with minimal human oversight.",
+    "airs-bench":
+      "Benchmark for quantifying the end-to-end AI research abilities of LLM agents on machine learning tasks drawn from recent papers.",
+    mlagentbench:
+      "Suite of end-to-end machine learning experimentation tasks where agents autonomously develop and improve models from dataset and task descriptions.",
+    "mle-bench":
+      "Benchmark for machine learning engineering agents, including task construction, evaluation logic, and reference agent implementations.",
+    "mlr-bench":
+      "Benchmark for open-ended machine learning research with 201 tasks, together with agent and judge baselines for evaluation.",
+    "lab-bench":
+      "Biology benchmark for capabilities foundational to scientific research in biology.",
     ai4research:
       "Living survey site mapping AI for scientific research across domains, tasks, and papers.",
+    "ai-for-research":
+      "Repository accompanying a survey on AI support across the research lifecycle from hypothesis generation to publication.",
     "survey-ai-scientists":
       "Survey focused on automatic scientists and end-to-end AI research pipelines.",
     openalex:
@@ -302,6 +344,8 @@ export const en: Copy = {
       "Curated collection organized around research workflow tasks, useful as a complementary module-first view.",
     "awesome-ai-scientists":
       "Curated list centered on AI Scientist systems, complementary to this repository's broader layered-map perspective.",
+    "awesome-papers-on-agents-for-science":
+      "Curated bibliography of agents-for-science papers across domains, task types, and benchmarks.",
   },
 };
 

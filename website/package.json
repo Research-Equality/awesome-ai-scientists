@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate:readmes": "tsc -p tsconfig.scripts.json && node ../.generated-scripts/website/scripts/generate-readmes.js",
     "build": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build",
     "preview": "vite preview"
   },

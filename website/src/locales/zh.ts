@@ -136,6 +136,7 @@ export const zh: Copy = {
     "Domain-Specific Autonomous Discovery Systems": "领域特定自主发现系统",
     "End-to-End AI Scientist Systems": "端到端 AI Scientist 系统",
     "Experiment Execution & Optimization": "实验执行与优化",
+    "Evaluation & Training Environments": "评测与训练环境",
     "Literature Discovery & Review": "文献发现与综述",
     "Memory / Observability / Collaboration Layers": "记忆、观测与协作层",
     "Other Awesome Lists": "其他 Awesome 列表",
@@ -152,8 +153,18 @@ export const zh: Copy = {
       "Google Research 的多智能体科学协作系统，用于提出、辩论、排序并迭代优化研究假设。",
     "the-ai-scientist":
       "开源的端到端科研系统，可从种子代码库出发生成想法、实验、图表、评审与论文草稿。",
+    "ai-researcher":
+      "面向端到端科学创新的开源自主研究系统，覆盖想法生成、实现、实验与论文写作等环节。",
     autoresearchclaw:
       "全自动科研流水线，可将单个研究想法转化为基于真实文献的实验、分析与可投稿论文，并支持 OpenClaw 兼容执行。",
+    nanoresearch:
+      "端到端自主科研引擎，可将研究主题转化为实验规划、真实任务执行、结果分析与基于真实运行输出的论文草稿。",
+    "agent-laboratory":
+      "端到端自主科研工作流，使用专门代理覆盖文献综述、实验执行与研究报告撰写，并支持 co-pilot 模式和 AgentRxiv 协作扩展。",
+    "mlr-copilot":
+      "面向机器学习研究的自主研究框架，可生成研究想法、实现实验并执行运行，同时结合迭代调试与人工反馈。",
+    robin:
+      "FutureHouse 的多智能体系统，面向自动化科学发现中的候选生成、实验设计与可选的数据分析环节。",
     coscientist:
       "面向化学研究的代理系统，可规划合成路径、检索文档、控制仪器并循环执行实验流程。",
     piflow:
@@ -166,6 +177,8 @@ export const zh: Copy = {
       "基于 OpenClaw 的 AI 原生科研系统，覆盖自动文献综述、实验执行、写作与迭代式研究工作流。",
     chemcrow:
       "结合化学软件与工具调用的研究代理，用于合成与发现任务。",
+    biomni:
+      "通用生物医学 AI 代理，设计目标是在多种生物医学子领域中自主执行广泛的研究任务。",
     futurehouse:
       "以自动化科学发现为核心目标的 research-native 平台，强调代理系统与领域工具结合。",
     "research-claw":
@@ -176,6 +189,7 @@ export const zh: Copy = {
       "常用于构建研究助手、文献代理和评测流程的多智能体编程框架。",
     langgraph:
       "适合长流程代理任务的有状态图运行时，支持分支、记忆、恢复与显式控制流。",
+    ldp: "用于语言代理、环境与优化器模块化互换的框架。",
     openhands:
       "面向仓库级编码、执行和 issue 驱动工程任务的代理运行时，也适用于研究编码工作流。",
     agentscope:
@@ -184,16 +198,32 @@ export const zh: Copy = {
       "轻量、仅基于 Markdown 的研究工作流编排工具包，覆盖想法发现、跨模型评审循环、实验自动化与论文写作，可运行在 Claude Code、Codex、OpenClaw 等代理环境中。",
     e2b:
       "为 AI 驱动科研流程提供代码、浏览器和桌面式工具调用的沙箱执行层。",
+    aviary:
+      "面向语言代理的 gym 式环境，内置科学文献检索、蛋白稳定性等科研任务场景。",
     wandb:
       "用于长流程研究代理、消融实验与基准运行的实验追踪与协作层。",
     elicit:
       "面向文献搜索、证据抽取与结构化综述流程的 AI 研究助手。",
     paperqa2:
       "面向科学文献的开源问答与证据综合工具栈，强调引用支撑。",
+    lattereview:
+      "面向标题摘要筛选、证据抽取、多模态审阅与可定制 reviewer 工作流的多智能体文献综述框架。",
+    litllm:
+      "AI 驱动的文献综述助手，结合混合检索、重排序与结构化生成，用于 related work 草稿撰写。",
     "research-rabbit":
       "用于从种子论文扩展相关工作网络的可视化引用图谱探索工具。",
+    litmaps:
+      "围绕引用网络探索、可视化与提醒构建的文献发现与监测工具。",
+    "connected-papers":
+      "以种子论文为中心，帮助发现相关学术工作的可视化论文探索工具。",
+    scite:
+      "以 Smart Citations 为核心的研究发现与评估平台，可显示研究是支持、对比还是仅提及既有工作。",
+    "scispace-literature-review":
+      "用于查找、分析、组织与比较科学论文的 AI 文献综述工作区。",
     consensus:
       "以 claim-grounded answer 为特色的科学搜索引擎，适合构思研究问题与假设。",
+    researchagent:
+      "迭代式研究想法生成系统，可检索科学文献，并在 LLM reviewer 反馈下不断优化候选研究问题、方法与实验设计。",
     geneagent:
       "面向基因集分析的领域数据库代理，展示了科学工具使用如何接入外部生物医学资源。",
     optuna:
@@ -208,8 +238,20 @@ export const zh: Copy = {
       "面向奥赛式与研究式科学推理任务的基准套件。",
     sciencebench:
       "面向端到端科学操作与发现、且尽量减少人工介入的自主实验室基准。",
+    "airs-bench":
+      "用于量化 LLM 代理在近期机器学习论文任务上端到端 AI 研究能力的基准。",
+    mlagentbench:
+      "端到端机器学习实验任务套件，评估代理能否基于数据集与任务描述自主开发并改进模型。",
+    "mle-bench":
+      "面向机器学习工程代理的基准，包含任务构建、评测逻辑与参考代理实现。",
+    "mlr-bench":
+      "面向开放式机器学习研究的基准，包含 201 个任务以及配套的 agent 和 judge 基线。",
+    "lab-bench":
+      "面向生物学科学研究基础能力的基准。",
     ai4research:
       "持续更新的 AI for Research 调研站点，覆盖不同领域、任务与论文。",
+    "ai-for-research":
+      "对应综述论文的配套仓库，覆盖从假设生成到发表的研究生命周期中 AI 支持能力。",
     "survey-ai-scientists":
       "聚焦自动科学家与端到端 AI 研究流程的综述。",
     openalex:
@@ -220,5 +262,7 @@ export const zh: Copy = {
       "按研究工作流任务组织的 curated list，可作为本仓库的补充视角。",
     "awesome-ai-scientists":
       "聚焦 AI Scientist 系统的 curated list，与本仓库更广义的分层地图视角互补。",
+    "awesome-papers-on-agents-for-science":
+      "覆盖多领域、任务类型与基准的 agents-for-science 论文书目型 curated list。",
   },
 };

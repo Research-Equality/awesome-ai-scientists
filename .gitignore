@@ -215,3 +215,4 @@ website/.vite/
 website/*.tsbuildinfo
 website/*.js
 website/*.d.ts
+.generated-scripts/
