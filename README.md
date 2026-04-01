@@ -83,6 +83,10 @@ Systems that attempt to cover meaningful parts of the scientific loop, from idea
   [Code](https://github.com/OpenRaiser/NanoResearch) · [Docs](https://github.com/OpenRaiser/NanoResearch#readme) · [![GitHub stars](https://img.shields.io/github/stars/OpenRaiser/NanoResearch?style=flat-square&label=stars)](https://github.com/OpenRaiser/NanoResearch/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: General` · `Openness: Open-source`
 
+- [Auto-Research](https://github.com/openags/Auto-Research) - Prototype autonomous generalist scientist framework spanning literature review, proposal generation, experimentation, writing, submission, and review workflows.<br>
+  [Code](https://github.com/openags/Auto-Research) · [![GitHub stars](https://img.shields.io/github/stars/openags/Auto-Research?style=flat-square&label=stars)](https://github.com/openags/Auto-Research/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
 - [Agent Laboratory](https://github.com/SamuelSchmidgall/AgentLaboratory) - End-to-end autonomous research workflow with specialized agents for literature review, experimentation, and report writing, with optional co-pilot mode and AgentRxiv support.<br>
   [Code](https://github.com/SamuelSchmidgall/AgentLaboratory) · [Paper](https://arxiv.org/abs/2501.04227) · [Homepage](https://agentlaboratory.github.io/) · [![GitHub stars](https://img.shields.io/github/stars/SamuelSchmidgall/AgentLaboratory?style=flat-square&label=stars)](https://github.com/SamuelSchmidgall/AgentLaboratory/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
@@ -109,6 +113,14 @@ Systems that attempt to cover meaningful parts of the scientific loop, from idea
   [Code](https://github.com/tsingyuai/scientify) · [Docs](https://github.com/tsingyuai/scientify#readme) · [![GitHub stars](https://img.shields.io/github/stars/tsingyuai/scientify?style=flat-square&label=stars)](https://github.com/tsingyuai/scientify/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [AutoResearch-SibylSystem](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem) - Fully autonomous AI scientist with 20+ agents and a dual-loop architecture for end-to-end ML research, GPU experiment execution, paper writing, and cross-project self-evolution.<br>
+  [Code](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem) · [Docs](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem#readme) · [![GitHub stars](https://img.shields.io/github/stars/Sibyl-Research-Team/AutoResearch-SibylSystem?style=flat-square&label=stars)](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: CS` · `Openness: Open-source`
+
+- [AGI](https://github.com/hyperspaceai/agi) - Distributed peer-to-peer research network where autonomous agents run experiments, share results, synthesize papers, and compound discoveries across shared leaderboards.<br>
+  [Code](https://github.com/hyperspaceai/agi) · [![GitHub stars](https://img.shields.io/github/stars/hyperspaceai/agi?style=flat-square&label=stars)](https://github.com/hyperspaceai/agi/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
 ### Closed-Loop Discovery Systems
 
 - [Coscientist](https://www.nature.com/articles/s41586-023-06792-0) - Chemistry agent that plans syntheses, searches documentation, controls instruments, and iterates through experimental workflows.<br>
@@ -129,6 +141,10 @@ Systems that attempt to cover meaningful parts of the scientific loop, from idea
   [Code](https://github.com/snap-stanford/Biomni) · [![GitHub stars](https://img.shields.io/github/stars/snap-stanford/Biomni?style=flat-square&label=stars)](https://github.com/snap-stanford/Biomni/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Biology` · `Openness: Open-source`
 
+- [ML-Agent](https://github.com/MASWorks/ML-Agent) - 7B reinforcement-trained agent for end-to-end machine learning engineering that learns from interactive experimentation on MLAgentBench and MLE-bench tasks.<br>
+  [Code](https://github.com/MASWorks/ML-Agent) · [Paper](https://arxiv.org/abs/2505.23723) · [![GitHub stars](https://img.shields.io/github/stars/MASWorks/ML-Agent?style=flat-square&label=stars)](https://github.com/MASWorks/ML-Agent/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: CS` · `Openness: Partially Open`
+
 ## 🏗 Research Infrastructure & Platforms
 
 The runtime substrate for AI-native research: orchestration, execution, memory, observability, and collaboration.
@@ -138,6 +154,10 @@ The runtime substrate for AI-native research: orchestration, execution, memory, 
 - [FutureHouse](https://www.futurehouse.org/) - Research-native platform focused on automating scientific discovery with agentic systems and domain-aware tooling.<br>
   [Homepage](https://www.futurehouse.org/)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Closed-source`
+
+- [AgentRxiv](https://agentrxiv.github.io/) - Collaborative autonomous research framework and preprint layer where agent laboratories can publish, retrieve, and build on each other's findings.<br>
+  [Homepage](https://agentrxiv.github.io/) · [Paper](https://arxiv.org/abs/2503.18102)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Paper-only`
 
 - [Research-Claw](https://github.com/wentorai/Research-Claw) - Local-first academic research workspace with a dashboard, literature management, writing, experiment workflows, and OpenClaw-based extensions for always-on research assistance.<br>
   [Code](https://github.com/wentorai/Research-Claw) · [Docs](https://github.com/wentorai/Research-Claw/blob/main/docs/00-reference-map.md) · [![GitHub stars](https://img.shields.io/github/stars/wentorai/Research-Claw?style=flat-square&label=stars)](https://github.com/wentorai/Research-Claw/stargazers)<br>
@@ -161,6 +181,10 @@ The runtime substrate for AI-native research: orchestration, execution, memory, 
   [Code](https://github.com/agentscope-ai/agentscope) · [![GitHub stars](https://img.shields.io/github/stars/agentscope-ai/agentscope?style=flat-square&label=stars)](https://github.com/agentscope-ai/agentscope/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [ClawTeam](https://github.com/HKUDS/ClawTeam) - Swarm-intelligence orchestration layer where leader agents spawn specialized workers across worktrees, tmux sessions, and GPUs for autonomous research and engineering workflows.<br>
+  [Code](https://github.com/HKUDS/ClawTeam) · [![GitHub stars](https://img.shields.io/github/stars/HKUDS/ClawTeam?style=flat-square&label=stars)](https://github.com/HKUDS/ClawTeam/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
 - [LDP](https://github.com/Future-House/ldp) - Framework for modular interchange of language agents, environments, and optimizers.<br>
   [Code](https://github.com/Future-House/ldp) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/ldp?style=flat-square&label=stars)](https://github.com/Future-House/ldp/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
@@ -170,6 +194,10 @@ The runtime substrate for AI-native research: orchestration, execution, memory, 
 - [ARIS: Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) - Lightweight Markdown-only research workflow kit for idea discovery, cross-model review loops, experiment automation, and paper writing across Claude Code, Codex, OpenClaw, and similar agents.<br>
   [Code](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) · [Docs](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#readme) · [![GitHub stars](https://img.shields.io/github/stars/wanshuiyin/Auto-claude-code-research-in-sleep?style=flat-square&label=stars)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [AI Research Skills Library](https://github.com/Orchestra-Research/AI-Research-SKILLs) - Open-source skills library plus autoresearch orchestration layer that gives coding agents reusable research skills spanning literature survey, experimentation, and paper writing.<br>
+  [Code](https://github.com/Orchestra-Research/AI-Research-SKILLs) · [![GitHub stars](https://img.shields.io/github/stars/Orchestra-Research/AI-Research-SKILLs?style=flat-square&label=stars)](https://github.com/Orchestra-Research/AI-Research-SKILLs/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Open-source`
 
 ### Tool-Use & Execution Infrastructure
 
@@ -209,6 +237,10 @@ Stage-specific building blocks for literature review, ideation, planning, coding
 
 - [LitLLM](https://github.com/LitLLM/LitLLM) - AI-powered literature review assistant that combines hybrid retrieval, re-ranking, and structured generation for related-work drafting.<br>
   [Code](https://github.com/LitLLM/LitLLM) · [Paper](https://arxiv.org/abs/2412.15249) · [Homepage](https://litllm.onrender.com) · [![GitHub stars](https://img.shields.io/github/stars/LitLLM/LitLLM?style=flat-square&label=stars)](https://github.com/LitLLM/LitLLM/stargazers)<br>
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [AutoResearcher](https://github.com/eimenhmdt/autoresearcher) - Early-stage open-source Python package for automating scientific workflows, currently focused on literature reviews with a longer-term goal of autonomous discovery.<br>
+  [Code](https://github.com/eimenhmdt/autoresearcher) · [Docs](https://eimenhmdt.github.io/autoresearcher/) · [![GitHub stars](https://img.shields.io/github/stars/eimenhmdt/autoresearcher?style=flat-square&label=stars)](https://github.com/eimenhmdt/autoresearcher/stargazers)<br>
   `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
 - [ResearchRabbit](https://www.researchrabbit.ai/) - Visual citation-graph exploration tool for expanding seed papers into neighborhoods of related work.<br>
@@ -281,6 +313,10 @@ Stage-specific building blocks for literature review, ideation, planning, coding
   [Homepage](https://optuna.org/) · [Code](https://github.com/optuna/optuna) · [![GitHub stars](https://img.shields.io/github/stars/optuna/optuna?style=flat-square&label=stars)](https://github.com/optuna/optuna/stargazers)<br>
   `Level: Module` · `Stage: Experiment` · `Loop: Open-loop` · `Domain: General` · `Openness: Open-source`
 
+- [AIDE ML](https://github.com/WecoAI/aideml) - Tree-search machine learning engineering agent that iteratively drafts, debugs, benchmarks, and improves code against a target metric.<br>
+  [Code](https://github.com/WecoAI/aideml) · [Paper](https://arxiv.org/abs/2502.13138) · [![GitHub stars](https://img.shields.io/github/stars/WecoAI/aideml?style=flat-square&label=stars)](https://github.com/WecoAI/aideml/stargazers)<br>
+  `Level: Module` · `Stage: Experiment` · `Loop: Closed-loop` · `Domain: CS` · `Openness: Open-source`
+
 - [PiFlow](https://github.com/amair-lab/PiFlow) - Principle-aware multi-agent framework for iterative scientific discovery across nanomaterials, biomolecules, and superconductors.<br>
   [Code](https://github.com/amair-lab/PiFlow) · [Paper](https://arxiv.org/abs/2505.15047) · [![GitHub stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=flat-square&label=stars)](https://github.com/amair-lab/PiFlow/stargazers)<br>
   `Level: Module` · `Stage: Experiment` · `Loop: Closed-loop` · `Domain: Multi-domain` · `Openness: Open-source`
@@ -323,6 +359,18 @@ Benchmarks, surveys, datasets, and other reference layers that keep the ecosyste
   [Code](https://github.com/zkzhou126/AI-for-Research) · [Paper](https://arxiv.org/abs/2503.01424) · [![GitHub stars](https://img.shields.io/github/stars/zkzhou126/AI-for-Research?style=flat-square&label=stars)](https://github.com/zkzhou126/AI-for-Research/stargazers)<br>
   `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [Awesome Deep Research Agent](https://github.com/ai-agents-2030/awesome-deep-research-agent) - Curated map of deep research agent papers, architectures, tool-use methods, and benchmarks, anchored by a dedicated survey and roadmap.<br>
+  [Code](https://github.com/ai-agents-2030/awesome-deep-research-agent) · [Paper](https://arxiv.org/abs/2506.18096) · [![GitHub stars](https://img.shields.io/github/stars/ai-agents-2030/awesome-deep-research-agent?style=flat-square&label=stars)](https://github.com/ai-agents-2030/awesome-deep-research-agent/stargazers)<br>
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) - Reading list for a survey on optimizing LLM-based agents, covering fine-tuning, reflection, tool use, datasets, and real-world applications.<br>
+  [Code](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) · [![GitHub stars](https://img.shields.io/github/stars/YoungDubbyDu/LLM-Agent-Optimization?style=flat-square&label=stars)](https://github.com/YoungDubbyDu/LLM-Agent-Optimization/stargazers)<br>
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [Awesome LLM Scientific Discovery](https://github.com/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery) - Curated list and taxonomy for LLMs in scientific discovery, organized by autonomy level from tool to analyst to scientist.<br>
+  [Code](https://github.com/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery) · [Paper](https://arxiv.org/abs/2505.13259) · [![GitHub stars](https://img.shields.io/github/stars/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery?style=flat-square&label=stars)](https://github.com/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery/stargazers)<br>
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
 ### Benchmarks & Evaluation Suites
 
 - [Frontiers in Science](https://openai.com/index/frontierscience/) - Benchmark suite for evaluating scientific reasoning across olympiad-style and research-style tasks.<br>
@@ -345,6 +393,10 @@ Benchmarks, surveys, datasets, and other reference layers that keep the ecosyste
   [Code](https://github.com/snap-stanford/MLAgentBench) · [![GitHub stars](https://img.shields.io/github/stars/snap-stanford/MLAgentBench?style=flat-square&label=stars)](https://github.com/snap-stanford/MLAgentBench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: CS` · `Openness: Open-source`
 
+- [ML-Bench](https://github.com/gersteinlab/ML-Bench) - Benchmark for large language models and agents on end-to-end machine learning workflows over repository-level code, including ML-LLM-Bench and ML-Agent-Bench tracks.<br>
+  [Code](https://github.com/gersteinlab/ML-Bench) · [Paper](https://arxiv.org/abs/2311.09835) · [![GitHub stars](https://img.shields.io/github/stars/gersteinlab/ML-Bench?style=flat-square&label=stars)](https://github.com/gersteinlab/ML-Bench/stargazers)<br>
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Open-source`
+
 - [MLE-bench](https://github.com/openai/mle-bench) - Benchmark for machine learning engineering agents, including task construction, evaluation logic, and reference agent implementations.<br>
   [Code](https://github.com/openai/mle-bench) · [![GitHub stars](https://img.shields.io/github/stars/openai/mle-bench?style=flat-square&label=stars)](https://github.com/openai/mle-bench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: CS` · `Openness: Open-source`
@@ -356,6 +408,10 @@ Benchmarks, surveys, datasets, and other reference layers that keep the ecosyste
 - [LAB-Bench](https://github.com/Future-House/LAB-Bench) - Biology benchmark for capabilities foundational to scientific research in biology.<br>
   [Code](https://github.com/Future-House/LAB-Bench) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/LAB-Bench?style=flat-square&label=stars)](https://github.com/Future-House/LAB-Bench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: Biology` · `Openness: Open-source`
+
+- [AgentBench](https://github.com/THUDM/AgentBench) - General benchmark for evaluating LLMs as agents across diverse interactive environments such as operating systems, databases, web tasks, and knowledge graphs.<br>
+  [Code](https://github.com/THUDM/AgentBench) · [Paper](https://arxiv.org/abs/2308.03688) · [![GitHub stars](https://img.shields.io/github/stars/THUDM/AgentBench?style=flat-square&label=stars)](https://github.com/THUDM/AgentBench/stargazers)<br>
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
 ### Datasets
 
@@ -379,6 +435,14 @@ Benchmarks, surveys, datasets, and other reference layers that keep the ecosyste
 
 - [Awesome Papers on Agents for Science](https://github.com/OSU-NLP-Group/awesome-agents4science) - Curated bibliography of agents-for-science papers across domains, task types, and benchmarks.<br>
   [Code](https://github.com/OSU-NLP-Group/awesome-agents4science) · [![GitHub stars](https://img.shields.io/github/stars/OSU-NLP-Group/awesome-agents4science?style=flat-square&label=stars)](https://github.com/OSU-NLP-Group/awesome-agents4science/stargazers)<br>
+  `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [Awesome AI Scientist Papers](https://github.com/openags/Awesome-AI-Scientist-Papers) - Curated bibliography of AI Scientist and Robot Scientist papers, surveys, benchmarks, timelines, and community resources.<br>
+  [Code](https://github.com/openags/Awesome-AI-Scientist-Papers) · [![GitHub stars](https://img.shields.io/github/stars/openags/Awesome-AI-Scientist-Papers?style=flat-square&label=stars)](https://github.com/openags/Awesome-AI-Scientist-Papers/stargazers)<br>
+  `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [Awesome AutoResearch](https://github.com/WecoAI/awesome-autoresearch) - Curated list of autoresearch use cases, implementations, and optimization traces for keep-or-revert research loops across domains.<br>
+  [Code](https://github.com/WecoAI/awesome-autoresearch) · [![GitHub stars](https://img.shields.io/github/stars/WecoAI/awesome-autoresearch?style=flat-square&label=stars)](https://github.com/WecoAI/awesome-autoresearch/stargazers)<br>
   `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
 
 <!--lint enable awesome-list-item-->

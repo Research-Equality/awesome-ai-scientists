@@ -83,6 +83,10 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/OpenRaiser/NanoResearch) · [文档](https://github.com/OpenRaiser/NanoResearch#readme) · [![GitHub stars](https://img.shields.io/github/stars/OpenRaiser/NanoResearch?style=flat-square&label=stars)](https://github.com/OpenRaiser/NanoResearch/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: General` · `Openness: Open-source`
 
+- [Auto-Research](https://github.com/openags/Auto-Research) - 面向通用科学研究的自主科研原型框架，覆盖文献综述、研究提案、实验、写作、投稿与评审等流程。<br>
+  [代码](https://github.com/openags/Auto-Research) · [![GitHub stars](https://img.shields.io/github/stars/openags/Auto-Research?style=flat-square&label=stars)](https://github.com/openags/Auto-Research/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
 - [Agent Laboratory](https://github.com/SamuelSchmidgall/AgentLaboratory) - 端到端自主科研工作流，使用专门代理覆盖文献综述、实验执行与研究报告撰写，并支持 co-pilot 模式和 AgentRxiv 协作扩展。<br>
   [代码](https://github.com/SamuelSchmidgall/AgentLaboratory) · [论文](https://arxiv.org/abs/2501.04227) · [主页](https://agentlaboratory.github.io/) · [![GitHub stars](https://img.shields.io/github/stars/SamuelSchmidgall/AgentLaboratory?style=flat-square&label=stars)](https://github.com/SamuelSchmidgall/AgentLaboratory/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
@@ -109,6 +113,14 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/tsingyuai/scientify) · [文档](https://github.com/tsingyuai/scientify#readme) · [![GitHub stars](https://img.shields.io/github/stars/tsingyuai/scientify?style=flat-square&label=stars)](https://github.com/tsingyuai/scientify/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [AutoResearch-SibylSystem](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem) - 具备 20+ 代理和双循环架构的全自动 AI Scientist，覆盖端到端机器学习研究、GPU 实验执行、论文写作与跨项目自我演化。<br>
+  [代码](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem) · [文档](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem#readme) · [![GitHub stars](https://img.shields.io/github/stars/Sibyl-Research-Team/AutoResearch-SibylSystem?style=flat-square&label=stars)](https://github.com/Sibyl-Research-Team/AutoResearch-SibylSystem/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: CS` · `Openness: Open-source`
+
+- [AGI](https://github.com/hyperspaceai/agi) - 分布式点对点科研网络，自主代理可在共享排行榜上运行实验、分享结果、生成论文并持续累积发现。<br>
+  [代码](https://github.com/hyperspaceai/agi) · [![GitHub stars](https://img.shields.io/github/stars/hyperspaceai/agi?style=flat-square&label=stars)](https://github.com/hyperspaceai/agi/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
 ### Closed-Loop Discovery Systems
 
 - [Coscientist](https://www.nature.com/articles/s41586-023-06792-0) - 面向化学研究的代理系统，可规划合成路径、检索文档、控制仪器并循环执行实验流程。<br>
@@ -129,6 +141,10 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/snap-stanford/Biomni) · [![GitHub stars](https://img.shields.io/github/stars/snap-stanford/Biomni?style=flat-square&label=stars)](https://github.com/snap-stanford/Biomni/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Biology` · `Openness: Open-source`
 
+- [ML-Agent](https://github.com/MASWorks/ML-Agent) - 面向端到端机器学习工程的 7B 强化学习代理，可在 MLAgentBench 和 MLE-bench 任务上通过交互式实验持续学习。<br>
+  [代码](https://github.com/MASWorks/ML-Agent) · [论文](https://arxiv.org/abs/2505.23723) · [![GitHub stars](https://img.shields.io/github/stars/MASWorks/ML-Agent?style=flat-square&label=stars)](https://github.com/MASWorks/ML-Agent/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: CS` · `Openness: Partially Open`
+
 ## 🏗 Research Infrastructure & Platforms
 
 支撑 AI 原生科研的运行底座，包括编排、执行、记忆、观测与协作能力。
@@ -138,6 +154,10 @@ README 可见标签采用 5 项紧凑结构：
 - [FutureHouse](https://www.futurehouse.org/) - 以自动化科学发现为核心目标的 research-native 平台，强调代理系统与领域工具结合。<br>
   [主页](https://www.futurehouse.org/)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Closed-source`
+
+- [AgentRxiv](https://agentrxiv.github.io/) - 面向自主科研的协作框架与预印本层，让不同 agent laboratory 能发布、检索并建立在彼此研究结果之上。<br>
+  [主页](https://agentrxiv.github.io/) · [论文](https://arxiv.org/abs/2503.18102)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Paper-only`
 
 - [Research-Claw](https://github.com/wentorai/Research-Claw) - 本地优先的科研工作台，集成 Dashboard、文献管理、写作、实验工作流与基于 OpenClaw 的扩展能力，用于持续辅助研究过程。<br>
   [代码](https://github.com/wentorai/Research-Claw) · [文档](https://github.com/wentorai/Research-Claw/blob/main/docs/00-reference-map.md) · [![GitHub stars](https://img.shields.io/github/stars/wentorai/Research-Claw?style=flat-square&label=stars)](https://github.com/wentorai/Research-Claw/stargazers)<br>
@@ -161,6 +181,10 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/agentscope-ai/agentscope) · [![GitHub stars](https://img.shields.io/github/stars/agentscope-ai/agentscope?style=flat-square&label=stars)](https://github.com/agentscope-ai/agentscope/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [ClawTeam](https://github.com/HKUDS/ClawTeam) - 面向自主科研与工程流程的群体智能编排层，leader agent 可跨 worktree、tmux 会话和 GPU 生成并协调专门 worker。<br>
+  [代码](https://github.com/HKUDS/ClawTeam) · [![GitHub stars](https://img.shields.io/github/stars/HKUDS/ClawTeam?style=flat-square&label=stars)](https://github.com/HKUDS/ClawTeam/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
 - [LDP](https://github.com/Future-House/ldp) - 用于语言代理、环境与优化器模块化互换的框架。<br>
   [代码](https://github.com/Future-House/ldp) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/ldp?style=flat-square&label=stars)](https://github.com/Future-House/ldp/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
@@ -170,6 +194,10 @@ README 可见标签采用 5 项紧凑结构：
 - [ARIS: Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) - 轻量、仅基于 Markdown 的研究工作流编排工具包，覆盖想法发现、跨模型评审循环、实验自动化与论文写作，可运行在 Claude Code、Codex、OpenClaw 等代理环境中。<br>
   [代码](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) · [文档](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#readme) · [![GitHub stars](https://img.shields.io/github/stars/wanshuiyin/Auto-claude-code-research-in-sleep?style=flat-square&label=stars)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [AI Research Skills Library](https://github.com/Orchestra-Research/AI-Research-SKILLs) - 开源技能库加 autoresearch 编排层，为编码代理提供覆盖文献调研、实验和论文写作的可复用科研技能。<br>
+  [代码](https://github.com/Orchestra-Research/AI-Research-SKILLs) · [![GitHub stars](https://img.shields.io/github/stars/Orchestra-Research/AI-Research-SKILLs?style=flat-square&label=stars)](https://github.com/Orchestra-Research/AI-Research-SKILLs/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Open-source`
 
 ### Tool-Use & Execution Infrastructure
 
@@ -209,6 +237,10 @@ README 可见标签采用 5 项紧凑结构：
 
 - [LitLLM](https://github.com/LitLLM/LitLLM) - AI 驱动的文献综述助手，结合混合检索、重排序与结构化生成，用于 related work 草稿撰写。<br>
   [代码](https://github.com/LitLLM/LitLLM) · [论文](https://arxiv.org/abs/2412.15249) · [主页](https://litllm.onrender.com) · [![GitHub stars](https://img.shields.io/github/stars/LitLLM/LitLLM?style=flat-square&label=stars)](https://github.com/LitLLM/LitLLM/stargazers)<br>
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [AutoResearcher](https://github.com/eimenhmdt/autoresearcher) - 面向科学工作流自动化的早期开放源码 Python 包，目前重点支持文献综述，长期目标是走向自主科学发现。<br>
+  [代码](https://github.com/eimenhmdt/autoresearcher) · [文档](https://eimenhmdt.github.io/autoresearcher/) · [![GitHub stars](https://img.shields.io/github/stars/eimenhmdt/autoresearcher?style=flat-square&label=stars)](https://github.com/eimenhmdt/autoresearcher/stargazers)<br>
   `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
 - [ResearchRabbit](https://www.researchrabbit.ai/) - 用于从种子论文扩展相关工作网络的可视化引用图谱探索工具。<br>
@@ -281,6 +313,10 @@ README 可见标签采用 5 项紧凑结构：
   [主页](https://optuna.org/) · [代码](https://github.com/optuna/optuna) · [![GitHub stars](https://img.shields.io/github/stars/optuna/optuna?style=flat-square&label=stars)](https://github.com/optuna/optuna/stargazers)<br>
   `Level: Module` · `Stage: Experiment` · `Loop: Open-loop` · `Domain: General` · `Openness: Open-source`
 
+- [AIDE ML](https://github.com/WecoAI/aideml) - 树搜索式机器学习工程代理，可围绕目标指标反复起草、调试、评测并改进代码。<br>
+  [代码](https://github.com/WecoAI/aideml) · [论文](https://arxiv.org/abs/2502.13138) · [![GitHub stars](https://img.shields.io/github/stars/WecoAI/aideml?style=flat-square&label=stars)](https://github.com/WecoAI/aideml/stargazers)<br>
+  `Level: Module` · `Stage: Experiment` · `Loop: Closed-loop` · `Domain: CS` · `Openness: Open-source`
+
 - [PiFlow](https://github.com/amair-lab/PiFlow) - 面向纳米材料、生物分子和超导体等方向的多智能体迭代式科学发现框架。<br>
   [代码](https://github.com/amair-lab/PiFlow) · [论文](https://arxiv.org/abs/2505.15047) · [![GitHub stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=flat-square&label=stars)](https://github.com/amair-lab/PiFlow/stargazers)<br>
   `Level: Module` · `Stage: Experiment` · `Loop: Closed-loop` · `Domain: Multi-domain` · `Openness: Open-source`
@@ -323,6 +359,18 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/zkzhou126/AI-for-Research) · [论文](https://arxiv.org/abs/2503.01424) · [![GitHub stars](https://img.shields.io/github/stars/zkzhou126/AI-for-Research?style=flat-square&label=stars)](https://github.com/zkzhou126/AI-for-Research/stargazers)<br>
   `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [Awesome Deep Research Agent](https://github.com/ai-agents-2030/awesome-deep-research-agent) - 围绕 deep research agent 的 curated map，涵盖论文、架构、工具使用方法与基准，并附带专门综述与路线图。<br>
+  [代码](https://github.com/ai-agents-2030/awesome-deep-research-agent) · [论文](https://arxiv.org/abs/2506.18096) · [![GitHub stars](https://img.shields.io/github/stars/ai-agents-2030/awesome-deep-research-agent?style=flat-square&label=stars)](https://github.com/ai-agents-2030/awesome-deep-research-agent/stargazers)<br>
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) - 面向 LLM 代理优化综述的阅读清单，覆盖微调、反思、工具使用、数据集与真实应用。<br>
+  [代码](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) · [![GitHub stars](https://img.shields.io/github/stars/YoungDubbyDu/LLM-Agent-Optimization?style=flat-square&label=stars)](https://github.com/YoungDubbyDu/LLM-Agent-Optimization/stargazers)<br>
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [Awesome LLM Scientific Discovery](https://github.com/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery) - 围绕 LLM 驱动科学发现的 curated list 与分类体系，按从工具到分析者再到科学家的自主性层级组织。<br>
+  [代码](https://github.com/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery) · [论文](https://arxiv.org/abs/2505.13259) · [![GitHub stars](https://img.shields.io/github/stars/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery?style=flat-square&label=stars)](https://github.com/HKUST-KnowComp/Awesome-LLM-Scientific-Discovery/stargazers)<br>
+  `Level: Survey` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
 ### Benchmarks & Evaluation Suites
 
 - [Frontiers in Science](https://openai.com/index/frontierscience/) - 面向奥赛式与研究式科学推理任务的基准套件。<br>
@@ -345,6 +393,10 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/snap-stanford/MLAgentBench) · [![GitHub stars](https://img.shields.io/github/stars/snap-stanford/MLAgentBench?style=flat-square&label=stars)](https://github.com/snap-stanford/MLAgentBench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: CS` · `Openness: Open-source`
 
+- [ML-Bench](https://github.com/gersteinlab/ML-Bench) - 面向仓库级代码的端到端机器学习工作流基准，用于评测大语言模型与代理，并包含 ML-LLM-Bench 与 ML-Agent-Bench 轨道。<br>
+  [代码](https://github.com/gersteinlab/ML-Bench) · [论文](https://arxiv.org/abs/2311.09835) · [![GitHub stars](https://img.shields.io/github/stars/gersteinlab/ML-Bench?style=flat-square&label=stars)](https://github.com/gersteinlab/ML-Bench/stargazers)<br>
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Open-source`
+
 - [MLE-bench](https://github.com/openai/mle-bench) - 面向机器学习工程代理的基准，包含任务构建、评测逻辑与参考代理实现。<br>
   [代码](https://github.com/openai/mle-bench) · [![GitHub stars](https://img.shields.io/github/stars/openai/mle-bench?style=flat-square&label=stars)](https://github.com/openai/mle-bench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: CS` · `Openness: Open-source`
@@ -356,6 +408,10 @@ README 可见标签采用 5 项紧凑结构：
 - [LAB-Bench](https://github.com/Future-House/LAB-Bench) - 面向生物学科学研究基础能力的基准。<br>
   [代码](https://github.com/Future-House/LAB-Bench) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/LAB-Bench?style=flat-square&label=stars)](https://github.com/Future-House/LAB-Bench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: Biology` · `Openness: Open-source`
+
+- [AgentBench](https://github.com/THUDM/AgentBench) - 面向 LLM 代理的一般性基准，覆盖操作系统、数据库、网页任务、知识图谱等多种交互环境。<br>
+  [代码](https://github.com/THUDM/AgentBench) · [论文](https://arxiv.org/abs/2308.03688) · [![GitHub stars](https://img.shields.io/github/stars/THUDM/AgentBench?style=flat-square&label=stars)](https://github.com/THUDM/AgentBench/stargazers)<br>
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
 ### Datasets
 
@@ -379,6 +435,14 @@ README 可见标签采用 5 项紧凑结构：
 
 - [Awesome Papers on Agents for Science](https://github.com/OSU-NLP-Group/awesome-agents4science) - 覆盖多领域、任务类型与基准的 agents-for-science 论文书目型 curated list。<br>
   [代码](https://github.com/OSU-NLP-Group/awesome-agents4science) · [![GitHub stars](https://img.shields.io/github/stars/OSU-NLP-Group/awesome-agents4science?style=flat-square&label=stars)](https://github.com/OSU-NLP-Group/awesome-agents4science/stargazers)<br>
+  `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [Awesome AI Scientist Papers](https://github.com/openags/Awesome-AI-Scientist-Papers) - 汇总 AI Scientist 与 Robot Scientist 论文、综述、基准、时间线与社区资源的书目型 curated list。<br>
+  [代码](https://github.com/openags/Awesome-AI-Scientist-Papers) · [![GitHub stars](https://img.shields.io/github/stars/openags/Awesome-AI-Scientist-Papers?style=flat-square&label=stars)](https://github.com/openags/Awesome-AI-Scientist-Papers/stargazers)<br>
+  `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [Awesome AutoResearch](https://github.com/WecoAI/awesome-autoresearch) - 汇总 autoresearch 用例、实现与优化轨迹的 curated list，覆盖多领域中的保留或回滚式研究循环。<br>
+  [代码](https://github.com/WecoAI/awesome-autoresearch) · [![GitHub stars](https://img.shields.io/github/stars/WecoAI/awesome-autoresearch?style=flat-square&label=stars)](https://github.com/WecoAI/awesome-autoresearch/stargazers)<br>
   `Level: Meta` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
 
 <!--lint enable awesome-list-item-->

@@ -264,5 +264,37 @@ export const zh: Copy = {
       "聚焦 AI Scientist 系统的 curated list，与本仓库更广义的分层地图视角互补。",
     "awesome-papers-on-agents-for-science":
       "覆盖多领域、任务类型与基准的 agents-for-science 论文书目型 curated list。",
+    "autoresearch-sibylsystem":
+      "具备 20+ 代理和双循环架构的全自动 AI Scientist，覆盖端到端机器学习研究、GPU 实验执行、论文写作与跨项目自我演化。",
+    "hyperspace-agi":
+      "分布式点对点科研网络，自主代理可在共享排行榜上运行实验、分享结果、生成论文并持续累积发现。",
+    "openags-auto-research":
+      "面向通用科学研究的自主科研原型框架，覆盖文献综述、研究提案、实验、写作、投稿与评审等流程。",
+    "ml-agent":
+      "面向端到端机器学习工程的 7B 强化学习代理，可在 MLAgentBench 和 MLE-bench 任务上通过交互式实验持续学习。",
+    agentrxiv:
+      "面向自主科研的协作框架与预印本层，让不同 agent laboratory 能发布、检索并建立在彼此研究结果之上。",
+    clawteam:
+      "面向自主科研与工程流程的群体智能编排层，leader agent 可跨 worktree、tmux 会话和 GPU 生成并协调专门 worker。",
+    "ai-research-skills":
+      "开源技能库加 autoresearch 编排层，为编码代理提供覆盖文献调研、实验和论文写作的可复用科研技能。",
+    autoresearcher:
+      "面向科学工作流自动化的早期开放源码 Python 包，目前重点支持文献综述，长期目标是走向自主科学发现。",
+    aideml:
+      "树搜索式机器学习工程代理，可围绕目标指标反复起草、调试、评测并改进代码。",
+    "ml-bench":
+      "面向仓库级代码的端到端机器学习工作流基准，用于评测大语言模型与代理，并包含 ML-LLM-Bench 与 ML-Agent-Bench 轨道。",
+    agentbench:
+      "面向 LLM 代理的一般性基准，覆盖操作系统、数据库、网页任务、知识图谱等多种交互环境。",
+    "awesome-deep-research-agent":
+      "围绕 deep research agent 的 curated map，涵盖论文、架构、工具使用方法与基准，并附带专门综述与路线图。",
+    "llm-agent-optimization":
+      "面向 LLM 代理优化综述的阅读清单，覆盖微调、反思、工具使用、数据集与真实应用。",
+    "awesome-llm-scientific-discovery":
+      "围绕 LLM 驱动科学发现的 curated list 与分类体系，按从工具到分析者再到科学家的自主性层级组织。",
+    "awesome-ai-scientist-papers":
+      "汇总 AI Scientist 与 Robot Scientist 论文、综述、基准、时间线与社区资源的书目型 curated list。",
+    "awesome-autoresearch":
+      "汇总 autoresearch 用例、实现与优化轨迹的 curated list，覆盖多领域中的保留或回滚式研究循环。",
   },
 };

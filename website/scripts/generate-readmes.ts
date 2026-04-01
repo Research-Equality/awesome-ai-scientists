@@ -66,6 +66,7 @@ const readmeStructure = [
           "ai-researcher",
           "autoresearchclaw",
           "nanoresearch",
+          "openags-auto-research",
           "agent-laboratory",
           "mlr-copilot",
           "robin",
@@ -73,7 +74,13 @@ const readmeStructure = [
       },
       {
         heading: "Self-Improving / Self-Evolving Research Systems",
-        entries: ["the-ai-scientist-v2", "evoscientist", "scientify"],
+        entries: [
+          "the-ai-scientist-v2",
+          "evoscientist",
+          "scientify",
+          "autoresearch-sibylsystem",
+          "hyperspace-agi",
+        ],
       },
       {
         heading: "Closed-Loop Discovery Systems",
@@ -81,7 +88,7 @@ const readmeStructure = [
       },
       {
         heading: "Domain-Specific Autonomous Discovery Systems",
-        entries: ["chemcrow", "biomni"],
+        entries: ["chemcrow", "biomni", "ml-agent"],
       },
     ],
   },
@@ -91,15 +98,15 @@ const readmeStructure = [
     sections: [
       {
         heading: "Research Platforms",
-        entries: ["futurehouse", "research-claw", "researchclaw"],
+        entries: ["futurehouse", "agentrxiv", "research-claw", "researchclaw"],
       },
       {
         heading: "Agent Runtimes & Orchestration",
-        entries: ["langgraph", "autogen", "agentscope", "ldp"],
+        entries: ["langgraph", "autogen", "agentscope", "clawteam", "ldp"],
       },
       {
         heading: "Research Workflow Orchestration",
-        entries: ["aris"],
+        entries: ["aris", "ai-research-skills"],
       },
       {
         heading: "Tool-Use & Execution Infrastructure",
@@ -126,6 +133,7 @@ const readmeStructure = [
           "paperqa2",
           "lattereview",
           "litllm",
+          "autoresearcher",
           "research-rabbit",
           "litmaps",
           "connected-papers",
@@ -189,6 +197,7 @@ const readmeStructure = [
         heading: "Experiment Execution & Optimization",
         entries: [
           "optuna",
+          "aideml",
           {
             id: "piflow",
             override: { level: "Module", stage: "Experiment" },
@@ -217,7 +226,14 @@ const readmeStructure = [
     sections: [
       {
         heading: "Surveys & Taxonomies",
-        entries: ["survey-ai-scientists", "ai4research", "ai-for-research"],
+        entries: [
+          "survey-ai-scientists",
+          "ai4research",
+          "ai-for-research",
+          "awesome-deep-research-agent",
+          "llm-agent-optimization",
+          "awesome-llm-scientific-discovery",
+        ],
       },
       {
         heading: "Benchmarks & Evaluation Suites",
@@ -227,9 +243,11 @@ const readmeStructure = [
           "sciencebench",
           "airs-bench",
           "mlagentbench",
+          "ml-bench",
           "mle-bench",
           "mlr-bench",
           "lab-bench",
+          "agentbench",
         ],
       },
       {
@@ -242,6 +260,8 @@ const readmeStructure = [
           "awesome-research",
           "awesome-ai-scientists",
           "awesome-papers-on-agents-for-science",
+          "awesome-ai-scientist-papers",
+          "awesome-autoresearch",
         ],
       },
     ],

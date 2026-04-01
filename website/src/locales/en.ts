@@ -346,6 +346,38 @@ export const en: Copy = {
       "Curated list centered on AI Scientist systems, complementary to this repository's broader layered-map perspective.",
     "awesome-papers-on-agents-for-science":
       "Curated bibliography of agents-for-science papers across domains, task types, and benchmarks.",
+    "autoresearch-sibylsystem":
+      "Fully autonomous AI scientist with 20+ agents and a dual-loop architecture for end-to-end ML research, GPU experiment execution, paper writing, and cross-project self-evolution.",
+    "hyperspace-agi":
+      "Distributed peer-to-peer research network where autonomous agents run experiments, share results, synthesize papers, and compound discoveries across shared leaderboards.",
+    "openags-auto-research":
+      "Prototype autonomous generalist scientist framework spanning literature review, proposal generation, experimentation, writing, submission, and review workflows.",
+    "ml-agent":
+      "7B reinforcement-trained agent for end-to-end machine learning engineering that learns from interactive experimentation on MLAgentBench and MLE-bench tasks.",
+    agentrxiv:
+      "Collaborative autonomous research framework and preprint layer where agent laboratories can publish, retrieve, and build on each other's findings.",
+    clawteam:
+      "Swarm-intelligence orchestration layer where leader agents spawn specialized workers across worktrees, tmux sessions, and GPUs for autonomous research and engineering workflows.",
+    "ai-research-skills":
+      "Open-source skills library plus autoresearch orchestration layer that gives coding agents reusable research skills spanning literature survey, experimentation, and paper writing.",
+    autoresearcher:
+      "Early-stage open-source Python package for automating scientific workflows, currently focused on literature reviews with a longer-term goal of autonomous discovery.",
+    aideml:
+      "Tree-search machine learning engineering agent that iteratively drafts, debugs, benchmarks, and improves code against a target metric.",
+    "ml-bench":
+      "Benchmark for large language models and agents on end-to-end machine learning workflows over repository-level code, including ML-LLM-Bench and ML-Agent-Bench tracks.",
+    agentbench:
+      "General benchmark for evaluating LLMs as agents across diverse interactive environments such as operating systems, databases, web tasks, and knowledge graphs.",
+    "awesome-deep-research-agent":
+      "Curated map of deep research agent papers, architectures, tool-use methods, and benchmarks, anchored by a dedicated survey and roadmap.",
+    "llm-agent-optimization":
+      "Reading list for a survey on optimizing LLM-based agents, covering fine-tuning, reflection, tool use, datasets, and real-world applications.",
+    "awesome-llm-scientific-discovery":
+      "Curated list and taxonomy for LLMs in scientific discovery, organized by autonomy level from tool to analyst to scientist.",
+    "awesome-ai-scientist-papers":
+      "Curated bibliography of AI Scientist and Robot Scientist papers, surveys, benchmarks, timelines, and community resources.",
+    "awesome-autoresearch":
+      "Curated list of autoresearch use cases, implementations, and optimization traces for keep-or-revert research loops across domains.",
   },
 };
 
