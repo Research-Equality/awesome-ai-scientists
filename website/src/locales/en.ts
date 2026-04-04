@@ -241,6 +241,8 @@ export const en: Copy = {
       "Fully autonomous research pipeline that turns a single research idea into literature-grounded experiments, analysis, and a conference-ready paper with OpenClaw-compatible execution.",
     nanoresearch:
       "End-to-end autonomous research engine that turns a topic into planned experiments, executed jobs, grounded analysis, and paper drafts backed by real run outputs.",
+    deepscientist:
+      "Local-first AI research studio for turning papers or research goals into persistent quest repositories that support reproduction, experimentation, analysis, and paper drafting with human takeover anytime.",
     "agent-laboratory":
       "End-to-end autonomous research workflow with specialized agents for literature review, experimentation, and report writing, with optional co-pilot mode and AgentRxiv support.",
     "mlr-copilot":
@@ -378,6 +380,40 @@ export const en: Copy = {
       "Curated bibliography of AI Scientist and Robot Scientist papers, surveys, benchmarks, timelines, and community resources.",
     "awesome-autoresearch":
       "Curated list of autoresearch use cases, implementations, and optimization traces for keep-or-revert research loops across domains.",
+    curie:
+      "Research experimentation agent for automating hypothesis formulation, implementation, execution, analysis, and reproducible reporting with built-in rigor checks.",
+    autocontext:
+      "Workflow harness for running scenarios, tasks, and missions while carrying forward validated playbooks, artifacts, and distilled knowledge across repeated agent runs.",
+    discoveryworld:
+      "Virtual environment for building and evaluating automated scientific discovery agents with interactive tasks, scorecards, and baseline agents.",
+    mlgym:
+      "Gym environment and benchmark for open-ended AI research tasks that require ideation, coding, experimentation, analysis, and iteration.",
+    "gpt-researcher":
+      "Open deep research agent for web and local documents that uses planner and execution agents to produce citation-backed research reports.",
+    openscholar:
+      "Retrieval-augmented language model for searching scientific literature and generating grounded synthesis answers from relevant papers.",
+    openresearcher:
+      "Scientific research assistant with access to the arXiv corpus for answering research queries using retrieval, embeddings, and web search.",
+    pasa:
+      "LLM paper-search agent that autonomously searches, reads, expands citations, and selects relevant scholarly references for complex academic queries.",
+    surveyx:
+      "Academic survey automation system for generating domain-specific survey papers from user-provided references and LLM-driven writing pipelines.",
+    autosurvey:
+      "Framework for automatically writing long-form literature surveys with structured outlines, retrieval, and citation-aware generation.",
+    scienceagentbench:
+      "Benchmark for language agents on 102 expert-validated tasks from real scientific workflows across multiple disciplines.",
+    scholarqabench:
+      "Holistic benchmark for testing scientific literature synthesis, citation accuracy, coverage, relevance, and organization in long-form scholarly answers.",
+    "re-bench":
+      "Task suite for evaluating frontier AI R&D capabilities of language-model agents against human experts on realistic research engineering tasks.",
+    "exp-bench":
+      "Benchmark for assessing whether AI agents can conduct AI research experiments with rigorous implementation, execution, and analysis loops.",
+    researchbench:
+      "Benchmark for scientific discovery via inspiration retrieval, hypothesis composition, and hypothesis ranking across multiple disciplines.",
+    ideabench:
+      "Benchmarking framework for evaluating large language models on research idea generation quality, novelty, and relevance.",
+    liveideabench:
+      "Benchmark for evaluating scientific creativity and divergent thinking in LLM-generated ideas using minimal-context prompts.",
   },
 };
 

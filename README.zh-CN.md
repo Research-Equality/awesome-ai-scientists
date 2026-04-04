@@ -83,6 +83,10 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/OpenRaiser/NanoResearch) · [文档](https://github.com/OpenRaiser/NanoResearch#readme) · [![GitHub stars](https://img.shields.io/github/stars/OpenRaiser/NanoResearch?style=flat-square&label=stars)](https://github.com/OpenRaiser/NanoResearch/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: General` · `Openness: Open-source`
 
+- [DeepScientist](https://github.com/ResearAI/DeepScientist) - 本地优先的 AI 科研工作室，可将论文或研究目标转化为持续演进的 quest 仓库，支持基线复现、实验推进、结果分析与论文草拟，并可随时人工接管。<br>
+  [代码](https://github.com/ResearAI/DeepScientist) · [文档](https://github.com/ResearAI/DeepScientist/blob/main/docs/en/README.md) · [论文](https://openreview.net/forum?id=cZFgsLq8Gs) · [主页](https://deepscientist.cc/) · [![GitHub stars](https://img.shields.io/github/stars/ResearAI/DeepScientist?style=flat-square&label=stars)](https://github.com/ResearAI/DeepScientist/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
 - [Auto-Research](https://github.com/openags/Auto-Research) - 面向通用科学研究的自主科研原型框架，覆盖文献综述、研究提案、实验、写作、投稿与评审等流程。<br>
   [代码](https://github.com/openags/Auto-Research) · [![GitHub stars](https://img.shields.io/github/stars/openags/Auto-Research?style=flat-square&label=stars)](https://github.com/openags/Auto-Research/stargazers)<br>
   `Level: System` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
@@ -130,6 +134,10 @@ README 可见标签采用 5 项紧凑结构：
 - [PiFlow](https://github.com/amair-lab/PiFlow) - 面向纳米材料、生物分子和超导体等方向的多智能体迭代式科学发现框架。<br>
   [代码](https://github.com/amair-lab/PiFlow) · [论文](https://arxiv.org/abs/2505.15047) · [![GitHub stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=flat-square&label=stars)](https://github.com/amair-lab/PiFlow/stargazers)<br>
   `Level: System` · `Stage: Experiment` · `Loop: Closed-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [Curie](https://github.com/Just-Curieous/Curie) - 面向科研实验自动化的研究代理，覆盖假设提出、实现、执行、分析与可复现实验报告，并内置严格性检查。<br>
+  [代码](https://github.com/Just-Curieous/Curie) · [论文](https://arxiv.org/abs/2502.16069) · [![GitHub stars](https://img.shields.io/github/stars/Just-Curieous/Curie?style=flat-square&label=stars)](https://github.com/Just-Curieous/Curie/stargazers)<br>
+  `Level: System` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: General` · `Openness: Open-source`
 
 ### Domain-Specific Autonomous Discovery Systems
 
@@ -199,6 +207,10 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/Orchestra-Research/AI-Research-SKILLs) · [![GitHub stars](https://img.shields.io/github/stars/Orchestra-Research/AI-Research-SKILLs?style=flat-square&label=stars)](https://github.com/Orchestra-Research/AI-Research-SKILLs/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Open-source`
 
+- [autocontext](https://github.com/greyhaven-ai/autocontext) - 用于运行 scenario、task 和 mission 的工作流底座，可在多轮代理运行之间持续沉淀已验证的 playbook、产物与蒸馏知识。<br>
+  [代码](https://github.com/greyhaven-ai/autocontext) · [![GitHub stars](https://img.shields.io/github/stars/greyhaven-ai/autocontext?style=flat-square&label=stars)](https://github.com/greyhaven-ai/autocontext/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Closed-loop` · `Domain: General` · `Openness: Open-source`
+
 ### Tool-Use & Execution Infrastructure
 
 - [E2B](https://e2b.dev/) - 为 AI 驱动科研流程提供代码、浏览器和桌面式工具调用的沙箱执行层。<br>
@@ -210,6 +222,14 @@ README 可见标签采用 5 项紧凑结构：
 - [Aviary](https://github.com/Future-House/aviary) - 面向语言代理的 gym 式环境，内置科学文献检索、蛋白稳定性等科研任务场景。<br>
   [代码](https://github.com/Future-House/aviary) · [![GitHub stars](https://img.shields.io/github/stars/Future-House/aviary?style=flat-square&label=stars)](https://github.com/Future-House/aviary/stargazers)<br>
   `Level: Platform` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [DiscoveryWorld](https://github.com/allenai/discoveryworld) - 面向自动科学发现代理构建与评测的虚拟环境，提供交互式任务、评分卡与基线代理。<br>
+  [代码](https://github.com/allenai/discoveryworld) · [论文](https://openreview.net/forum?id=cDYqckEt6d) · [主页](https://allenai.github.io/discoveryworld/) · [![GitHub stars](https://img.shields.io/github/stars/allenai/discoveryworld?style=flat-square&label=stars)](https://github.com/allenai/discoveryworld/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [MLGym](https://github.com/facebookresearch/MLGym) - 面向开放式 AI 研究任务的 gym 环境与 benchmark，覆盖构思、编码、实验、分析与迭代。<br>
+  [代码](https://github.com/facebookresearch/MLGym) · [论文](https://arxiv.org/abs/2502.14499) · [主页](https://sites.google.com/view/mlgym) · [![GitHub stars](https://img.shields.io/github/stars/facebookresearch/MLGym?style=flat-square&label=stars)](https://github.com/facebookresearch/MLGym/stargazers)<br>
+  `Level: Platform` · `Stage: End-to-end` · `Loop: Open-loop` · `Domain: CS` · `Openness: Open-source`
 
 ### Memory / Observability / Collaboration Layers
 
@@ -237,6 +257,22 @@ README 可见标签采用 5 项紧凑结构：
 
 - [LitLLM](https://github.com/LitLLM/LitLLM) - AI 驱动的文献综述助手，结合混合检索、重排序与结构化生成，用于 related work 草稿撰写。<br>
   [代码](https://github.com/LitLLM/LitLLM) · [论文](https://arxiv.org/abs/2412.15249) · [主页](https://litllm.onrender.com) · [![GitHub stars](https://img.shields.io/github/stars/LitLLM/LitLLM?style=flat-square&label=stars)](https://github.com/LitLLM/LitLLM/stargazers)<br>
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [GPT Researcher](https://github.com/assafelovic/gpt-researcher) - 面向网页与本地文档的开放式 deep research 代理，采用 planner 与 execution agent 生成带引用的研究报告。<br>
+  [代码](https://github.com/assafelovic/gpt-researcher) · [文档](https://docs.gptr.dev) · [主页](https://gptr.dev) · [![GitHub stars](https://img.shields.io/github/stars/assafelovic/gpt-researcher?style=flat-square&label=stars)](https://github.com/assafelovic/gpt-researcher/stargazers)<br>
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [OpenScholar](https://github.com/AkariAsai/OpenScholar) - 面向科学文献检索与综述的检索增强语言模型，可基于相关论文生成有依据的综合回答。<br>
+  [代码](https://github.com/AkariAsai/OpenScholar) · [论文](https://arxiv.org/abs/2411.14199) · [主页](https://open-scholar.allen.ai/) · [![GitHub stars](https://img.shields.io/github/stars/AkariAsai/OpenScholar?style=flat-square&label=stars)](https://github.com/AkariAsai/OpenScholar/stargazers)<br>
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [OpenResearcher](https://github.com/GAIR-NLP/OpenResearcher) - 可访问 arXiv 语料的科学研究助手，结合检索、向量索引与网页搜索来回答研究问题。<br>
+  [代码](https://github.com/GAIR-NLP/OpenResearcher) · [论文](https://arxiv.org/abs/2408.06941) · [![GitHub stars](https://img.shields.io/github/stars/GAIR-NLP/OpenResearcher?style=flat-square&label=stars)](https://github.com/GAIR-NLP/OpenResearcher/stargazers)<br>
+  `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [PaSa](https://github.com/bytedance/pasa) - 面向复杂学术查询的论文搜索代理，可自主搜索、阅读论文、扩展引用并筛选相关参考文献。<br>
+  [代码](https://github.com/bytedance/pasa) · [论文](https://arxiv.org/abs/2501.10120) · [主页](https://pasa-agent.ai) · [![GitHub stars](https://img.shields.io/github/stars/bytedance/pasa?style=flat-square&label=stars)](https://github.com/bytedance/pasa/stargazers)<br>
   `Level: Module` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
 - [AutoResearcher](https://github.com/eimenhmdt/autoresearcher) - 面向科学工作流自动化的早期开放源码 Python 包，目前重点支持文献综述，长期目标是走向自主科学发现。<br>
@@ -341,6 +377,14 @@ README 可见标签采用 5 项紧凑结构：
   [代码](https://github.com/stanford-oval/storm) · [![GitHub stars](https://img.shields.io/github/stars/stanford-oval/storm?style=flat-square&label=stars)](https://github.com/stanford-oval/storm/stargazers)<br>
   `Level: Module` · `Stage: Writing` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
 
+- [SurveyX](https://github.com/IAAR-Shanghai/SurveyX) - 学术综述自动化系统，可基于用户提供的参考文献与 LLM 写作流程生成领域化 survey 论文。<br>
+  [代码](https://github.com/IAAR-Shanghai/SurveyX) · [论文](https://arxiv.org/abs/2502.14776) · [主页](https://surveyx.cn/) · [![GitHub stars](https://img.shields.io/github/stars/IAAR-Shanghai/SurveyX?style=flat-square&label=stars)](https://github.com/IAAR-Shanghai/SurveyX/stargazers)<br>
+  `Level: Module` · `Stage: Writing` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Partially Open`
+
+- [AutoSurvey](https://github.com/AutoSurveys/AutoSurvey) - 用于自动撰写长篇文献综述的框架，强调结构化提纲、检索与引用感知生成。<br>
+  [代码](https://github.com/AutoSurveys/AutoSurvey) · [论文](https://arxiv.org/abs/2406.10252) · [![GitHub stars](https://img.shields.io/github/stars/AutoSurveys/AutoSurvey?style=flat-square&label=stars)](https://github.com/AutoSurveys/AutoSurvey/stargazers)<br>
+  `Level: Module` · `Stage: Writing` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
 ## 📚 Benchmarks, Surveys & Meta-Resources
 
 帮助生态保持可比较、可评估、可导航的基准、综述、数据集与元资源。
@@ -412,6 +456,34 @@ README 可见标签采用 5 项紧凑结构：
 - [AgentBench](https://github.com/THUDM/AgentBench) - 面向 LLM 代理的一般性基准，覆盖操作系统、数据库、网页任务、知识图谱等多种交互环境。<br>
   [代码](https://github.com/THUDM/AgentBench) · [论文](https://arxiv.org/abs/2308.03688) · [![GitHub stars](https://img.shields.io/github/stars/THUDM/AgentBench?style=flat-square&label=stars)](https://github.com/THUDM/AgentBench/stargazers)<br>
   `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Open-source`
+
+- [ScienceAgentBench](https://github.com/OSU-NLP-Group/ScienceAgentBench) - 面向多学科真实科学工作流的语言代理基准，包含 102 个经过专家验证的任务。<br>
+  [代码](https://github.com/OSU-NLP-Group/ScienceAgentBench) · [论文](https://arxiv.org/abs/2410.05080) · [主页](https://osu-nlp-group.github.io/ScienceAgentBench/) · [![GitHub stars](https://img.shields.io/github/stars/OSU-NLP-Group/ScienceAgentBench?style=flat-square&label=stars)](https://github.com/OSU-NLP-Group/ScienceAgentBench/stargazers)<br>
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Partially Open`
+
+- [ScholarQABench](https://github.com/AkariAsai/ScholarQABench) - 用于评测科学文献综合能力的综合基准，覆盖引用准确率、覆盖度、相关性与组织性。<br>
+  [代码](https://github.com/AkariAsai/ScholarQABench) · [论文](https://arxiv.org/abs/2411.14199) · [![GitHub stars](https://img.shields.io/github/stars/AkariAsai/ScholarQABench?style=flat-square&label=stars)](https://github.com/AkariAsai/ScholarQABench/stargazers)<br>
+  `Level: Benchmark` · `Stage: Literature` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Open-source`
+
+- [RE-Bench](https://github.com/METR/RE-Bench) - 用于评测语言模型代理前沿 AI 研发能力的任务套件，并与人类专家表现进行对比。<br>
+  [代码](https://github.com/METR/RE-Bench) · [论文](https://arxiv.org/abs/2411.15114) · [![GitHub stars](https://img.shields.io/github/stars/METR/RE-Bench?style=flat-square&label=stars)](https://github.com/METR/RE-Bench/stargazers)<br>
+  `Level: Benchmark` · `Stage: End-to-end` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Partially Open`
+
+- [EXP-Bench](https://arxiv.org/abs/2505.24785) - 用于评估 AI 代理能否以严格流程开展 AI 研究实验的基准，覆盖实现、执行与分析闭环。<br>
+  [论文](https://arxiv.org/abs/2505.24785) · [文档](https://huggingface.co/datasets/Just-Curieous/EXP-Bench)<br>
+  `Level: Benchmark` · `Stage: Experiment` · `Loop: Human-in-the-loop` · `Domain: CS` · `Openness: Partially Open`
+
+- [ResearchBench](https://arxiv.org/abs/2503.21248) - 围绕 inspiration retrieval、hypothesis composition 与 hypothesis ranking 的科学发现基准，覆盖多个学科。<br>
+  [论文](https://arxiv.org/abs/2503.21248)<br>
+  `Level: Benchmark` · `Stage: Ideation` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Paper-only`
+
+- [IdeaBench](https://arxiv.org/abs/2411.02429) - 用于评测大语言模型研究想法生成质量、新颖性与相关性的 benchmark 框架。<br>
+  [论文](https://arxiv.org/abs/2411.02429)<br>
+  `Level: Benchmark` · `Stage: Ideation` · `Loop: Human-in-the-loop` · `Domain: General` · `Openness: Paper-only`
+
+- [LiveIdeaBench](https://liveideabench.com/) - 用于评测 LLM 科学创意与发散思维能力的基准，强调最小上下文条件下的想法生成。<br>
+  [主页](https://liveideabench.com/) · [论文](https://arxiv.org/abs/2412.17596)<br>
+  `Level: Benchmark` · `Stage: Ideation` · `Loop: Human-in-the-loop` · `Domain: Multi-domain` · `Openness: Partially Open`
 
 ### Datasets
 

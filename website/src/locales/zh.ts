@@ -159,6 +159,8 @@ export const zh: Copy = {
       "全自动科研流水线，可将单个研究想法转化为基于真实文献的实验、分析与可投稿论文，并支持 OpenClaw 兼容执行。",
     nanoresearch:
       "端到端自主科研引擎，可将研究主题转化为实验规划、真实任务执行、结果分析与基于真实运行输出的论文草稿。",
+    deepscientist:
+      "本地优先的 AI 科研工作室，可将论文或研究目标转化为持续演进的 quest 仓库，支持基线复现、实验推进、结果分析与论文草拟，并可随时人工接管。",
     "agent-laboratory":
       "端到端自主科研工作流，使用专门代理覆盖文献综述、实验执行与研究报告撰写，并支持 co-pilot 模式和 AgentRxiv 协作扩展。",
     "mlr-copilot":
@@ -296,5 +298,39 @@ export const zh: Copy = {
       "汇总 AI Scientist 与 Robot Scientist 论文、综述、基准、时间线与社区资源的书目型 curated list。",
     "awesome-autoresearch":
       "汇总 autoresearch 用例、实现与优化轨迹的 curated list，覆盖多领域中的保留或回滚式研究循环。",
+    curie:
+      "面向科研实验自动化的研究代理，覆盖假设提出、实现、执行、分析与可复现实验报告，并内置严格性检查。",
+    autocontext:
+      "用于运行 scenario、task 和 mission 的工作流底座，可在多轮代理运行之间持续沉淀已验证的 playbook、产物与蒸馏知识。",
+    discoveryworld:
+      "面向自动科学发现代理构建与评测的虚拟环境，提供交互式任务、评分卡与基线代理。",
+    mlgym:
+      "面向开放式 AI 研究任务的 gym 环境与 benchmark，覆盖构思、编码、实验、分析与迭代。",
+    "gpt-researcher":
+      "面向网页与本地文档的开放式 deep research 代理，采用 planner 与 execution agent 生成带引用的研究报告。",
+    openscholar:
+      "面向科学文献检索与综述的检索增强语言模型，可基于相关论文生成有依据的综合回答。",
+    openresearcher:
+      "可访问 arXiv 语料的科学研究助手，结合检索、向量索引与网页搜索来回答研究问题。",
+    pasa:
+      "面向复杂学术查询的论文搜索代理，可自主搜索、阅读论文、扩展引用并筛选相关参考文献。",
+    surveyx:
+      "学术综述自动化系统，可基于用户提供的参考文献与 LLM 写作流程生成领域化 survey 论文。",
+    autosurvey:
+      "用于自动撰写长篇文献综述的框架，强调结构化提纲、检索与引用感知生成。",
+    scienceagentbench:
+      "面向多学科真实科学工作流的语言代理基准，包含 102 个经过专家验证的任务。",
+    scholarqabench:
+      "用于评测科学文献综合能力的综合基准，覆盖引用准确率、覆盖度、相关性与组织性。",
+    "re-bench":
+      "用于评测语言模型代理前沿 AI 研发能力的任务套件，并与人类专家表现进行对比。",
+    "exp-bench":
+      "用于评估 AI 代理能否以严格流程开展 AI 研究实验的基准，覆盖实现、执行与分析闭环。",
+    researchbench:
+      "围绕 inspiration retrieval、hypothesis composition 与 hypothesis ranking 的科学发现基准，覆盖多个学科。",
+    ideabench:
+      "用于评测大语言模型研究想法生成质量、新颖性与相关性的 benchmark 框架。",
+    liveideabench:
+      "用于评测 LLM 科学创意与发散思维能力的基准，强调最小上下文条件下的想法生成。",
   },
 };

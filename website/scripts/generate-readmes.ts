@@ -66,6 +66,7 @@ const readmeStructure = [
           "ai-researcher",
           "autoresearchclaw",
           "nanoresearch",
+          "deepscientist",
           "openags-auto-research",
           "agent-laboratory",
           "mlr-copilot",
@@ -84,7 +85,7 @@ const readmeStructure = [
       },
       {
         heading: "Closed-Loop Discovery Systems",
-        entries: ["coscientist", "piflow"],
+        entries: ["coscientist", "piflow", "curie"],
       },
       {
         heading: "Domain-Specific Autonomous Discovery Systems",
@@ -106,7 +107,7 @@ const readmeStructure = [
       },
       {
         heading: "Research Workflow Orchestration",
-        entries: ["aris", "ai-research-skills"],
+        entries: ["aris", "ai-research-skills", "autocontext"],
       },
       {
         heading: "Tool-Use & Execution Infrastructure",
@@ -114,7 +115,7 @@ const readmeStructure = [
       },
       {
         heading: "Evaluation & Training Environments",
-        entries: ["aviary"],
+        entries: ["aviary", "discoveryworld", "mlgym"],
       },
       {
         heading: "Memory / Observability / Collaboration Layers",
@@ -133,6 +134,10 @@ const readmeStructure = [
           "paperqa2",
           "lattereview",
           "litllm",
+          "gpt-researcher",
+          "openscholar",
+          "openresearcher",
+          "pasa",
           "autoresearcher",
           "research-rabbit",
           "litmaps",
@@ -216,7 +221,7 @@ const readmeStructure = [
       },
       {
         heading: "Writing, Publication & Communication",
-        entries: ["overleaf-ai", "storm"],
+        entries: ["overleaf-ai", "storm", "surveyx", "autosurvey"],
       },
     ],
   },
@@ -248,6 +253,13 @@ const readmeStructure = [
           "mlr-bench",
           "lab-bench",
           "agentbench",
+          "scienceagentbench",
+          "scholarqabench",
+          "re-bench",
+          "exp-bench",
+          "researchbench",
+          "ideabench",
+          "liveideabench",
         ],
       },
       {
